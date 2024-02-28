@@ -24,11 +24,11 @@ const Navbar = () => {
     const closeMenu = () => setClick(false);
 
     const links = [
-        { id: "hero", title: "Home" },
-        { id: "about", title: "About" },
-        { id: "services", title: "Services" },
-        { id: "projects", title: "Projects" },
-        { id: "contact", title: "Contact" },
+        { id: "hero", title: "home" },
+        { id: "about", title: "about" },
+        { id: "services", title: "services" },
+        { id: "projects", title: "projects" },
+        { id: "contact", title: "contact" },
     ];
 
     return (
@@ -36,7 +36,17 @@ const Navbar = () => {
             {/* Desktop Version */}
             <div className="max-w-7xl mx-auto px-4 py-6 flex items-center justify-between relative">
                 <div className="flex items-center">
-                    <h1 className="text-white text-2xl font-bold mr-4">toni.</h1>
+                    <Link
+                        to='hero'
+                        spy={true}
+                        smooth={true}
+                        duration={500}
+                        className="text-white text-4xl font-bold mr-4
+                        hover:text-blue-400 hover:cursor-pointer transition 100"
+                        onClick={closeMenu}
+                    >
+                        toni.
+                    </Link>
                 </div>
                 <div className="hidden md:flex items-center justify-end space-x-4">
                     {links.map(({ id, title }) => (
@@ -47,8 +57,8 @@ const Navbar = () => {
                             smooth={true}
                             duration={500}
                             className="text-white text-lg font-medium py-2 px-4
-                            hover:text-gray-300 hover:border-b-2 hover:border-white hover:cursor-pointer"
-                            activeClass="border-b-2 border-white"
+                            hover:text-blue-400 hover:border-b-2 hover:border-white hover:cursor-pointer"
+                            activeClass="text-blue-400 border-b-2 border-blue-400"
                         >
                             {title}
                         </Link>
@@ -56,31 +66,35 @@ const Navbar = () => {
                 </div>
                 {/* Mobile Version */}
                 <div className="flex items-center md:hidden">
-                    <button onClick={handleClick} className="focus:outline-none">
-                        {click ? <FaTimes className="text-white" /> : <FaBars className="text-white" />}
+                    <button onClick={handleClick} className="focus:outline-none text-4xl">
+                        {click ? <FaTimes className="text-white hover:text-blue-400 transition 100" /> : <FaBars className="text-white hover:text-blue-400 transition 100" />}
                     </button>
                 </div>
             </div>
-            {/* Overlay for Mobile Navbar */}
-            {click && <div className="overlay" onClick={closeMenu}></div>}
+        
             {/* Mobile Version */}
             <div className={`md:hidden ${click ? 'block' : 'hidden'} bg-black`}>
                 <div className="max-w-7xl mx-auto px-4 py-6">
-                    <div className="flex flex-col items-center justify-center text-white">
-                        {links.map(({ id, title }) => (
-                            <Link
-                                key={id}
-                                to={id}
-                                spy={true}
-                                smooth={true}
-                                duration={500}
-                                className="text-lg font-medium py-2 px-4 hover:text-gray-300 hover:cursor-pointer"
-                                onClick={closeMenu}
-                            >
-                                {title}
-                            </Link>
-                        ))}
-                    </div>
+                    {/* Overlay for Mobile Navbar */}
+                    {click && <div className="overlay block  bg-black text-white" onClick={closeMenu}>
+                        <div className="flex flex-col items-center justify-center text-white">
+                            {links.map(({ id, title }) => (
+                                <Link
+                                    key={id}
+                                    to={id}
+                                    spy={true}
+                                    smooth={true}
+                                    duration={500}
+                                    className="text-xl font-medium py-3 border-b-2 border-transparent text-center w-2/3 px-4
+                                    hover:text-blue-400 hover:border-b-2 hover:border-blue-400 hover:cursor-pointer transition 100"
+                                    onClick={closeMenu}
+                                >
+                                    {title}
+                                </Link>
+                            ))}
+                        </div>
+                    </div>}
+                    
                 </div>
             </div>
         </nav>
