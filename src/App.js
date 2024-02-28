@@ -1,19 +1,21 @@
 import React from 'react'
-import NavBar from "./components/Navbar";
-import Hero from "./components/Hero";
-import About from "./components/About";
-import Projects from "./components/Projects";
-import Technologies from "./components/Technologies";
-import Footer from "./components/Footer";
+import Navbar from './components/Navbar'
+import Hero from './components/Hero'
+import About from './components/About'
+import Services from './components/Services'
+import Projects from './components/Projects'
+import Contact from './components/Contact'
+import Footer from './components/Footer'
 
 function App() {
   return (
-    <div>
-      <NavBar/>
+    <div className="bg-black">
+      <Navbar/>
       <Hero/>
       <About/>
+      <Services/>
       <Projects/>
-      <Technologies/>
+      <Contact/>
       <Footer/>
     </div>
   );

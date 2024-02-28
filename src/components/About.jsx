@@ -1,16 +1,17 @@
 import React from 'react'
-import avatar from '../assets/avatar.png'
+import john from '../assets/avatar.png'
+import './css/About.css'
 
 const About = () => {
     return (
-        <div className='about bg-white w-full m-auto pt-32 pb-0 px-4' id='about'>
-            <div className='container w-[1240px] grid grid-cols-[repeat(2,1fr)] m-auto;'>
-                <img src={avatar} alt='neka' />
+        <div className='about' id='about'>
+            <div className='container'>
+                <img src={john} alt='john' />
                 <div className='col-2'>
                     <h2>About</h2>
                     <span className='line'></span>
-                    <p> Lorem ipsum dolor sit amet, consectetur lorem ipsum dolor sit ipsum dolor sit amet. Cum sociis natoque penatibus</p>
-                    <p>Neka, software engineer, web developer and designer</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea, quam at hic expedita illum fuga consequuntur, modi id maiores sed quos in repellat autem nemo eaque dolor eum adipisci. Eligendi!</p>
+                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam qui quas repellendus voluptas officiis, itaque ad magni. Soluta adipisci porro sunt molestiae pariatur, veniam quibusdam, saepe est animi fugiat cupiditate.</p>
                     <button className='button'>Explore More</button>
                 </div>
             </div>

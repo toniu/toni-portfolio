@@ -1,13 +1,13 @@
 import React from 'react'
 
-const Projects = () => {
+const Contact = () => {
     return (
-        <div className='projects' id='project'>
+        <div className='contact' id='contact'>
             <div className='container'>
-                Projects
+                Contact
             </div>
         </div>
     )
 }
 
-export default Projects
+export default Contact
