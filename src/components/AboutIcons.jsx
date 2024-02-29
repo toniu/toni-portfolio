@@ -26,7 +26,8 @@ const AboutIcons = () => {
     
     const IconGrid = ({ currentIndex }) => {
         return (
-            <div className='ml-4 grid grid-cols-5 md:grid-cols-8 gap-4 text-center justify-center text-6xl'>
+            <div className='mx-4 grid grid-cols-5 gap-2 text-center justify-center text-4xl
+            md:grid-cols-8 md:text-6xl md:gap-4'>
                 {techIcons.map((tech, index) => (
                     <div key={index} className={`text-center ${currentIndex === index ? 'text-blue-400 transition 100' : 'text-white transition 100'}`}>
                         {tech.icon}

@@ -9,10 +9,10 @@ const Hero = () => {
         <div className='hero relative h-screen' style={{ backgroundImage: `url(${backgroundImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
             <div className='bg-overlay absolute top-0 left-0 w-full h-full bg-black opacity-85'></div>
             <div className='content flex flex-col justify-center md:text-left text-center h-full  mx-auto px-10 relative z-10 text-white'>
-                <h1 className='text-6xl md:text-5xl font-normal leading-tight'>hello, it's me</h1>
-                <p className='text-6xl md:text-5xl mt-4 font-bold'>neka <span className="text-blue-400">toni</span>-uebari</p>
+                <h1 className='text-4xl md:text-5xl font-normal leading-tight'>hello, it's me</h1>
+                <p className='text-4xl md:text-5xl mt-4 font-bold'>neka <span className="text-blue-400">toni</span>-uebari</p>
                 <TypeAnimation
-                    className="pr-5 py-5 text-4xl md:text-5xl text-blue-400"
+                    className="pr-5 py-5 text-2xl md:text-5xl text-blue-400"
                     sequence={[
                         'software engineer',
                         1500,

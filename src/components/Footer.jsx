@@ -4,19 +4,19 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const Footer = () => {
     return (
-        <div className='footer w-full bg-black text-[#eee] px-4 py-12'>
+        <div className='footer w-full bg-black text-[#eee] px-4 py-8'>
             <div className='container max-w-[1240px] text-center m-auto'>
                 <ul className='flex justify-center'>
                     <li className='nav-item p-4'>
                         <a href="https://www.linkedin.com/in/neka-toni-uebari/" target="_blank" rel="noopener noreferrer"
-                            className="mx-8 text-3xl
+                            className="mx-8 text-5xl
                             hover:text-blue-400 transition 100">
                             <FaLinkedin />
                         </a>
                     </li>
                     <li className='nav-item p-4'>
                         <a href="https://github.com/toniu" target="_blank" rel="noopener noreferrer"
-                            className="mx-8 text-3xl
+                            className="mx-8 text-5xl
                             hover:text-blue-400 transition 100">
                             <FaGithub />
                         </a>

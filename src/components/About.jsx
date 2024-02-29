@@ -5,13 +5,14 @@ import AboutIcons from './AboutIcons.jsx';
 
 const About = () => {
     return (
-        <div id='about' className="bg-white shadow-lg rounded-lg overflow-hidden">
-            <h2 className="pt-20 text-4xl text-center font-bold text-gray-900 mb-4">
-                neka toni-uebari
+        <div id='about' className="bg-white relative h-screen">
+            <h2 className="pt-20 text-2xl text-center font-bold text-gray-900 mb-4">
+                about neka toni-uebari
             </h2>
+            
             <div className=" px-6 py-8">
                 <div className='md:flex'>
-                    <img className="block mx-auto rounded-full w-32 md:w-48 h-32"
+                    <img className="block mx-auto rounded-full w-32 h-32 md:w-48 md:h-48"
                     src={moi} alt='avatar'/>
                     <div className="text-center">
                         <p className="p-5 text-gray-600 text-lg font-light">

@@ -26,8 +26,8 @@ const Navbar = () => {
     const links = [
         { id: "hero", title: "home", offset: -100},
         { id: "about", title: "about", offset: -100},
-        { id: "projects", title: "projects", offset: 0},
-        { id: "contact", title: "contact", offset: 0},
+        { id: "projects", title: "projects", offset: -100},
+        { id: "contact", title: "contact", offset: -100},
     ];
 
     return (
@@ -77,7 +77,7 @@ const Navbar = () => {
                 <div className="max-w-7xl mx-auto px-4 py-6">
                     {/* Overlay for Mobile Navbar */}
                     {click && <div className="overlay block  bg-black text-white" onClick={closeMenu}>
-                        <div className="flex flex-col items-center justify-center text-white">
+                        <div className="flex flex-col items-center justify-center  text-white">
                             {links.map(({ id, title, offset}) => (
                                 <Link
                                     key={id}
@@ -95,7 +95,6 @@ const Navbar = () => {
                             ))}
                         </div>
                     </div>}
-                    
                 </div>
             </div>
         </nav>
