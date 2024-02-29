@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/toni-portfolio/static/css/main.6ef8c796.css",
-    "main.js": "/toni-portfolio/static/js/main.c2e532c6.js",
+    "main.css": "/toni-portfolio/static/css/main.40f65ada.css",
+    "main.js": "/toni-portfolio/static/js/main.d474a4ee.js",
     "static/js/453.6bd84ed3.chunk.js": "/toni-portfolio/static/js/453.6bd84ed3.chunk.js",
     "static/media/zoom-in-img.png": "/toni-portfolio/static/media/zoom-in-img.716d534c38facc00452b.png",
     "static/media/apple-avatar.png": "/toni-portfolio/static/media/apple-avatar.2422a0bc80e08fe45171.png",
     "index.html": "/toni-portfolio/index.html",
-    "main.6ef8c796.css.map": "/toni-portfolio/static/css/main.6ef8c796.css.map",
-    "main.c2e532c6.js.map": "/toni-portfolio/static/js/main.c2e532c6.js.map",
+    "main.40f65ada.css.map": "/toni-portfolio/static/css/main.40f65ada.css.map",
+    "main.d474a4ee.js.map": "/toni-portfolio/static/js/main.d474a4ee.js.map",
     "453.6bd84ed3.chunk.js.map": "/toni-portfolio/static/js/453.6bd84ed3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6ef8c796.css",
-    "static/js/main.c2e532c6.js"
+    "static/css/main.40f65ada.css",
+    "static/js/main.d474a4ee.js"
   ]
 }
