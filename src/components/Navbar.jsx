@@ -24,11 +24,10 @@ const Navbar = () => {
     const closeMenu = () => setClick(false);
 
     const links = [
-        { id: "hero", title: "home" },
-        { id: "about", title: "about" },
-        { id: "services", title: "services" },
-        { id: "projects", title: "projects" },
-        { id: "contact", title: "contact" },
+        { id: "hero", title: "home", offset: -100},
+        { id: "about", title: "about", offset: -100},
+        { id: "projects", title: "projects", offset: 0},
+        { id: "contact", title: "contact", offset: 0},
     ];
 
     return (
@@ -49,11 +48,12 @@ const Navbar = () => {
                     </Link>
                 </div>
                 <div className="hidden md:flex items-center justify-end space-x-4">
-                    {links.map(({ id, title }) => (
+                    {links.map(({ id, title, offset}) => (
                         <Link
                             key={id}
                             to={id}
                             spy={true}
+                            offset={offset}
                             smooth={true}
                             duration={500}
                             className="text-white text-lg font-medium py-2 px-4
@@ -78,11 +78,12 @@ const Navbar = () => {
                     {/* Overlay for Mobile Navbar */}
                     {click && <div className="overlay block  bg-black text-white" onClick={closeMenu}>
                         <div className="flex flex-col items-center justify-center text-white">
-                            {links.map(({ id, title }) => (
+                            {links.map(({ id, title, offset}) => (
                                 <Link
                                     key={id}
                                     to={id}
                                     spy={true}
+                                    offset={offset}
                                     smooth={true}
                                     duration={500}
                                     className="text-xl font-medium py-3 border-b-2 border-transparent text-center w-2/3 px-4

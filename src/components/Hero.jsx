@@ -7,7 +7,7 @@ import { Link } from 'react-scroll';
 const Hero = () => {
     return (
         <div className='hero relative h-screen' style={{ backgroundImage: `url(${backgroundImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
-            <div className='bg-overlay absolute top-0 left-0 w-full h-full bg-black opacity-90'></div>
+            <div className='bg-overlay absolute top-0 left-0 w-full h-full bg-black opacity-85'></div>
             <div className='content flex flex-col justify-center md:text-left text-center h-full  mx-auto px-10 relative z-10 text-white'>
                 <h1 className='text-6xl md:text-5xl font-normal leading-tight'>hello, it's me</h1>
                 <p className='text-6xl md:text-5xl mt-4 font-bold'>neka <span className="text-blue-400">toni</span>-uebari</p>
@@ -16,7 +16,7 @@ const Hero = () => {
                     sequence={[
                         'software engineer',
                         1500,
-                        'web developer',
+                        'full-stack web developer',
                         1500,
                         'graphic designer',
                         1500,
