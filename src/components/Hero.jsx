@@ -1,7 +1,8 @@
 import React from 'react';
 import backgroundImage from '../assets/zoom-in-img.png';
 import { TypeAnimation } from 'react-type-animation';
-import { FaGithub, FaLinkedin, FaPhoneSquareAlt } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, } from 'react-icons/fa';
+import { MdEmail } from "react-icons/md";
 import { Link } from 'react-scroll';
 
 const Hero = () => {
@@ -43,7 +44,7 @@ const Hero = () => {
                         spy={true}
                         smooth={true}
                         duration={500}>
-                        <FaPhoneSquareAlt/>
+                        <MdEmail/>
                     </Link>
                 </div>
             </div>
