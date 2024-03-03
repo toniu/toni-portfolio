@@ -7,3 +7,17 @@
 body {
     font-family: 'Nunito', sans-serif;
 }
+
+.slick-slide>div {
+    margin: 0 10px;
+}
+
+.slick-prev {
+    left: 3% !important;
+    z-index: 1;
+}
+
+.slick-next {
+    right: 3% !important;
+    z-index: 1;
+}

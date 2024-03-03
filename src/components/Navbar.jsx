@@ -40,6 +40,7 @@ const Navbar = () => {
                         spy={true}
                         smooth={true}
                         duration={500}
+                        offset= {-100}
                         className="text-white text-4xl font-bold mr-4
                         hover:text-blue-400 hover:cursor-pointer transition 100"
                         onClick={closeMenu}

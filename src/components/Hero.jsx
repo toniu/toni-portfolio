@@ -43,6 +43,7 @@ const Hero = () => {
                         to='contact'
                         spy={true}
                         smooth={true}
+                        offset= {-100}
                         duration={500}>
                         <MdEmail/>
                     </Link>

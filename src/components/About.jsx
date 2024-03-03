@@ -6,7 +6,7 @@ import AboutIcons from './AboutIcons.jsx';
 const About = () => {
     return (
         <div id='about' className="bg-white relative h-screen">
-            <h2 className="pt-6 md:pt-12 text-2xl w-1/5 text-center md:text-left font-smeibold text-gray-900
+            <h2 className="pt-6 md:pt-10 text-2xl w-1/5 text-center md:text-left font-smeibold text-gray-900
             border-b-4 border-blue-400 mb-4 mx-auto md:mx-5 md:text-4xl">
                 about
             </h2>
@@ -34,6 +34,7 @@ const About = () => {
                     to='projects'
                     spy={true}
                     smooth={true}
+                    offset= {-100}
                     duration={500}>
                     my projects
                 </Link>
@@ -43,6 +44,7 @@ const About = () => {
                     to='contact'
                     spy={true}
                     smooth={true}
+                    offset= {-100}
                     duration={500}>
                     let's connect
                 </Link>
