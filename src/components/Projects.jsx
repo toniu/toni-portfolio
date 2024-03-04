@@ -8,6 +8,8 @@ import img1 from '../assets/project-arithmetix.png';
 import img2 from '../assets/project-fsimulation.png';
 import img3 from '../assets/project-mybiblejourney.png';
 import img4 from '../assets/project-toniarts.png';
+import img5 from '../assets/project-badminton.png';
+import img6 from '../assets/project-sportal.png';
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -18,7 +20,7 @@ function SampleNextArrow(props) {
     const { onClick } = props;
     return (
       <button
-        className='text-4xl z-50 hover:text-blue-400 transition 100 absolute top-1/2 right-0 transform -translate-y-1/2'
+        className='text-4xl z-30 hover:text-blue-400 transition 100 absolute top-1/2 right-0 transform -translate-y-1/2'
         onClick={onClick}
       >
         <FaCircleArrowRight/>
@@ -30,7 +32,7 @@ function SampleNextArrow(props) {
     const { onClick } = props;
     return (
       <button
-        className='text-4xl z-50 hover:text-blue-400 transition 100 absolute top-1/2 left-0 transform -translate-y-1/2'
+        className='text-4xl z-30 hover:text-blue-400 transition 100 absolute top-1/2 left-0 transform -translate-y-1/2'
         onClick={onClick}
       >
         <FaCircleArrowLeft/>
@@ -70,6 +72,20 @@ const Projects = () => {
             demoLink: 'https://example.com/demo4',
             codeLink: 'https://example.com/demo4',
         },
+        {
+            title: 'bpms netbeans ',
+            description: 'Java Netbeans project for a badminton player management system of a club of badminton players. This includes the login of badminton players, management of players, scheduling of fixtures and results and the ranking of players.',
+            imageUrl: img5,
+            demoLink: 'https://example.com/demo5',
+            codeLink: 'https://example.com/demo5',
+        },
+        {
+            title: 'sharepoint portal',
+            description: 'SPFx TypeScript project of implemented Sharepoint webparts for Sharepoint website specifically for receiving and delivering information to other parties. This includes dashboard, profile, polls, group management and calendar',
+            imageUrl: img6,
+            demoLink: 'https://example.com/demo6',
+            codeLink: 'https://example.com/demo6',
+        },
     ];
 
     const settings = {
@@ -92,7 +108,7 @@ const Projects = () => {
 
     return (
         <div id='projects' className="bg-white relative h-screen">
-            <h2 className="pt-6 md:pt-10 text-2xl w-1/5 text-center md:text-left font-semibold text-gray-900 border-b-4 border-blue-400 mb-4 mx-auto md:mx-5 md:text-4xl">
+            <h2 className="pt-6 md:pt-10 text-2xl w-1/3 text-center md:text-left font-semibold text-gray-900 border-b-4 border-blue-400 mb-4 mx-auto md:mx-5 md:text-4xl">
                 projects
             </h2>
 
@@ -100,7 +116,7 @@ const Projects = () => {
                 <div className='mt-10'>
                     <Slider {...settings}>
                         {projects.map((p, index) => (
-                            <div key={index} className='bg-white px-10 h-[450px] text-black rounded-xl flex justify-center text-center'>
+                            <div key={index} className='bg-white px-2 h-[450px] text-black rounded-xl flex justify-center text-center'>
 
                                 <div
                                     className='rounded-t-xl bg-blue-500 flex justify-center text-center items-center'

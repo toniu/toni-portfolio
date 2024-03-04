@@ -1,12 +1,11 @@
 import React from 'react'
 import moi from '../assets/apple-avatar.png'
-import { Link } from 'react-scroll';
 import AboutIcons from './AboutIcons.jsx';
 
 const About = () => {
     return (
         <div id='about' className="bg-white relative h-screen">
-            <h2 className="pt-6 md:pt-10 text-2xl w-1/5 text-center md:text-left font-smeibold text-gray-900
+            <h2 className="pt-6 md:pt-10 text-2xl w-1/3 text-center md:text-left font-semibold text-gray-900
             border-b-4 border-blue-400 mb-4 mx-auto md:mx-5 md:text-4xl">
                 about
             </h2>
@@ -26,28 +25,6 @@ const About = () => {
                     </div>
                 </div>
                 <AboutIcons/>
-            </div>
-            <div className='flex justify-center md:justify-start p-2'>
-                <Link
-                    className="mx-4 bg-blue-500 hover:bg-blue-700 text-white text-xl font-bold py-2 px-12 rounded-full
-                    focus:outline-none focus:shadow-outline hover:cursor-pointer transition 100"
-                    to='projects'
-                    spy={true}
-                    smooth={true}
-                    offset= {-100}
-                    duration={500}>
-                    my projects
-                </Link>
-                <Link
-                    className="mx-4 bg-blue-500 hover:bg-blue-700 text-white text-xl font-bold py-2 px-12 rounded-full
-                    focus:outline-none focus:shadow-outline hover:cursor-pointer transition 100"
-                    to='contact'
-                    spy={true}
-                    smooth={true}
-                    offset= {-100}
-                    duration={500}>
-                    let's connect
-                </Link>
             </div>
             
         </div>

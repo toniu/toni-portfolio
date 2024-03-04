@@ -3,14 +3,14 @@ import React from 'react'
 const Contact = () => {
     return (
         <div id='contact' className="bg-white relative h-screen">
-            <h2 className="pt-6 md:pt-10 text-2xl w-1/5 text-center md:text-left font-semibold text-gray-900
+            <h2 className="pt-6 md:pt-10 text-2xl w-1/3 text-center md:text-left font-semibold text-gray-900
             border-b-4 border-blue-400 mb-4 mx-auto md:mx-5 md:text-4xl">
                 contact
             </h2>
 
             <div className=" px-6 py-2">
                 <div className='p-1 text-gray-800 text-lg font-light'>
-                    <p className='p-2 flex justify-center md:justify-between'> submit the form below to get in touch with me </p>
+                    <p className='p-5 flex text-center justify-center md:justify-between'> submit the form below to get in touch with me through e-mail </p>
                     <div className="max-w-4/5  mx-auto">
                         <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
                             <div className="mb-4">

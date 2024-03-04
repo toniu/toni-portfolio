@@ -13,7 +13,7 @@ const Hero = () => {
                 <h1 className='text-4xl md:text-5xl font-normal leading-tight'>hello, it's me</h1>
                 <p className='text-4xl md:text-5xl mt-4 font-bold'>neka <span className="text-blue-400">toni</span>-uebari</p>
                 <TypeAnimation
-                    className="pr-5 py-5 text-2xl md:text-5xl text-blue-400"
+                    className="px-2 py-5 text-xl md:text-5xl text-center md:text-left text-blue-400"
                     sequence={[
                         'software engineer',
                         1500,
@@ -25,17 +25,17 @@ const Hero = () => {
                     wrapper="span"
                     speed={50}
                     repeat={Infinity}
-                    />
+                />
                 <div className="flex justify-center md:justify-start mt-10 p-3">
                     <a href="https://www.linkedin.com/in/neka-toni-uebari/" target="_blank" rel="noopener noreferrer"
-                    className="mx-8 text-6xl
+                        className="mx-8 text-6xl
                     hover:text-blue-400 transition 100">
-                        <FaLinkedin/>
+                        <FaLinkedin />
                     </a>
                     <a href="https://github.com/toniu" target="_blank" rel="noopener noreferrer"
-                    className="mx-8 text-6xl
+                        className="mx-8 text-6xl
                     hover:text-blue-400 transition 100">
-                        <FaGithub/>
+                        <FaGithub />
                     </a>
                     <Link
                         className="mx-8 text-6xl
@@ -43,9 +43,31 @@ const Hero = () => {
                         to='contact'
                         spy={true}
                         smooth={true}
-                        offset= {-100}
+                        offset={-100}
                         duration={500}>
-                        <MdEmail/>
+                        <MdEmail />
+                    </Link>
+                </div>
+                <div className='pt-5 block text-lg md:text-xl md:flex md:justify-start'>
+                    <Link
+                        className="block m-6 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-12 rounded-full
+                    focus:outline-none focus:shadow-outline hover:cursor-pointer transition 100"
+                        to='about'
+                        spy={true}
+                        smooth={true}
+                        offset={-100}
+                        duration={500}>
+                        about me
+                    </Link>
+                    <Link
+                        className="block m-6 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-12 rounded-full
+                    focus:outline-none focus:shadow-outline hover:cursor-pointer transition 100"
+                        to='projects'
+                        spy={true}
+                        smooth={true}
+                        offset={-100}
+                        duration={500}>
+                        my projects
                     </Link>
                 </div>
             </div>

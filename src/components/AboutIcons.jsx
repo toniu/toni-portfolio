@@ -67,7 +67,7 @@ const AboutIcons = () => {
     return (
         <div className='px-5'>
             <div className='p-3 bg-black text-center rounded-md border-t-4 border-blue-400 text-white w-full'>
-                <div className='m-1 p-1'>
+                <div className='m-1 p-3'>
                     <AnimatedTitle title={techIcons[currentIndex].title} />
                 </div>
                 <IconGrid currentIndex={currentIndex} />
