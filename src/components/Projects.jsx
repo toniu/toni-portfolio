@@ -10,6 +10,7 @@ import img3 from '../assets/project-mybiblejourney.png';
 import img4 from '../assets/project-toniarts.png';
 import img5 from '../assets/project-badminton.png';
 import img6 from '../assets/project-sportal.png';
+import img7 from '../assets/project-pyaux.png';
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -48,44 +49,51 @@ const Projects = () => {
             title: 'arithmetix',
             description: 'An e-learning website to help A-level Maths students in preparation for their exams. This includes provided resources of quizzes, notes and exam papers based on the syllabus of the exam boards: AQA, OCR and Edexcel.',
             imageUrl: img1,
-            demoLink: 'https://github.com/toniu/CS3821Repo',
-            codeLink: 'https://github.com/toniu/CS3821Repo',
+            demoLink: '',
+            codeLink: 'https://github.com/toniu/arithmetix',
         },
         {
             title: 'fsimulation',
             description: 'A Java football simulation project which includes the simulation of leagues and matches between teams based on their FIFA ratings (attack, defence, midfield, and OVR rating).',
             imageUrl: img2,
-            demoLink: 'https://github.com/toniu/FSimulation',
+            demoLink: '',
             codeLink: 'https://github.com/toniu/FSimulation',
         },
         {
             title: 'mybiblejourney',
             description: 'A website which directs to the e-book release of visual Bible study notes of each book of the Bible',
             imageUrl: img3,
-            demoLink: 'https://example.com/demo3',
-            codeLink: 'https://example.com/demo3',
+            demoLink: 'https://toniu.github.io/mybiblejourney',
+            codeLink: 'https://github.com/toniu/mybiblejourney',
         },
         {
             title: 'toniarts.',
-            description: 'A visually appealing website which shows a gallery of my drawings exploring the beauty and depth of black people',
+            description: 'A visually appealing website which shows a gallery of my drawings exploring the beauty and depth of black diaspora.',
             imageUrl: img4,
-            demoLink: 'https://example.com/demo4',
-            codeLink: 'https://example.com/demo4',
+            demoLink: 'https://toniu.github.io/toniarts',
+            codeLink: 'https://github.com/toniu/toniarts',
         },
         {
             title: 'bpms netbeans ',
             description: 'Java Netbeans project for a badminton player management system of a club of badminton players. This includes the login of badminton players, management of players, scheduling of fixtures and results and the ranking of players.',
             imageUrl: img5,
-            demoLink: 'https://example.com/demo5',
-            codeLink: 'https://example.com/demo5',
+            demoLink: '',
+            codeLink: 'https://github.com/toniu/BPMS2018',
         },
         {
             title: 'sharepoint portal',
             description: 'SPFx TypeScript project of implemented Sharepoint webparts for Sharepoint website specifically for receiving and delivering information to other parties. This includes dashboard, profile, polls, group management and calendar',
             imageUrl: img6,
-            demoLink: 'https://example.com/demo6',
-            codeLink: 'https://example.com/demo6',
+            demoLink: '',
+            codeLink: 'https://github.com/toniu/SPortal',
         },
+        {
+            title: 'pyaux',
+            description: `Python project which fetches and analyses a user's spotify playlist information using the python Spotify API and calculates the rating based on artist diversity, genre cohesion, popularity, playlist length. It also gives track recommendations based on the user's playlist preferences.`,
+            imageUrl: img7,
+            demoLink: '',
+            codeLink: 'https://github.com/toniu/pyaux',
+        }
     ];
 
     const settings = {
@@ -116,7 +124,7 @@ const Projects = () => {
                 <div className='mt-10'>
                     <Slider {...settings}>
                         {projects.map((p, index) => (
-                            <div key={index} className='bg-white px-2 h-[450px] text-black rounded-xl flex justify-center text-center'>
+                            <div key={index} className='bg-white px-10 h-[450px] text-black rounded-xl flex justify-center text-center'>
 
                                 <div
                                     className='rounded-t-xl bg-blue-500 flex justify-center text-center items-center'
@@ -135,10 +143,11 @@ const Projects = () => {
                                     <p className='text-xl  font-bold'> {p.title} </p>
                                     <p className='text-md font-normal h-[100px] overflow-scroll text-gray-800'> {p.description} </p>
                                     <div className='flex text-3xl'>
-                                        <a href={p.demoLink} target="_blank" rel="noopener noreferrer"
+                                        {p.demoLink.trim().length > 0 && <a href={p.demoLink} target="_blank" rel="noopener noreferrer"
                                            className="mx-8 hover:text-blue-400 transition 100">
                                             <FaExternalLinkAlt/>
                                         </a>
+                                        }
                                         <a href={p.codeLink} target="_blank" rel="noopener noreferrer"
                                            className="mx-8 hover:text-blue-400 transition 100">
                                             <FaGithub/>
