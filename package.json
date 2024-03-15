@@ -18,6 +18,7 @@
     "react-type-animation": "^3.2.0",
     "slick-carousel": "^1.8.1",
     "stream-browserify": "^3.0.0",
+    "swiper": "^11.0.7",
     "vibrant": "^0.0.1",
     "web-vitals": "^2.1.4"
   },

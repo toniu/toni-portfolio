@@ -8,14 +8,14 @@ import img7 from '../../assets/project-pyaux.png';
 
 const projectsData = [
     {
-      title: 'arithmetix',
+      title: 'arithmetix.',
       secondTitle: 'A-Level Maths e-Learning platform',
       techStack: ['VueJS', 'TailwindCSS', 'Webpack', 'Jest','NodeJS', 'Express', 'PostgreSQL'],
       description: 'An e-learning website to help A-level Maths students in preparation for their exams. This includes provided resources of quizzes, notes and exam papers based on the syllabus of the exam boards: AQA, OCR and Edexcel.',
       imageUrl: img1,
       demoLink: '',
       codeLink: 'https://github.com/toniu/arithmetix',
-      bgColors: ['#ffffff', '#d4f3ff']
+      bgColors: ['#29303b', '#1761bd']
     },
     {
       title: 'FSimulation',
@@ -25,7 +25,7 @@ const projectsData = [
       imageUrl: img2,
       demoLink: '',
       codeLink: 'https://github.com/toniu/FSimulation',
-      bgColors: ['#7a8a6e', '#b4bd8a']
+      bgColors: ['#2e5675', '#49573a']
     },
     {
       title: 'mybiblejourney',
@@ -49,7 +49,7 @@ const projectsData = [
     },
     {
       title: 'BPMS2018',
-      secondTitle: 'Netbeans Badminton Player Management System',
+      secondTitle: 'Badminton Player Management System',
       techStack: ['Java','NetBeans','MySQL'],
       description: 'Java Netbeans project for a badminton player management system of a club of badminton players. This includes the login of badminton players, management of players, scheduling of fixtures and results and the ranking of players.',
       imageUrl: img5,
@@ -65,12 +65,12 @@ const projectsData = [
       imageUrl: img6,
       demoLink: '',
       codeLink: 'https://github.com/toniu/SPortal',
-      bgColors: ['#e0e0e0', '#b0d4cf']
+      bgColors: ['#066f75', '#737474']
     },
     {
       title: 'pyaux',
       secondTitle: 'Python Spotify playlist analyser',
-      techStack: ['Python'],
+      techStack: ['Python','OAuth2'],
       description: `Python project which fetches and analyses a user's spotify playlist information using the python Spotify API and calculates the rating based on artist diversity, genre cohesion, popularity, playlist length. It also gives track recommendations based on the user's playlist preferences.`,
       imageUrl: img7,
       demoLink: '',
