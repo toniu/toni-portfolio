@@ -4,7 +4,7 @@ import AboutIcons from './AboutIcons.jsx';
 
 const About = () => {
     return (
-        <div id='about' className="bg-yellow-200 relative h-screen">
+        <div id='about' className=" relative h-screen">
             About
             
         </div>

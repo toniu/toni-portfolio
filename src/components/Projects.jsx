@@ -2,21 +2,38 @@ import React from 'react';
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 
 import { Swiper, SwiperSlide } from "swiper/react";
+import { FreeMode, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import 'swiper/css/navigation';
 import "swiper/css/free-mode";
-import { FreeMode, Navigation, Pagination } from "swiper/modules";
 
 import projectsData from './utils/ProjectData';
 import './css/GradBg.css'
+import './css/Pagination.css'
 
 const Projects = () => {
+  /* Custom CSS pagination for Carousel swiper */
+  const pagination = {
+    clickable: true,
+    renderBullet: function (index, className) {
+      return '<span class="' + className + '"></span>';
+    },
+  };
 
   return (
     <div id="projects" className="bg-white relative h-auto">
+      <div className='py-3 w-4/5 mx-auto'>
+        <p className="text-base md:text-lg font-light text-center md:text-left text-black mb-2">
+          Check out my latest projects
+        </p>
+      </div>
       {/* Slider Card */}
       <Swiper
+        navigation={true}
+        freeMode={true}
+        pagination={pagination}
+        modules={[FreeMode, Pagination, Navigation]}
         slidesPerView={1}
         spaceBetween={5}
         breakpoints={{
@@ -25,15 +42,9 @@ const Projects = () => {
             spaceBetween: 5,
           },
         }}
-        freeMode={true}
-        pagination={{
-          clickable: true,
-        }}
-        navigation={true}
-        modules={[FreeMode, Pagination, Navigation]}
         className="max-w-[100%]">
         {projectsData.map((item) => (
-          <SwiperSlide id='card' className="mx-auto h-[410px] w-full rounded-md text-left">
+          <SwiperSlide key={item.title} id='card' className="mx-auto h-[410px] w-full rounded-md text-left">
             <div className='h-[380px]'
               style={{
                 backgroundSize: '200% auto',
@@ -71,7 +82,7 @@ const Projects = () => {
                 <div className='pt-2 px-2'>
                   <ul className='p-1 flex h-[80px] justify-start md:justify-normal flex-wrap select-none'>
                     {item.techStack.map((tech) => (
-                      <li className='m-1 h-6 py-0.5 px-5 bg-white bg-opacity-90 rounded-full text-black text-sm md:text-base'>
+                      <li key={tech} className='m-1 h-6 py-0.5 px-5 bg-white bg-opacity-90 rounded-full text-black text-sm md:text-base'>
                         {tech}
                       </li>
                     ))}
