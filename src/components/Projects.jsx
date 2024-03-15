@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
+import { motion } from "framer-motion";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Pagination, Navigation } from "swiper/modules";
@@ -8,7 +9,7 @@ import "swiper/css/pagination";
 import 'swiper/css/navigation';
 import "swiper/css/free-mode";
 
-import projectsData from './utils/ProjectData';
+import projectsData from './constants/ProjectData';
 import './css/GradBg.css'
 import './css/Pagination.css'
 
@@ -22,7 +23,12 @@ const Projects = () => {
   };
 
   return (
-    <div id="projects" className="bg-white relative h-auto">
+    <motion.div
+    initial={{x: -200, opacity: 0, }}
+    transition={{ duration: 1, }}
+    whileInView={{ opacity: 1, x: 0 }}
+    viewport={{ once: false }}
+     id="projects" className="bg-white relative h-screen">
       <div className='py-3 w-4/5 mx-auto'>
         <p className="text-base md:text-lg font-light text-center md:text-left text-black mb-2">
           Check out my latest projects
@@ -58,7 +64,7 @@ const Projects = () => {
                   </div>
 
                   <div className='block p-3 h-32 content-cente'>
-                    <h2 className='text-white font-bold text-3xl'> {item.title} </h2>
+                    <h2 className='text-white font-bold text-2xl'> {item.title} </h2>
                     <h3 className='h-6 truncate text-gray-300 font-semibold text-sm md:text-base '> {item.secondTitle} </h3>
                     <div className='flex pt-2 text-2xl space-x-3'>
                       {item.demoLink.trim().length > 0 &&
@@ -75,7 +81,7 @@ const Projects = () => {
                   </div>
                 </div>
 
-                <div className='py-1 px-5 h-[100px] overflow-auto'>
+                <div className='py-1 px-14 h-[100px] overflow-auto'>
                   <p className='text-gray-200 font-normal text-sm md:text-base'> {item.description} </p>
                 </div>
 
@@ -95,7 +101,7 @@ const Projects = () => {
       </Swiper>
 
 
-    </div>
+    </motion.div>
   );
 };
 

@@ -1,56 +1,74 @@
-import React, { useEffect } from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
-import { useLocomotiveScroll } from 'react-locomotive-scroll';
+import { TypeAnimation } from 'react-type-animation';
+import heroImg from '../assets/zoom-in-img.png';
+import { BiSolidMouse } from "react-icons/bi";
 
 const Hero = () => {
-  const { scroll } = useLocomotiveScroll();
+  const [isScrolled, setIsScrolled] = useState(false);
 
-  useEffect(() => {
-    // Update locomotive scroll on component mount
-    if (scroll) {
-      scroll.update();
-    }
-  }, [scroll]);
+  /* Listen for scroll event */
+  React.useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      // Set isScrolled to true if user scrolls past 50px
+      setIsScrolled(scrollTop > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
     <motion.section
-    id='hero'
-      className="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-500 to-purple-600 text-white" // Adjusted margin-top
+      id='hero'
+      className="relative h-screen pb-12 flex items-center justify-center text-white " // Adjusted margin-top
       initial={{ opacity: 0, y: -100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
+      style={{
+        backgroundImage: `url(${heroImg})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center'
+      }}
     >
-      <div className="text-center">
+      <div className="absolute inset-0 bg-black opacity-80"></div> {/* Overlay */}
+      <div className="text-center relative z-10">
         <motion.h1
-          className="text-4xl md:text-6xl font-bold mb-4"
+          className="text-2xl md:text-4xl font-bold mb-4"
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.5, duration: 1 }}
         >
-          Welcome to My Portfolio
+          <h2 className='select-none'> hello. it's me </h2>
+          <h2 className='select-none'> neka <span className='text-blue-400'>toni</span>-uebari </h2>
         </motion.h1>
-        <motion.h2
-          className="text-lg md:text-2xl font-medium mb-8"
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 1, duration: 1 }}
-        >
-          Explore my projects and skills
-        </motion.h2>
+        <div className='pt-2 pb-10'>
+          <TypeAnimation
+            wrapper="span"
+            speed={50}
+            className='select-none text-lg md:text-2xl text-blue-400 font-medium py-12'
+            repeat={Infinity}
+            sequence={[
+              'software engineer',
+              1500, // wait 1s before replacing "Mice" with "Hamsters"
+              'web developer',
+              1500,
+              'graphic designer',
+              1500,
+            ]}
+          />
+        </div>
+
         <motion.div
-          className="flex justify-center space-x-4"
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 1.5, duration: 1 }}
-        >
-          <a href="https://github.com/your-github" target="_blank" rel="noopener noreferrer" className="text-xl md:text-2xl hover:text-gray-300">
-            <FaGithub />
-          </a>
-          <a href="https://linkedin.com/in/your-linkedin" target="_blank" rel="noopener noreferrer" className="text-xl md:text-2xl hover:text-gray-300">
-            <FaLinkedin />
-          </a>
-          {/* Add more social media links as needed */}
+          initial={{ y: -200 }}
+          animate={{ opacity: isScrolled ? 0 : 100, y: isScrolled ? 100 : 0 }}
+          transition={{ duration: 0.3 }}
+          className='select-none mt-10 text-xl md:text-2xl rounded-full mx-auto flex justify-center'>
+            <BiSolidMouse className='m-1'/>
+          use scroll
         </motion.div>
       </div>
     </motion.section>

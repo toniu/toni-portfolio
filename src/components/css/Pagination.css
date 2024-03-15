@@ -1,3 +1,14 @@
+.swiper-button-prev,
+.swiper-button-next {
+    color: white;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    color: #60a5fa;
+    transition: 100s;
+}
+
 .swiper-pagination-bullet {
     width: 5vw;
     height: 5px;

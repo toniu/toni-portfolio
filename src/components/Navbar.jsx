@@ -30,14 +30,14 @@ const Navbar = () => {
 
   const links = [
     { id: 'hero', title: 'home', offset: -100, icon: <FaHome />, ref: null },
-    { id: 'about', title: 'about', offset: -100, icon: <FaInfoCircle />, ref: null },
+    { id: 'about', title: 'about', offset: -60, icon: <FaInfoCircle />, ref: null },
     { id: 'projects', title: 'projects', offset: -100, icon: <FaSuitcase />, ref: null },
     { id: 'contact', title: 'contact', offset: -100, icon: <MdEmail />, ref: null },
   ];
 
   return (
     <motion.nav
-      className={`bg-black backdrop-blur-md bg-opacity-85 fixed top-0 left-0 w-full z-10`}
+      className={`bg-black backdrop-blur-md bg-opacity-85 fixed top-0 left-0 w-full z-20`}
       initial={{ y: -100 }}
       animate={{ y: isScrolled || isOpen ? 0 : -100 }}
       transition={{ duration: 0.3 }}
@@ -46,7 +46,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="flex-shrink-0 text-white font-bold text-2xl">toni.</div>
+            <div className="select-none flex-shrink-0 text-white font-bold text-2xl">toni.</div>
           </div>
           {/* Desktop Menu */}
           <div className="hidden md:flex flex-grow justify-end">
