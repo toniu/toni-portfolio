@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/toni-portfolio/static/css/main.e1bd1aab.css",
-    "main.js": "/toni-portfolio/static/js/main.a1d5d919.js",
+    "main.css": "/toni-portfolio/static/css/main.4399d373.css",
+    "main.js": "/toni-portfolio/static/js/main.a8cdefe3.js",
     "static/js/453.6bd84ed3.chunk.js": "/toni-portfolio/static/js/453.6bd84ed3.chunk.js",
-    "static/media/zoom-in-img.png": "/toni-portfolio/static/media/zoom-in-img.716d534c38facc00452b.png",
     "static/media/project-fsimulation.png": "/toni-portfolio/static/media/project-fsimulation.d5da07cd68e091b3dc84.png",
+    "static/media/self-img.png": "/toni-portfolio/static/media/self-img.16d08207452a94fae0c3.png",
     "static/media/project-badminton.png": "/toni-portfolio/static/media/project-badminton.fc287d49434ab6107640.png",
     "static/media/project-arithmetix.png": "/toni-portfolio/static/media/project-arithmetix.372a4f90e888d22021e2.png",
     "static/media/project-mybiblejourney.png": "/toni-portfolio/static/media/project-mybiblejourney.b0e9d85bc01a5097ceec.png",
@@ -13,12 +13,12 @@
     "static/media/project-pyaux.png": "/toni-portfolio/static/media/project-pyaux.f68633cf83b9632b846d.png",
     "static/media/project-toniarts.png": "/toni-portfolio/static/media/project-toniarts.f5138d52263337dc487f.png",
     "index.html": "/toni-portfolio/index.html",
-    "main.e1bd1aab.css.map": "/toni-portfolio/static/css/main.e1bd1aab.css.map",
-    "main.a1d5d919.js.map": "/toni-portfolio/static/js/main.a1d5d919.js.map",
+    "main.4399d373.css.map": "/toni-portfolio/static/css/main.4399d373.css.map",
+    "main.a8cdefe3.js.map": "/toni-portfolio/static/js/main.a8cdefe3.js.map",
     "453.6bd84ed3.chunk.js.map": "/toni-portfolio/static/js/453.6bd84ed3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e1bd1aab.css",
-    "static/js/main.a1d5d919.js"
+    "static/css/main.4399d373.css",
+    "static/js/main.a8cdefe3.js"
   ]
 }
