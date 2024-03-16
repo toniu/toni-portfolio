@@ -10,13 +10,13 @@ const About = () => {
             transition={{ duration: 1, }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: false }}
-            id='about' className=" relative h-screen">
+            id='about' className="relative h-auto pt-12 pb-16">
             <div className='pt-12 block md:flex'>
                 <div className='text-center md:w-[40%]'>
                     <img src={moi} alt='me' className='w-[110px] h-[110px] md:w-[150px] md:h-[150px] mx-auto'/>
                     <p className='p-3 m-2 font-light text-sm md:text-base'>
-                    Hi, I'm Neka Toni-Uebari. I am a passionate MSci Computer Science student with a First-Class Honours degree,
-                    thrilled to dive into the world of software engineering, web development and design.
+                    Hi, I'm Neka Toni-Uebari. With a First-Class Honours degree in MSci Computer Science (with Software Engineering),
+                    I am thrilled to dive into the world of software engineering, web development and design.
                     I seek for career development and ways to positively contribute to users using
                     my technical and personal skills.I bring a blend of academic excellence, hands-on
                     coding skills in various front-end and back-end technologies and a­­n artistic eye for design.­­­ 

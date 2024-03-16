@@ -29,10 +29,10 @@ const Navbar = () => {
   }, []);
 
   const links = [
-    { id: 'hero', title: 'home', offset: -100, icon: <FaHome />, ref: null },
-    { id: 'about', title: 'about', offset: -60, icon: <FaInfoCircle />, ref: null },
-    { id: 'projects', title: 'projects', offset: -100, icon: <FaSuitcase />, ref: null },
-    { id: 'contact', title: 'contact', offset: -100, icon: <MdEmail />, ref: null },
+    { id: 'hero', title: 'home', offset: -70, icon: <FaHome />, ref: null },
+    { id: 'about', title: 'about', offset: -70, icon: <FaInfoCircle />, ref: null },
+    { id: 'projects', title: 'projects', offset: -70, icon: <FaSuitcase />, ref: null },
+    { id: 'contact', title: 'contact', offset: -70, icon: <MdEmail />, ref: null },
   ];
 
   return (

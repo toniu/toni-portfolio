@@ -20,7 +20,7 @@ const Contact = () => {
     const [state, handleSubmit] = useForm(emailKey);
     if (state.succeeded) {
         return (
-            <div className='block pt-20 md:pt-5 pb-20'>
+            <div id='contact' className='block pt-24 md:pt-5 pb-20'>
                 <div className='hover:scale-110 cursor-default transition 100'>
                     <FaPaperPlane className='mx-auto text-3xl md:text-5xl text-black select-none' />
                     <p className='select-none py-2  text-black font-bold text-base md:text-xl text-center cursor-default'>
@@ -41,7 +41,7 @@ const Contact = () => {
 
     return (
         <div id='contact' className='relative h-auto flex justify-center items-center'>
-            <div className="w-4/5 px-5 pb-10">
+            <div className="w-4/5 px-5 pt-6 pb-10">
                 <p className="text-base md:text-lg font-light text-center md:text-left text-black mb-1">Let's connect. Get in touch with my socials and fill out the form below!</p>
                 <ul className='flex justify-center md:justify-start text-3xl text-black'>
                     <li className='nav-item p-2'>

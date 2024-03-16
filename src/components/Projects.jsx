@@ -24,11 +24,11 @@ const Projects = () => {
 
   return (
     <motion.div
-    initial={{x: -200, opacity: 0, }}
+    initial={{x: -100, opacity: 0, }}
     transition={{ duration: 1, }}
     whileInView={{ opacity: 1, x: 0 }}
     viewport={{ once: false }}
-     id="projects" className="bg-white relative h-screen">
+     id="projects" className="relative h-screen pt-6">
       <div className='py-3 w-4/5 mx-auto'>
         <p className="text-base md:text-lg font-light text-center md:text-left text-black mb-2">
           Check out my latest projects
