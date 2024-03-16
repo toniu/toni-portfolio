@@ -18,7 +18,7 @@ const About = () => {
                     Hi, I'm Neka Toni-Uebari. With a First-Class Honours degree in MSci Computer Science (with Software Engineering),
                     I am thrilled to dive into the world of software engineering, web development and design.
                     I seek for career development and ways to positively contribute to users using
-                    my technical and personal skills.I bring a blend of academic excellence, hands-on
+                    my technical and personal skills. I bring a blend of academic excellence, hands-on
                     coding skills in various front-end and back-end technologies and a­­n artistic eye for design.­­­ 
                     </p>
                 </div>

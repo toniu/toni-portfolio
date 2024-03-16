@@ -9,16 +9,16 @@ const Navbar = () => {
   const [activeLink, setActiveLink] = useState(null);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  // Toggle menu visibility
+  /* Toggle menu visibility */
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
-  // Listen for scroll event
+  /* Listen for scroll event */
   React.useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
-      // Set isScrolled to true if user scrolls past 50px
+      /* Set isScrolled to true if user scrolls past 50px */
       setIsScrolled(scrollTop > 50);
     };
 

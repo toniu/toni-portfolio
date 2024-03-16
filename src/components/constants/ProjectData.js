@@ -1,3 +1,4 @@
+import imgToni from '../../assets/project-toni.png';
 import img1 from '../../assets/project-arithmetix.png';
 import img2 from '../../assets/project-fsimulation.png';
 import img3 from '../../assets/project-mybiblejourney.png';
@@ -7,6 +8,16 @@ import img6 from '../../assets/project-sportal.png';
 import img7 from '../../assets/project-pyaux.png';
 
 const projectsData = [
+    {
+      title: 'toni.',
+      secondTitle: 'Portfolio website',
+      techStack: ['React', 'TailwindCSS'],
+      description: 'The website that you are already in! It is the official portfolio website of Neka Toni-Uebari. It includes an introduction of myself and the technologies and projects I can present.',
+      imageUrl: imgToni,
+      demoLink: 'https://toniu.github.io/toni-portfolio',
+      codeLink: 'https://github.com/toniu/toni-portfolio',
+      bgColors: ['#000000', '#19334d']
+    },
     {
       title: 'arithmetix.',
       secondTitle: 'A-Level Maths e-Learning platform',
@@ -65,7 +76,7 @@ const projectsData = [
       imageUrl: img6,
       demoLink: '',
       codeLink: 'https://github.com/toniu/SPortal',
-      bgColors: ['#066f75', '#737474']
+      bgColors: ['#166f75', '#837474']
     },
     {
       title: 'pyaux',

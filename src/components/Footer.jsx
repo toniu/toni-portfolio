@@ -11,7 +11,7 @@ const Footer = () => {
     React.useEffect(() => {
         const handleScroll = () => {
             const scrollTop = window.scrollY;
-            // Set isScrolled to true if user scrolls past 50px
+            /* Set isScrolled to true if user scrolls past 50px */
             setIsScrolled(scrollTop > 50);
         };
 

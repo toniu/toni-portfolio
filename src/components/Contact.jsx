@@ -24,15 +24,16 @@ const Contact = () => {
                 <div className='hover:scale-110 cursor-default transition 100'>
                     <FaPaperPlane className='mx-auto text-3xl md:text-5xl text-black select-none' />
                     <p className='select-none py-2  text-black font-bold text-base md:text-xl text-center cursor-default'>
-                        Message sent!
+                        Email sent!
                     </p>
                     <p className='select-none  text-black text-base md:text-xl text-center cursor-default'>
-                        Thank you for sending your inquiry
+                        Thank you for reaching out to Neka
                     </p>
                 </div>
 
-                <div className='bottom font-light text-base text-center pt-14 pb-16'>
-                    <p>2024 toni., inc. all rights reserved</p>
+                <div className='select-none bottom font-light text-sm md:text-base text-center pt-14 pb-16 space-y-2 w-[60%] mx-auto'>
+                    <p >2024 toni., inc. all rights reserved</p>
+                    <p>Developed by Neka Toni-Uebari, using ReactJS and TailwindCSS</p>
                 </div>
             </div>
         )
@@ -86,8 +87,9 @@ const Contact = () => {
                     </div>
                 </form>
 
-                <div className='bottom font-light text-base text-center pt-14 pb-16'>
+                <div className='select-none bottom font-light text-base text-center pt-14 pb-16 space-y-2'>
                     <p>2024 toni., inc. all rights reserved</p>
+                    <p>Developed by Neka Toni-Uebari, using ReactJS and TailwindCSS</p>
                 </div>
             </div>
 
