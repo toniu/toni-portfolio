@@ -13,10 +13,6 @@ module.exports = {
   content: {
     enabled: true,
     content: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
-    purge: {
-      content: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
-      // Other purge options as needed
-    },
     options: {
       whitelistPatterns: [/^CanvasSection*/],
     },

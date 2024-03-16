@@ -67,12 +67,17 @@ const Hero = () => {
         </motion.div>
 
         <motion.div
-          initial={{ y: -200 }}
-          animate={{ opacity: isScrolled ? 0 : 100, y: isScrolled ? 100 : 0 }}
-          transition={{ duration: 0.3 }}
-          className='select-none mt-10 text-xl md:text-2xl rounded-full mx-auto flex justify-center'>
-          <BiSolidMouse className='m-1' />
-          use scroll
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 1.5, duration: 1 }}>
+          <motion.div
+            initial={{ y: -200 }}
+            animate={{ opacity: isScrolled ? 0 : 100, y: isScrolled ? 100 : 0 }}
+            transition={{ duration: 0.3 }}
+            className='select-none mt-10 text-xl md:text-2xl rounded-full mx-auto flex justify-center'>
+            <BiSolidMouse className='m-1' />
+            use scroll
+          </motion.div>
         </motion.div>
       </div>
     </motion.section>

@@ -6,9 +6,9 @@ import techIcons from './constants/TechData'
 const About = () => {
     return (
         <motion.div
-            initial={{ x: -100, opacity: 0, }}
-            transition={{ duration: 1, }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ y: -100, opacity: 0, }}
+            transition={{ duration: 0.75, }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false }}
             id='about' className="relative h-auto pt-12 pb-16">
             <div className='pt-12 block md:flex'>
