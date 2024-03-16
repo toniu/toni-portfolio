@@ -87,7 +87,7 @@ const Contact = () => {
                     </div>
                 </form>
 
-                <div className='select-none bottom font-light text-base text-center pt-14 pb-16 space-y-2'>
+                <div className='select-none bottom font-light text-sm md:text-base text-center pt-14 pb-16 space-y-2 w-[60%] mx-auto'>
                     <p>2024 toni., inc. all rights reserved</p>
                     <p>Developed by Neka Toni-Uebari, using ReactJS and TailwindCSS</p>
                 </div>
