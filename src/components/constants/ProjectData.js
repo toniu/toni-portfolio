@@ -52,7 +52,7 @@ const projectsData = [
       title: 'toniarts.',
       secondTitle: 'Visual gallery website',
       techStack: ['React','JavaScript','TailwindCSS'],
-      description: 'A visually appealing website which shows a gallery of my drawings exploring the beauty and depth of black diaspora. From family, to sports, to fashion, to music, to film and other forms of our creativity',
+      description: 'A visually appealing website which shows a gallery of my drawings exploring the beauty of the black diaspora. From family, to sports, to fashion, to music, to film and other forms of our creativity.',
       imageUrl: img4,
       demoLink: 'https://toniu.github.io/toniarts',
       codeLink: 'https://github.com/toniu/toniarts',
