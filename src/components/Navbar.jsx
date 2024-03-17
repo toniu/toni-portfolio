@@ -46,7 +46,16 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="select-none flex-shrink-0 text-white font-bold text-2xl">toni.</div>
+            <Link
+              to={'hero'}
+              spy={true}
+              offset={-70}
+              smooth={true}
+              duration={500}
+              className="select-none flex-shrink-0 text-white font-bold text-2xl
+                  hover:text-blue-400 hover:cursor-pointer transition 100">
+              toni.
+            </Link>
           </div>
           {/* Desktop Menu */}
           <div className="hidden md:flex flex-grow justify-end">
@@ -110,9 +119,9 @@ const Navbar = () => {
                   smooth={true}
                   duration={500}
                   onClick={toggleMenu}
-                  className="text-gray-300 flex hover:bg-gray-700 hover:text-white hover:cursor-pointer px-3 py-2 rounded-md text-base font-medium"
+                  className="text-white flex hover:bg-black/75 hover:text-blue-400 hover:cursor-pointer py-2 rounded-sm text-base font-medium transition 100"
                 >
-                  <div className="flex space-x-3">
+                  <div className="flex space-x-3 px-2">
                     <span className="text-xl p-1"> {icon} </span>
                     <span className="text-lg"> {title} </span>
                   </div>
