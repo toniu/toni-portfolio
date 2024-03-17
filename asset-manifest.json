@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/toni-portfolio/static/css/main.b3ac5106.css",
-    "main.js": "/toni-portfolio/static/js/main.94721660.js",
+    "main.css": "/toni-portfolio/static/css/main.3617092b.css",
+    "main.js": "/toni-portfolio/static/js/main.a5522280.js",
     "static/js/453.6bd84ed3.chunk.js": "/toni-portfolio/static/js/453.6bd84ed3.chunk.js",
     "static/media/project-fsimulation.png": "/toni-portfolio/static/media/project-fsimulation.d5da07cd68e091b3dc84.png",
     "static/media/self-img.png": "/toni-portfolio/static/media/self-img.16d08207452a94fae0c3.png",
@@ -13,12 +13,12 @@
     "static/media/project-pyaux.png": "/toni-portfolio/static/media/project-pyaux.f68633cf83b9632b846d.png",
     "static/media/project-toniarts.png": "/toni-portfolio/static/media/project-toniarts.f5138d52263337dc487f.png",
     "index.html": "/toni-portfolio/index.html",
-    "main.b3ac5106.css.map": "/toni-portfolio/static/css/main.b3ac5106.css.map",
-    "main.94721660.js.map": "/toni-portfolio/static/js/main.94721660.js.map",
+    "main.3617092b.css.map": "/toni-portfolio/static/css/main.3617092b.css.map",
+    "main.a5522280.js.map": "/toni-portfolio/static/js/main.a5522280.js.map",
     "453.6bd84ed3.chunk.js.map": "/toni-portfolio/static/js/453.6bd84ed3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b3ac5106.css",
-    "static/js/main.94721660.js"
+    "static/css/main.3617092b.css",
+    "static/js/main.a5522280.js"
   ]
 }
