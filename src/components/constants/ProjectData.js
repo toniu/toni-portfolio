@@ -6,6 +6,7 @@ import img4 from '../../assets/project-toniarts.png';
 import img5 from '../../assets/project-badminton.png';
 import img6 from '../../assets/project-sportal.png';
 import img7 from '../../assets/project-pyaux.png';
+import img8 from '../../assets/project-onepercent.png';
 
 const projectsData = [
     {
@@ -87,6 +88,16 @@ const projectsData = [
       demoLink: '',
       codeLink: 'https://github.com/toniu/pyaux',
       bgColors: ['#010500', '#001c06']
+    },
+    {
+      title: 'ONE%',
+      secondTitle: 'Scala game-show program',
+      techStack: ['Scala'],
+      description: `A Scala game-show program inspired by the ITV game-show, The 1% club. The game structure involves 100 players (the user called ‘You’ and 99 other ‘CPU’ players) who attempt to answer a question to stay in the game each round. The game ends when there is only one player left`,
+      imageUrl: img8,
+      demoLink: '',
+      codeLink: 'https://github.com/toniu/ONEpercent',
+      bgColors: ['#1d2b00', '#171a12']
     }
   ];
 
