@@ -16,8 +16,8 @@ const About = () => {
                     <img src={moi} alt='me' className='w-[110px] h-[110px] md:w-[150px] md:h-[150px] mx-auto'/>
                     <p className='p-3 m-2 font-light text-sm md:text-base'>
                     Hi, I'm Neka Toni-Uebari. With a First-Class Honours degree in MSci Computer Science (with Software Engineering),
-                    I am thrilled to dive into the world of software engineering, web development and design.
-                    I seek for career development and ways to positively contribute to users using
+                    I am a freelance web designer that also dives into the world of software engineering, web development and design.
+                    I look for career development and ways to positively contribute to users using
                     my technical and personal skills. I bring a blend of academic excellence, hands-on
                     coding skills in various front-end and back-end technologies and a­­n artistic eye for design.­­­ 
                     </p>

@@ -72,11 +72,11 @@ const Projects = () => {
                           className='p-2 bg-white rounded-full hover:bg-blue-400 transition 100'>
                           <FaExternalLinkAlt />
                         </a>}
-                      <a href={item.codeLink} target="_blank" rel="noopener noreferrer"
-                        className='p-2 bg-white rounded-full hover:bg-blue-400 transition 100'>
-                        <FaGithub />
-                      </a>
-
+                      {item.codeLink.trim().length > 0 &&
+                        <a href={item.codeLink} target="_blank" rel="noopener noreferrer"
+                          className='p-2 bg-white rounded-full hover:bg-blue-400 transition 100'>
+                          <FaGithub />
+                        </a>}
                     </div>
                   </div>
                 </div>

@@ -2,11 +2,14 @@ import imgToni from '../../assets/project-toni.png';
 import img1 from '../../assets/project-arithmetix.png';
 import img2 from '../../assets/project-fsimulation.png';
 import img3 from '../../assets/project-mybiblejourney.png';
-import img4 from '../../assets/project-toniarts.png';
+import img4 from '../../assets/project-toniartsg.png';
 import img5 from '../../assets/project-badminton.png';
 import img6 from '../../assets/project-sportal.png';
 import img7 from '../../assets/project-pyaux.png';
 import img8 from '../../assets/project-onepercent.png';
+import img9 from '../../assets/project-ccollective.png';
+import img10 from '../../assets/project-matildaltd.png';
+import img11 from '../../assets/project-wayfindingkaia.png';
 
 const projectsData = [
     {
@@ -30,14 +33,24 @@ const projectsData = [
       bgColors: ['#29303b', '#1761bd']
     },
     {
-      title: 'FSimulation',
-      secondTitle: 'Java console football simulation',
-      techStack: ['Java'],
-      description: 'A Java football simulation project which includes the simulation of leagues and matches between teams based on their FIFA ratings (attack, defence, midfield, and OVR rating).',
-      imageUrl: img2,
-      demoLink: '',
-      codeLink: 'https://github.com/toniu/FSimulation',
-      bgColors: ['#2e5675', '#49573a']
+      title: 'Matilda Limited',
+      secondTitle: 'Healthcare Training Provider',
+      techStack: ['WordPress','PHP','HTML','CSS','JavaScript'],
+      description: 'A leading healthcare training provider, delivering mandatory and complex care training led by experienced professionals. With years of hands-on expertise, our trainers ensure engaging and practical learning.',
+      imageUrl: img10,
+      demoLink: 'https://matildahealthtraining.com/',
+      codeLink: '',
+      bgColors: ['#0f535c','2fcfd6']
+    },
+    {
+      title: 'Wayfinding Kaia',
+      secondTitle: 'A travel community for young people',
+      techStack: ['Squarespace'],
+      description: 'A hub for a global, diverse community based in London, creating unforgettable experiences that bring people together through travel, events, and shared moments of discovery.',
+      imageUrl: img11,
+      demoLink: 'https://www.wayfindingkaia.co.uk/',
+      codeLink: '',
+      bgColors: ['#4e7d9d', '#34546a']
     },
     {
       title: 'mybiblejourney',
@@ -60,6 +73,26 @@ const projectsData = [
       bgColors: ['#292316', '#544932']
     },
     {
+      title: 'SPortal',
+      secondTitle: 'React TS SharePoint webparts',
+      techStack: ['SPFx','React','TypeScript','Jest','Gulp','SharePoint Lists'],
+      description: 'SPFx TypeScript project of implemented Sharepoint webparts for Sharepoint website specifically for receiving and delivering information to other parties. This includes dashboard, profile, polls, group management and calendar',
+      imageUrl: img6,
+      demoLink: '',
+      codeLink: 'https://github.com/toniu/SPortal',
+      bgColors: ['#166f75', '#837474']
+    },
+    {
+      title: 'FSimulation',
+      secondTitle: 'Java console football simulation',
+      techStack: ['Java'],
+      description: 'A Java football simulation project which includes the simulation of leagues and matches between teams based on their FIFA ratings (attack, defence, midfield, and OVR rating).',
+      imageUrl: img2,
+      demoLink: '',
+      codeLink: 'https://github.com/toniu/FSimulation',
+      bgColors: ['#2e5675', '#49573a']
+    },
+    {
       title: 'BPMS2018',
       secondTitle: 'Badminton Player Management System',
       techStack: ['Java','NetBeans','MySQL'],
@@ -70,14 +103,14 @@ const projectsData = [
       bgColors: ['#0d4032', '#0d5441']
     },
     {
-      title: 'SPortal',
-      secondTitle: 'React TS SharePoint webparts',
-      techStack: ['SPFx','React','TypeScript','Jest','Gulp','SharePoint Lists'],
-      description: 'SPFx TypeScript project of implemented Sharepoint webparts for Sharepoint website specifically for receiving and delivering information to other parties. This includes dashboard, profile, polls, group management and calendar',
-      imageUrl: img6,
-      demoLink: '',
-      codeLink: 'https://github.com/toniu/SPortal',
-      bgColors: ['#166f75', '#837474']
+      title: 'Christian Collective',
+      secondTitle: 'Christian community for young people',
+      techStack: ['Squarespace'],
+      description: 'A centralised hub for a community and gathering of creative minded Christians, including latest blogs, events and creatives. Christian Collective aims to develop a comprehensive platform where users can easily discover and access information about Christian events',
+      imageUrl: img9,
+      demoLink: 'https://www.christiancollective.uk/',
+      codeLink: '',
+      bgColors: ['#000000','#717171']
     },
     {
       title: 'pyaux',

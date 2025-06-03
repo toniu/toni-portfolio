@@ -66,6 +66,8 @@ const Hero = () => {
               repeat={Infinity}
               sequence={[
                 2000,
+                'freelance web designer',
+                2000,
                 'software engineer',
                 2000,
                 'full-stack web developer',

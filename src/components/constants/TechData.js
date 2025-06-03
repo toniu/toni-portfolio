@@ -1,5 +1,5 @@
-import { FaJava, FaPython, FaHtml5, FaCss3, FaVuejs, FaReact, FaNodeJs, FaFigma, FaGithub } from 'react-icons/fa';
-import { SiScala, SiJavascript, SiTypescript, SiWebpack, SiExpress, SiTailwindcss, SiMysql, SiCanva, SiSubversion, SiJest } from 'react-icons/si';
+import { FaJava, FaPython, FaHtml5, FaCss3, FaVuejs, FaReact, FaNodeJs, FaFigma, FaGithub, FaWordpress, FaSquarespace } from 'react-icons/fa';
+import { SiScala, SiJavascript, SiTypescript, SiWebpack, SiExpress, SiTailwindcss, SiCanva, SiJest } from 'react-icons/si';
 import { BiLogoPostgresql } from 'react-icons/bi';
 
 const techIcons = [
@@ -17,10 +17,10 @@ const techIcons = [
     { icon: <FaNodeJs />, title: 'NodeJS' },
     { icon: <SiExpress />, title: 'Express' },
     { icon: <BiLogoPostgresql />, title: 'PostgreSQL' },
-    { icon: <SiMysql />, title: 'MySQL' },
     { icon: <SiJest />, title: 'Jest' },
     { icon: <FaGithub />, title: 'Git' },
-    { icon: <SiSubversion />, title: 'SVN' },
+    { icon: <FaSquarespace />, title: 'Squarespace' },
+    { icon: <FaWordpress />, title: 'WordPress' },
     { icon: <FaFigma />, title: 'Figma' },
     { icon: <SiCanva />, title: 'Canva' },
 ];
