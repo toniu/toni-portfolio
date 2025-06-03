@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/toni-portfolio/static/css/main.3617092b.css",
-    "main.js": "/toni-portfolio/static/js/main.209f133f.js",
+    "main.js": "/toni-portfolio/static/js/main.f2911e25.js",
     "static/js/453.6bd84ed3.chunk.js": "/toni-portfolio/static/js/453.6bd84ed3.chunk.js",
     "static/media/project-fsimulation.png": "/toni-portfolio/static/media/project-fsimulation.d5da07cd68e091b3dc84.png",
     "static/media/self-img.png": "/toni-portfolio/static/media/self-img.16d08207452a94fae0c3.png",
@@ -11,15 +11,18 @@
     "static/media/apple-avatar.png": "/toni-portfolio/static/media/apple-avatar.2422a0bc80e08fe45171.png",
     "static/media/project-sportal.png": "/toni-portfolio/static/media/project-sportal.73a37152077778662aeb.png",
     "static/media/project-pyaux.png": "/toni-portfolio/static/media/project-pyaux.f68633cf83b9632b846d.png",
-    "static/media/project-toniarts.png": "/toni-portfolio/static/media/project-toniarts.f5138d52263337dc487f.png",
+    "static/media/project-toniartsg.png": "/toni-portfolio/static/media/project-toniartsg.2e2bb9dc1c29b63e1ae4.png",
+    "static/media/project-matildaltd.png": "/toni-portfolio/static/media/project-matildaltd.1f8eab7ac388823bc32a.png",
+    "static/media/project-wayfindingkaia.png": "/toni-portfolio/static/media/project-wayfindingkaia.98b22399c0ba26e15894.png",
+    "static/media/project-ccollective.png": "/toni-portfolio/static/media/project-ccollective.138ab527e1dd948cda0e.png",
     "static/media/project-onepercent.png": "/toni-portfolio/static/media/project-onepercent.7c76905794e9af59093d.png",
     "index.html": "/toni-portfolio/index.html",
     "main.3617092b.css.map": "/toni-portfolio/static/css/main.3617092b.css.map",
-    "main.209f133f.js.map": "/toni-portfolio/static/js/main.209f133f.js.map",
+    "main.f2911e25.js.map": "/toni-portfolio/static/js/main.f2911e25.js.map",
     "453.6bd84ed3.chunk.js.map": "/toni-portfolio/static/js/453.6bd84ed3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3617092b.css",
-    "static/js/main.209f133f.js"
+    "static/js/main.f2911e25.js"
   ]
 }
