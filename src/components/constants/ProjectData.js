@@ -40,7 +40,7 @@ const projectsData = [
       imageUrl: img10,
       demoLink: 'https://matildahealthtraining.com/',
       codeLink: '',
-      bgColors: ['#0f535c','2fcfd6']
+      bgColors: ['#0f535c','#1f8b8f']
     },
     {
       title: 'Wayfinding Kaia',
