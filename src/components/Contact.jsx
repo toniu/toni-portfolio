@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useForm } from '@formspree/react';
 import { FaPaperPlane } from "react-icons/fa";
+import { motion } from "framer-motion";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 const Contact = () => {
@@ -42,8 +43,24 @@ const Contact = () => {
 
     return (
         <div id='contact' className='relative h-auto flex justify-center items-center'>
+
             <div className="w-4/5 px-5 pt-6 pb-10">
-                <p className="text-base md:text-lg font-light text-center md:text-left text-black mb-1">Let's connect. Get in touch with my socials and fill out the form below!</p>
+                {/* Section header */}
+                <header className="text-center mb-6 mt-12">
+                    <motion.h2
+                        class="block text-base uppercase tracking-widest text-blue-500 font-bold"
+                        initial={{ opacity: 0, y: 6 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.4, ease: 'easeOut' }}
+                    >
+                        Contact
+                    </motion.h2>
+
+                    <p className="mt-2 text-sm md:text-base text-gray-600">
+                        Let's connect. Get in touch with my socials and fill out the form below!
+                    </p>
+                </header>
                 <ul className='flex justify-center md:justify-start text-3xl text-black'>
                     <li className='nav-item p-2'>
                         <a href="https://www.linkedin.com/in/neka-toni-uebari/" target="_blank" rel="noopener noreferrer"
