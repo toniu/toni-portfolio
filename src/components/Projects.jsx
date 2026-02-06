@@ -22,20 +22,35 @@ const Projects = () => {
     },
   };
 
-    return (
+  return (
     <motion.div
       initial={{ y: -100, opacity: 0 }}
       transition={{ duration: 0.75 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: false }}
       id="projects"
-      className="relative py-12 bg-white">
+      className="relative h-screen py-12 bg-white">
 
       <div className="max-w-6xl mx-auto px-4">
-        <header className="mb-6 text-center md:text-left">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">project selection</h2>
-          <p className="text-sm md:text-base text-gray-900 mt-2">A selection of past client and personal projects demonstrating responsive layouts, CMS integration, and accessibility-focused development.</p>
+
+        {/* Section header */}
+        <header className="text-center mb-6 mt-12">
+          <motion.h2
+            class="block text-base uppercase tracking-widest text-blue-500 font-bold"
+            initial={{ opacity: 0, y: 6 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, ease: 'easeOut' }}
+          >
+            Projects
+          </motion.h2>
+
+          <p className="mt-2 text-sm md:text-base text-gray-600">
+            A selection of past client and personal projects demonstrating responsive layouts, CMS integration, and accessibility-focused development.
+          </p>
         </header>
+
+
 
         <div className="mb-16 pb-24">
           <Swiper

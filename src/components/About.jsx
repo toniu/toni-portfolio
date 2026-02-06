@@ -11,9 +11,9 @@ const About = () => {
     };
 
     const achievements = [
-        { icon: '🚀', label: '5+ Client Projects', description: 'Delivered WordPress & Squarespace sites' },
-        { icon: '♿', label: 'WCAG AA Compliant', description: 'Accessibility-first development' },
-        { icon: '⚡', label: 'Performance Focused', description: 'Optimised load speeds & SEO' }
+        { icon: '', label: '5+ Contracted Projects', description: 'Delivered WordPress & Squarespace sites for upcoming businesses and organisations' },
+        { icon: '', label: 'WCAG AA Compliant', description: 'Accessibility-first development' },
+        { icon: '', label: 'Performance Focused', description: 'Optimised load speeds & SEO' }
     ];
 
     const containerVariants = {
@@ -40,32 +40,44 @@ const About = () => {
             viewport={{ once: false }}
             id='about' className="relative h-auto pt-12 pb-16 bg-gradient-to-b from-transparent via-blue-500/5 to-transparent">
             <div className="max-w-6xl mx-auto px-4">
-                {/* Header Section */}
-                <div className='pt-8 pb-12'>
-                    <div className='w-12 h-1 bg-blue-400 mx-auto rounded-full'></div>
-                </div>
+                {/* Section header */}
+                <header className="text-center mb-6 mt-12">
+                    <motion.h2
+                        class="block text-base uppercase tracking-widest text-blue-500 font-bold"
+                        initial={{ opacity: 0, y: 6 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.4, ease: 'easeOut' }}
+                    >
+                        About
+                    </motion.h2>
+
+                    <p className="mt-2 text-sm md:text-base text-gray-600">
+                        My background, accomplishments and skillset as a web developer
+                    </p>
+                </header>
 
                 {/* Main Content */}
                 <div className='pt-12 pr-3 pl-3 block md:flex gap-12'>
                     {/* Left Section - Bio & Highlights */}
                     <div className='md:w-[45%]'>
                         <div className='text-center md:text-left mb-8'>
-                            <img src={moi} alt='me' className='w-[120px] h-[120px] md:w-[150px] md:h-[150px] mx-auto md:mx-0 rounded-full0'/>
+                            <img src={moi} alt='me' className='w-[120px] h-[120px] md:w-[150px] md:h-[150px] mx-auto md:mx-0 rounded-full0' />
                         </div>
-                        
+
                         <p className='text-gray-900 text-sm md:text-base leading-relaxed mb-6'>
                             Hi, I'm <span className='text-blue-500 font-semibold'>Neka Toni-Uebari</span>. I'm a <span className='text-blue-500 font-semibold'>Junior Web Developer specialising in WordPress</span> with hands-on experience delivering custom CMS-driven websites. I focus on building responsive, accessible, and SEO-optimized web solutions that prioritise user experience and modern web standards (WCAG 2.1).
                         </p>
 
                         {/* Highlights */}
-                        <motion.div 
+                        <motion.div
                             className='grid grid-cols-1 gap-4 mb-8'
                             variants={containerVariants}
                             initial="hidden"
                             whileInView="visible"
                             viewport={{ once: false }}>
                             {achievements.map((achievement, index) => (
-                                <motion.div 
+                                <motion.div
                                     key={index}
                                     variants={itemVariants}
                                     className='bg-gradient-to-r from-blue-500/10 to-transparent p-4 rounded-lg border-l-2 border-blue-400 flex items-start gap-3'>
@@ -82,7 +94,7 @@ const About = () => {
                     {/* Right Section - Skills */}
                     <div className='md:w-[55%]'>
                         {/* Frontend Skills */}
-                        <motion.div 
+                        <motion.div
                             className='mb-10'
                             initial={{ opacity: 0, x: 20 }}
                             whileInView={{ opacity: 1, x: 0 }}
@@ -106,7 +118,7 @@ const About = () => {
                         </motion.div>
 
                         {/* WordPress & CMS Skills */}
-                        <motion.div 
+                        <motion.div
                             className='mb-10'
                             initial={{ opacity: 0, x: 20 }}
                             whileInView={{ opacity: 1, x: 0 }}
@@ -130,7 +142,7 @@ const About = () => {
                         </motion.div>
 
                         {/* Web Standards Skills */}
-                        <motion.div 
+                        <motion.div
                             initial={{ opacity: 0, x: 20 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.6, delay: 0.2 }}
