@@ -36,7 +36,7 @@ const Hero = () => {
   }, []);
 
   const getBackgroundSize = () => {
-    const baseSize = screenWidth <= 1024 ? 200 : 100; // 200% for mobile and tablet, 100% for larger screens
+    const baseSize = screenWidth <= 1024 ? 200 : 150; // 200% for mobile and tablet, 150% for larger screens
     return `${baseSize + scrollY * 0.075}%`;
   };
 

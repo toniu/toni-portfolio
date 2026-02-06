@@ -5,8 +5,8 @@ import moi from '../assets/apple-avatar.png'
 const About = () => {
     const skills = {
         frontend: ['HTML5', 'CSS3', 'Tailwind CSS', 'JavaScript (ES6+)', 'TypeScript', 'Responsive Design', 'React', 'Vue.js'],
-        cms: ['WordPress','PHP (WordPress Themes)', 'Elementor', 'Custom WP Plugins', 'WP Optimisation','Squarespace'],
-        webstandards: ['WCAG Accessibility', 'SEO Optimisation', 'Caching and Backup systems (WP)', 'Anti-spam and bot mitigation', 'Google Analytics', 'User-Centered Design', 'Figma', 'Canva']
+        cms: ['WordPress','PHP (WordPress Themes)', 'Elementor', 'Custom WP Plugins', 'WP Optimisation','Caching and Backup systems (WP)','Squarespace'],
+        webstandards: ['WCAG Accessibility', 'SEO Optimisation', 'Anti-spam and bot mitigation (WP)', 'Google Analytics', 'User-Centered Design', 'Figma', 'Canva']
     };
 
     const achievements = [
@@ -124,7 +124,7 @@ const About = () => {
                             transition={{ duration: 0.6, delay: 0.1 }}
                             viewport={{ once: false }}>
                             <h3 className='text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2'>
-                                <span className='w-8 h-8 bg-green-400 rounded-full flex items-center justify-center text-black text-sm font-bold'>W</span>
+                                <span className='w-8 h-8 bg-green-400 rounded-full flex items-center justify-center text-black text-sm font-bold'>C</span>
                                 Content Management System (CMS)
                             </h3>
                             <div className='flex flex-wrap gap-2'>
@@ -147,7 +147,7 @@ const About = () => {
                             transition={{ duration: 0.6, delay: 0.2 }}
                             viewport={{ once: false }}>
                             <h3 className='text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2'>
-                                <span className='w-8 h-8 bg-purple-400 rounded-full flex items-center justify-center text-black text-sm font-bold'>S</span>
+                                <span className='w-8 h-8 bg-purple-400 rounded-full flex items-center justify-center text-black text-sm font-bold'>W</span>
                                 Web Standards & UX
                             </h3>
                             <div className='flex flex-wrap gap-2'>

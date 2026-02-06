@@ -11,6 +11,7 @@ const Navbar = () => {
   const [isScrolling, setIsScrolling] = useState(false);
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
   const scrollTimeoutRef = React.useRef(null);
+  const navRef = React.useRef(null);
 
   /* Toggle menu visibility */
   const toggleMenu = () => {
@@ -58,6 +59,24 @@ const Navbar = () => {
     };
   }, []);
 
+  /* Close menu when clicking outside */
+  React.useEffect(() => {
+    if (!isOpen) return;
+
+    const handleClickOutside = (event) => {
+      if (navRef.current && !navRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener('touchstart', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('touchstart', handleClickOutside);
+    };
+  }, [isOpen]);
+
   const links = [
     { id: 'hero', title: 'home', offset: -75, icon: <FaHome />, ref: null },
     { id: 'about', title: 'about', offset: -75, icon: <FaInfoCircle />, ref: null },
@@ -68,6 +87,7 @@ const Navbar = () => {
 
   return (
     <motion.nav
+      ref={navRef}
       className={`bg-black bg-opacity-85 fixed top-0 z-20 md:border-gray-900 m-0 w-full md:m-6 md:inset-x-0 md:mx-auto md:w-[70%] md:rounded-full md:border ${isScrolling ? 'md:shadow-2xl md:shadow-blue-500/20' : 'md:shadow-lg'}`}
       style={{
         backdropFilter: screenWidth >= 768 ? (isScrolling ? 'blur(12px)' : 'blur(2px)') : 'blur(10px)',
