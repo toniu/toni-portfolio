@@ -13,12 +13,19 @@
     width: 5vw;
     height: 10px;
     text-align: center;
-    line-height: 20px;
+    line-height: 10px;
     font-size: 15px;
     border-radius: 10px;
     color: #000;
     opacity: 1;
     background: rgba(0, 0, 0, 0.8);
+    margin: 16px 4px 0 4px;
+}
+
+.swiper-pagination {
+    position: relative !important;
+    bottom: auto !important;
+    padding-top: 20px;
 }
 
 .swiper-pagination-bullet-active {

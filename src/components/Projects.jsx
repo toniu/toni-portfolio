@@ -22,85 +22,95 @@ const Projects = () => {
     },
   };
 
-  return (
+    return (
     <motion.div
-    initial={{y: -100, opacity: 0, }}
-    transition={{ duration: 0.75, }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: false }}
-     id="projects" className="relative h-screen pt-6">
-      <div className='py-3 w-4/5 mx-auto'>
-        <p className="text-base md:text-lg font-light text-center md:text-left text-black mb-2">
-          Check out my latest projects
-        </p>
-      </div>
-      {/* Slider Card */}
-      <Swiper
-        navigation={true}
-        freeMode={true}
-        pagination={pagination}
-        modules={[FreeMode, Pagination, Navigation]}
-        slidesPerView={1}
-        spaceBetween={5}
-        breakpoints={{
-          768: {
-            slidesPerView: 2,
-            spaceBetween: 5,
-          },
-        }}
-        className="max-w-[100%]">
-        {projectsData.map((item) => (
-          <SwiperSlide key={item.title} id='card' className="mx-auto h-[410px] w-full rounded-md text-left">
-            <div className='h-[380px]'
-              style={{
-                backgroundSize: '200% auto',
-                backgroundImage: `linear-gradient(to right, ${item.bgColors[0]} 0%, ${item.bgColors[1]} 100%)`,
-                animation: 'gradientAnimation 5s infinite',
-              }}>
-              <div className='block'>
-                <div className='flex'>
-                  <div className="p-2 w-32 h-32 overflow-hidden">
-                    <img src={item.imageUrl} alt='' className="w-full h-full rounded-lg object-cover" />
-                  </div>
+      initial={{ y: -100, opacity: 0 }}
+      transition={{ duration: 0.75 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: false }}
+      id="projects"
+      className="relative py-12 bg-white">
 
-                  <div className='block p-3 h-32 content-cente'>
-                    <h2 className='text-white font-bold text-2xl'> {item.title} </h2>
-                    <h3 className='h-6 truncate text-gray-300 font-semibold text-sm md:text-base '> {item.secondTitle} </h3>
-                    <div className='flex pt-2 text-2xl space-x-3'>
-                      {item.demoLink.trim().length > 0 &&
-                        <a href={item.demoLink} target="_blank" rel="noopener noreferrer"
-                          className='p-2 bg-white rounded-full hover:bg-blue-400 transition 100'>
-                          <FaExternalLinkAlt />
-                        </a>}
-                      {item.codeLink.trim().length > 0 &&
-                        <a href={item.codeLink} target="_blank" rel="noopener noreferrer"
-                          className='p-2 bg-white rounded-full hover:bg-blue-400 transition 100'>
-                          <FaGithub />
-                        </a>}
+      <div className="max-w-6xl mx-auto px-4">
+        <header className="mb-6 text-center md:text-left">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">project selection</h2>
+          <p className="text-sm md:text-base text-gray-900 mt-2">A selection of past client and personal projects demonstrating responsive layouts, CMS integration, and accessibility-focused development.</p>
+        </header>
+
+        <div className="mb-16 pb-24">
+          <Swiper
+            navigation={true}
+            freeMode={true}
+            pagination={pagination}
+            modules={[FreeMode, Pagination, Navigation]}
+            slidesPerView={1}
+            spaceBetween={15}
+            breakpoints={{
+              768: {
+                slidesPerView: 2,
+                spaceBetween: 12,
+              },
+            }}
+          >
+            {projectsData.map((item) => (
+              <SwiperSlide key={item.title} className="h-auto">
+                <motion.div
+                  className="mx-auto rounded-lg overflow-hidden shadow-lg bg-gradient-to-r"
+                  style={{ backgroundImage: `linear-gradient(90deg, ${item.bgColors[0]}, ${item.bgColors[1]})` }}
+                  initial={{ y: 30, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  whileHover={{ scale: 1.02 }}
+                  viewport={{ once: false }}
+                  transition={{ type: 'spring', stiffness: 120, damping: 14 }}
+                >
+                  <div className="md:flex">
+                    <div className="md:w-1/3 w-full h-64 md:h-48 overflow-hidden relative">
+                      <motion.img
+                        src={item.imageUrl}
+                        alt={item.title}
+                        className="w-full h-full object-cover"
+                        initial={{ y: -10 }}
+                        whileInView={{ y: 0 }}
+                        transition={{ duration: 0.8 }}
+                        loading="lazy"
+                      />
+                    </div>
+
+                    <div className="md:w-2/3 w-full p-4 text-left">
+                      <div className="flex items-start justify-between">
+                        <div>
+                          <h3 className="text-white font-bold text-xl">{item.title}</h3>
+                          <p className="text-gray-200 text-sm mt-1">{item.secondTitle}</p>
+                        </div>
+                        <div className="flex space-x-2">
+                          {item.demoLink?.trim().length > 0 && (
+                            <a href={item.demoLink} target="_blank" rel="noopener noreferrer" className="p-2 bg-white rounded-full hover:bg-blue-600 transition text-black">
+                              <FaExternalLinkAlt />
+                            </a>
+                          )}
+                          {item.codeLink?.trim().length > 0 && (
+                            <a href={item.codeLink} target="_blank" rel="noopener noreferrer" className="p-2 bg-white rounded-full hover:bg-gray-300 transition text-black">
+                              <FaGithub />
+                            </a>
+                          )}
+                        </div>
+                      </div>
+
+                      <p className="text-gray-200 text-sm mt-3 line-clamp-4">{item.description}</p>
+
+                      <div className="mt-4 flex flex-wrap gap-2">
+                        {item.techStack.map((tech) => (
+                          <span key={tech} className="text-xs bg-white bg-opacity-90 text-black px-3 py-1 rounded-full">{tech}</span>
+                        ))}
+                      </div>
                     </div>
                   </div>
-                </div>
-
-                <div className='py-1 px-14 h-[100px] overflow-auto'>
-                  <p className='text-gray-200 font-normal text-sm md:text-base'> {item.description} </p>
-                </div>
-
-                <div className='pt-2 px-2'>
-                  <ul className='p-1 flex h-[80px] justify-start md:justify-normal flex-wrap select-none'>
-                    {item.techStack.map((tech) => (
-                      <li key={tech} className='m-1 h-6 py-0.5 px-5 bg-white bg-opacity-90 rounded-full text-black text-sm md:text-base'>
-                        {tech}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-
-
+                </motion.div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+      </div>
     </motion.div>
   );
 };

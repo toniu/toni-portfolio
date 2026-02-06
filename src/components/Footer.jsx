@@ -23,9 +23,9 @@ const Footer = () => {
 
     return (
         <motion.nav
-            className='footer bg-black backdrop-blur-md bg-opacity-80 text-[#eee] py-2 px-4 fixed bottom-0 left-0 z-50 w-full'
+            className='footer bg-[black] backdrop-blur-md bg-opacity-80 text-[#eee] py-1 px-2 fixed bottom-0 z-50 w-full md:inset-x-0 md:mx-auto md:m-6 md:p-0 md:shadow-2xl md:shadow-blue-500/20 md:border-[1px] border-gray-900 md:w-[45%] md:rounded-full shadow-lg'
             initial={{ y: -100 }}
-            animate={{ y: isScrolled ? 100 : 0 }}
+            animate={{ y: isScrolled ? 200 : 0 }}
             transition={{ duration: 0.3 }}>
             <div className='container mx-auto flex justify-center'>
                 <ul className='flex justify-center'>

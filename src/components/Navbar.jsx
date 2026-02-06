@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
 import { Link } from 'react-scroll';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaHome, FaInfoCircle, FaSuitcase } from 'react-icons/fa';
+import { FaHome, FaInfoCircle, FaSuitcase, FaCommentAlt } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeLink, setActiveLink] = useState(null);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isScrolling, setIsScrolling] = useState(false);
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const scrollTimeoutRef = React.useRef(null);
 
   /* Toggle menu visibility */
   const toggleMenu = () => {
@@ -20,11 +23,34 @@ const Navbar = () => {
       const scrollTop = window.scrollY;
       /* Set isScrolled to true if user scrolls past 50px */
       setIsScrolled(scrollTop > 50);
+      /* Set isScrolling to true and reset timeout for bounce effect */
+      setIsScrolling(true);
+      if (scrollTimeoutRef.current) {
+        clearTimeout(scrollTimeoutRef.current);
+      }
+      scrollTimeoutRef.current = setTimeout(() => {
+        setIsScrolling(false);
+      }, 500);
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
+      if (scrollTimeoutRef.current) {
+        clearTimeout(scrollTimeoutRef.current);
+      }
+    };
+  }, []);
+
+  /* Listen for resize event */
+  React.useEffect(() => {
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
 
@@ -32,15 +58,20 @@ const Navbar = () => {
     { id: 'hero', title: 'home', offset: -70, icon: <FaHome />, ref: null },
     { id: 'about', title: 'about', offset: -70, icon: <FaInfoCircle />, ref: null },
     { id: 'projects', title: 'projects', offset: -70, icon: <FaSuitcase />, ref: null },
+    { id: 'testimonials', title: 'testimonials', offset: -70, icon: <FaCommentAlt />, ref: null },
     { id: 'contact', title: 'contact', offset: -70, icon: <MdEmail />, ref: null },
   ];
 
   return (
     <motion.nav
-      className={`bg-black backdrop-blur-md bg-opacity-85 fixed top-0 left-0 w-full z-20`}
+      className={`bg-black bg-opacity-85 fixed top-0 z-20 md:border-gray-900 m-0 w-full md:m-6 md:inset-x-0 md:mx-auto md:w-[65%] md:rounded-full md:border ${isScrolling ? 'md:shadow-2xl md:shadow-blue-500/20' : 'md:shadow-lg'}`}
+      style={{
+        backdropFilter: screenWidth >= 768 ? (isScrolling ? 'blur(12px)' : 'blur(2px)') : 'blur(10px)',
+        WebkitBackdropFilter: screenWidth >= 768 ? (isScrolling ? 'blur(12px)' : 'blur(2px)') : 'blur(10px)',
+      }}
       initial={{ y: -100 }}
-      animate={{ y: isScrolled || isOpen ? 0 : -100 }}
-      transition={{ duration: 0.3 }}
+      animate={{ y: isScrolled || isOpen ? 0 : -100, scale: screenWidth >= 768 && isScrolling ? 1.02 : 1 }}
+      transition={{ duration: 0.3, scale: { type: 'spring', stiffness: 400, damping: 10 } }}
     >
       <div className="max-w-7xl mx-auto px-8">
         <div className="flex items-center justify-between h-16">

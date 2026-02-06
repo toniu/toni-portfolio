@@ -10,6 +10,7 @@ import img8 from '../../assets/project-onepercent.png';
 import img9 from '../../assets/project-ccollective.png';
 import img10 from '../../assets/project-matildaltd.png';
 import img11 from '../../assets/project-wayfindingkaia.png';
+import img12 from '../../assets/project-anreer.png';
 
 const projectsData = [
     {
@@ -51,6 +52,16 @@ const projectsData = [
       demoLink: 'https://www.wayfindingkaia.co.uk/',
       codeLink: '',
       bgColors: ['#4e7d9d', '#34546a']
+    },
+    {
+      title: 'ANREER Investments',
+      secondTitle: 'A construction investment company',
+      techStack: ['WordPress','HTML', 'CSS', 'JavaScript'],
+      description: 'A construction business committed to delivering high-quality construction services from concept to completion.',
+      imageUrl: img12,
+      demoLink: 'https://www.anreerinvestments.com/',
+      codeLink: '',
+      bgColors: ['#FFC300','#18234A']
     },
     {
       title: 'mybiblejourney',
