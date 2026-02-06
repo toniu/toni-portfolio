@@ -25,19 +25,24 @@ const Contact = () => {
     const [state, handleSubmit] = useForm(emailKey);
     if (state.succeeded) {
         return (
-            <div id='contact' className='block pt-24 md:pt-5 pb-20'>
-                <div className='hover:scale-110 cursor-default transition 100'>
-                    <FaPaperPlane className='mx-auto text-3xl md:text-5xl text-black select-none' />
-                    <p className='select-none py-2  text-black font-bold text-base md:text-xl text-center cursor-default'>
-                        Email sent!
-                    </p>
-                    <p className='select-none  text-black text-base md:text-xl text-center cursor-default'>
-                        Thank you for reaching out to Neka
-                    </p>
+            <div id='contact' className='block pt-24 md:pt-5 pb-20 px-4'>
+                <div className='mx-auto max-w-3xl rounded-2xl border border-gray-200 bg-white shadow-md overflow-hidden'>
+                    <div className="h-1 w-full bg-gradient-to-r from-blue-400 to-blue-700" />
+                    <div className='p-8 md:p-12 text-center'>
+                        <div className='mx-auto mb-4 inline-flex h-14 w-14 items-center justify-center rounded-full bg-blue-50 text-blue-600 hover:bg-blue-100 hover:scale-105 transition 100'>
+                            <FaPaperPlane className='text-2xl md:text-3xl' />
+                        </div>
+                        <p className='text-gray-900 font-semibold text-lg md:text-2xl'>
+                            Email sent
+                        </p>
+                        <p className='mt-2 text-gray-600 text-sm md:text-base'>
+                            Thanks for reaching out - I will get back to you soon.
+                        </p>
+                    </div>
                 </div>
 
-                <div className='select-none bottom font-light text-sm md:text-base text-center pt-14 pb-16 space-y-2 w-[85%] mx-auto'>
-                    <p >2024 toni., inc. all rights reserved</p>
+                <div className='select-none bottom font-light text-sm md:text-base text-center pt-12 pb-16 space-y-2 w-full max-w-3xl mx-auto'>
+                    <p>2024 toni., inc. all rights reserved</p>
                     <p>Developed by Neka Toni-Uebari, using ReactJS and TailwindCSS</p>
                 </div>
             </div>
