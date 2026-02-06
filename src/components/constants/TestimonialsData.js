@@ -21,7 +21,7 @@ const testimonialsData = [
   {
     name: 'Riann Ross',
     company: 'Wayfinding Kaia',
-    quote: `I would recommend Neka for his great quality and fast results. What I enjoyed the most about the website is that it was quick and that it looks amazing`,
+    quote: `I would recommend Neka for his great quality and fast results. What I enjoyed the most about my website is that it was quick and that it looks amazing.`,
     rating: 0.9
   }
 ];

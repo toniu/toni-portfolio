@@ -1,109 +1,133 @@
-import imgToni from '../../assets/project-toni.png';
-import img1 from '../../assets/project-arithmetix.png';
+import imgToni from "../../assets/project-toni.png";
+import img1 from "../../assets/project-arithmetix.png";
 // import img2 from '../../assets/project-fsimulation.png';
-import img3 from '../../assets/project-mybiblejourney.png';
-import img4 from '../../assets/project-toniartsg.png';
+import img3 from "../../assets/project-mybiblejourney.png";
+import img4 from "../../assets/project-toniartsg.png";
 // import img5 from '../../assets/project-badminton.png';
-import img6 from '../../assets/project-sportal.png';
+import img6 from "../../assets/project-sportal.png";
 //import img7 from '../../assets/project-pyaux.png';
 //import img8 from '../../assets/project-onepercent.png';
-import img9 from '../../assets/project-ccollective.png';
-import img10 from '../../assets/project-matildaltd.png';
-import img11 from '../../assets/project-wayfindingkaia.png';
-import img12 from '../../assets/project-anreer.png';
+import img9 from "../../assets/project-ccollective.png";
+import img10 from "../../assets/project-matildaltd.png";
+import img11 from "../../assets/project-wayfindingkaia.png";
+import img12 from "../../assets/project-anreer.png";
 
 const projectsData = [
-    {
-      title: 'toni.',
-      secondTitle: 'Portfolio website',
-      techStack: ['React', 'TailwindCSS'],
-      description: 'The website that you are already in! It is the official portfolio website of Neka Toni-Uebari. It includes an introduction of myself and the technologies and projects I can present.',
-      imageUrl: imgToni,
-      demoLink: 'https://toniu.github.io/toni-portfolio',
-      codeLink: 'https://github.com/toniu/toni-portfolio',
-      bgColors: ['#000000', '#19334d']
-    },
-    {
-      title: 'Matilda Limited',
-      secondTitle: 'Healthcare Training Provider',
-      techStack: ['WordPress','PHP','HTML','CSS','JavaScript'],
-      description: 'A leading healthcare training provider, delivering mandatory and complex care training led by experienced professionals. With years of hands-on expertise, our trainers ensure engaging and practical learning.',
-      imageUrl: img10,
-      demoLink: 'https://matildahealthtraining.com/',
-      codeLink: '',
-      bgColors: ['#0f535c','#1f8b8f']
-    },
-    {
-      title: 'Wayfinding Kaia',
-      secondTitle: 'A travel community for young people',
-      techStack: ['Squarespace'],
-      description: 'A hub for a global, diverse community based in London, creating unforgettable experiences that bring people together through travel, events, and shared moments of discovery.',
-      imageUrl: img11,
-      demoLink: 'https://www.wayfindingkaia.co.uk/',
-      codeLink: '',
-      bgColors: ['#4e7d9d', '#34546a']
-    },
-    {
-      title: 'ANREER Investments',
-      secondTitle: 'A construction investment company',
-      techStack: ['WordPress','HTML', 'CSS', 'JavaScript'],
-      description: 'A construction business committed to delivering high-quality construction services from concept to completion.',
-      imageUrl: img12,
-      demoLink: 'https://www.anreerinvestments.com/',
-      codeLink: '',
-      bgColors: ['#FFC300','#18234A']
-    },
-    {
-      title: 'mybiblejourney',
-      secondTitle: 'E-book release website',
-      techStack: ['React','JavaScript','TailwindCSS'],
-      description: 'A website which directs to the official release of my e-book of visual Bible study notes of each book of the Bible. It includes details about the project as well as external links to charities. ',
-      imageUrl: img3,
-      demoLink: 'https://toniu.github.io/mybiblejourney',
-      codeLink: 'https://github.com/toniu/mybiblejourney',
-      bgColors: ['#12132b', '#212245']
-    },
-    {
-      title: 'toniarts.',
-      secondTitle: 'Visual gallery website',
-      techStack: ['React','JavaScript','TailwindCSS'],
-      description: 'A visually appealing website which shows a gallery of my drawings exploring the beauty of the black diaspora. From family, to sports, to fashion, to music, to film and other forms of our creativity.',
-      imageUrl: img4,
-      demoLink: 'https://toniu.github.io/toniarts',
-      codeLink: 'https://github.com/toniu/toniarts',
-      bgColors: ['#292316', '#544932']
-    },
-        {
-      title: 'Christian Collective',
-      secondTitle: 'Christian community for young people',
-      techStack: ['Squarespace'],
-      description: 'A centralised hub for a community and gathering of creative minded Christians, including latest blogs, events and creatives. Christian Collective aims to develop a comprehensive platform where users can easily discover and access information about Christian events',
-      imageUrl: img9,
-      demoLink: 'https://www.christiancollective.uk/',
-      codeLink: '',
-      bgColors: ['#000000','#717171']
-    },
-    {
-      title: 'SPortal',
-      secondTitle: 'React TS SharePoint webparts',
-      techStack: ['SPFx','React','TypeScript','Jest','Gulp','SharePoint Lists'],
-      description: 'SPFx TypeScript project of implemented Sharepoint webparts for Sharepoint website specifically for receiving and delivering information to other parties. This includes dashboard, profile, polls, group management and calendar',
-      imageUrl: img6,
-      demoLink: '',
-      codeLink: 'https://github.com/toniu/SPortal',
-      bgColors: ['#166f75', '#837474']
-    },
-        {
-      title: 'arithmetix.',
-      secondTitle: 'A-Level Maths e-Learning platform',
-      techStack: ['VueJS', 'TailwindCSS', 'Webpack', 'Jest','NodeJS', 'Express', 'PostgreSQL'],
-      description: 'An e-learning website to help A-level Maths students in preparation for their exams. This includes provided resources of quizzes, notes and exam papers based on the syllabus of the exam boards: AQA, OCR and Edexcel.',
-      imageUrl: img1,
-      demoLink: '',
-      codeLink: 'https://github.com/toniu/arithmetix',
-      bgColors: ['#29303b', '#1761bd']
-    },
-  ];
+  {
+    title: "toni.",
+    secondTitle: "Portfolio website",
+    techStack: ["React", "TailwindCSS"],
+    description:
+      "The website that you are already in! It is the official portfolio website of Neka Toni-Uebari. It includes an introduction of myself and the technologies and projects I can present.",
+    imageUrl: imgToni,
+    demoLink: "https://toniu.github.io/toni-portfolio",
+    codeLink: "https://github.com/toniu/toni-portfolio",
+    bgColors: ["#000000", "#19334d"],
+  },
+  {
+    title: "Matilda Limited",
+    secondTitle: "Healthcare Training Provider",
+    techStack: ["WordPress", "PHP", "HTML", "CSS", "JavaScript"],
+    description:
+      "A leading healthcare training provider, delivering mandatory and complex care training led by experienced professionals. With years of hands-on expertise, our trainers ensure engaging and practical learning.",
+    imageUrl: img10,
+    demoLink: "https://matildahealthtraining.com/",
+    codeLink: "",
+    bgColors: ["#0f535c", "#1f8b8f"],
+  },
+  {
+    title: "Wayfinding Kaia",
+    secondTitle: "A travel community for young people",
+    techStack: ["Squarespace", "Canva"],
+    description:
+      "A hub for a global, diverse community based in London, creating unforgettable experiences that bring people together through travel, events, and shared moments of discovery.",
+    imageUrl: img11,
+    demoLink: "https://www.wayfindingkaia.co.uk/",
+    codeLink: "",
+    bgColors: ["#4e7d9d", "#34546a"],
+  },
+  {
+    title: "ANREER Investments",
+    secondTitle: "A construction investment company",
+    techStack: ["WordPress", "HTML", "CSS", "JavaScript"],
+    description:
+      "A construction business committed to delivering high-quality construction services from concept to completion.",
+    imageUrl: img12,
+    demoLink: "https://www.anreerinvestments.com/",
+    codeLink: "",
+    bgColors: ["#FFC300", "#18234A"],
+  },
+  {
+    title: "Christian Collective",
+    secondTitle: "Christian community for young people",
+    techStack: ["Squarespace", "Figma"],
+    description:
+      "A centralised hub for a community and gathering of creative minded Christians, including latest blogs, events and creatives. Christian Collective aims to develop a comprehensive platform where users can easily discover and access information about Christian events",
+    imageUrl: img9,
+    demoLink: "https://www.christiancollective.uk/",
+    codeLink: "",
+    bgColors: ["#000000", "#717171"],
+  },
+  {
+    title: "mybiblejourney",
+    secondTitle: "E-book release website",
+    techStack: ["React", "JavaScript", "TailwindCSS"],
+    description:
+      "A website which directs to the official release of my e-book of visual Bible study notes of each book of the Bible. It includes details about the project as well as external links to charities. ",
+    imageUrl: img3,
+    demoLink: "https://toniu.github.io/mybiblejourney",
+    codeLink: "https://github.com/toniu/mybiblejourney",
+    bgColors: ["#12132b", "#212245"],
+  },
+  {
+    title: "toniarts.",
+    secondTitle: "Visual gallery website",
+    techStack: ["React", "JavaScript", "TailwindCSS"],
+    description:
+      "A visually appealing website which shows a gallery of my drawings exploring the beauty of the black diaspora. From family, to sports, to fashion, to music, to film and other forms of our creativity.",
+    imageUrl: img4,
+    demoLink: "https://toniu.github.io/toniarts",
+    codeLink: "https://github.com/toniu/toniarts",
+    bgColors: ["#292316", "#544932"],
+  },
+  {
+    title: "SPortal",
+    secondTitle: "React TS SharePoint webparts",
+    techStack: [
+      "SPFx",
+      "React",
+      "TypeScript",
+      "Jest",
+      "Gulp",
+      "SharePoint Lists",
+    ],
+    description:
+      "SPFx TypeScript project of implemented Sharepoint webparts for Sharepoint website specifically for receiving and delivering information to other parties. This includes dashboard, profile, polls, group management and calendar",
+    imageUrl: img6,
+    demoLink: "",
+    codeLink: "https://github.com/toniu/SPortal",
+    bgColors: ["#166f75", "#837474"],
+  },
+  {
+    title: "arithmetix.",
+    secondTitle: "A-Level Maths e-Learning platform",
+    techStack: [
+      "VueJS",
+      "TailwindCSS",
+      "Webpack",
+      "Jest",
+      "NodeJS",
+      "Express",
+      "PostgreSQL",
+    ],
+    description:
+      "An e-learning website to help A-level Maths students in preparation for their exams. This includes provided resources of quizzes, notes and exam papers based on the syllabus of the exam boards: AQA, OCR and Edexcel.",
+    imageUrl: img1,
+    demoLink: "",
+    codeLink: "https://github.com/toniu/arithmetix",
+    bgColors: ["#29303b", "#1761bd"],
+  },
+];
 
 /*
 {

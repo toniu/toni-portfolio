@@ -4,7 +4,7 @@ import moi from '../assets/apple-avatar.png'
 
 const About = () => {
     const skills = {
-        frontend: ['HTML5', 'CSS3', 'Tailwind CSS', 'JavaScript (ES6+)', 'Responsive Design', 'React', 'Vue.js'],
+        frontend: ['HTML5', 'CSS3', 'Tailwind CSS', 'JavaScript (ES6+)', 'TypeScript', 'Responsive Design', 'React', 'Vue.js'],
         cms: ['WordPress','PHP (WordPress Themes)', 'Elementor', 'Custom WP Plugins', 'WP Optimisation','Squarespace'],
         webstandards: ['WCAG Accessibility', 'SEO Optimisation', 'Caching and Backup systems (WP)', 'Anti-spam and bot mitigation', 'Google Analytics', 'User-Centered Design', 'Figma', 'Canva']
     };
@@ -65,7 +65,7 @@ const About = () => {
                         </div>
 
                         <p className='text-gray-900 text-sm md:text-base leading-relaxed mb-6'>
-                            Hi, I'm <span className='text-blue-500 font-semibold'>Neka Toni-Uebari</span>. I'm a <span className='text-blue-500 font-semibold'>Junior Web Developer specialising in WordPress</span> with hands-on experience delivering custom CMS-driven websites. I focus on building responsive, accessible, and SEO-optimised web solutions that prioritise user experience and modern web standards (WCAG 2.1).
+                            Hi, I'm <span className='text-blue-500 font-semibold'>Neka Toni-Uebari</span>. I'm a <span className='text-blue-500 font-semibold'>Junior Web Developer specialising in WordPress</span> with hands-on experience delivering custom both frontend and CMS-driven websites. I focus on building responsive, accessible, and SEO-optimised web solutions that prioritise user experience and modern web standards (WCAG 2.1).
                         </p>
 
                         {/* Highlights */}
