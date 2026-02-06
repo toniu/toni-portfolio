@@ -1,12 +1,50 @@
-.swiper-button-prev,
-.swiper-button-next {
-    color: white;
+.projects-swiper {
+    padding: 0 56px 0 56px;
 }
 
-.swiper-button-prev:hover,
-.swiper-button-next:hover {
-    color: #60a5fa;
-    transition: 100s;
+.projects-swiper .swiper-button-prev,
+.projects-swiper .swiper-button-next {
+    width: 40px;
+    height: 40px;
+    border-radius: 9999px;
+    background: #ffffff;
+    color: #111827;
+    border: 1px solid rgba(17, 24, 39, 0.15);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.projects-swiper .swiper-button-prev::after,
+.projects-swiper .swiper-button-next::after {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.projects-swiper .swiper-button-prev {
+    left: 0;
+}
+
+.projects-swiper .swiper-button-next {
+    right: 0;
+}
+
+.projects-swiper .swiper-button-prev:hover,
+.projects-swiper .swiper-button-next:hover {
+    background: #60a5fa;
+    color: #ffffff;
+    border-color: #60a5fa;
+    transform: translateY(-1px);
+}
+
+.projects-swiper .swiper-button-prev:active,
+.projects-swiper .swiper-button-next:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 767px) {
+    .projects-swiper {
+        padding: 0 44px 0 44px;
+    }
 }
 
 .swiper-pagination-bullet {

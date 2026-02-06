@@ -45,7 +45,11 @@ const Navbar = () => {
   /* Listen for resize event */
   React.useEffect(() => {
     const handleResize = () => {
-      setScreenWidth(window.innerWidth);
+      const width = window.innerWidth;
+      setScreenWidth(width);
+      if (width >= 768) {
+        setIsOpen(false);
+      }
     };
 
     window.addEventListener('resize', handleResize);
@@ -55,16 +59,16 @@ const Navbar = () => {
   }, []);
 
   const links = [
-    { id: 'hero', title: 'home', offset: -70, icon: <FaHome />, ref: null },
-    { id: 'about', title: 'about', offset: -70, icon: <FaInfoCircle />, ref: null },
-    { id: 'projects', title: 'projects', offset: -70, icon: <FaSuitcase />, ref: null },
-    { id: 'testimonials', title: 'testimonials', offset: -70, icon: <FaCommentAlt />, ref: null },
-    { id: 'contact', title: 'contact', offset: -70, icon: <MdEmail />, ref: null },
+    { id: 'hero', title: 'home', offset: -75, icon: <FaHome />, ref: null },
+    { id: 'about', title: 'about', offset: -75, icon: <FaInfoCircle />, ref: null },
+    { id: 'projects', title: 'projects', offset: -75, icon: <FaSuitcase />, ref: null },
+    { id: 'testimonials', title: 'testimonials', offset: -75, icon: <FaCommentAlt />, ref: null },
+    { id: 'contact', title: 'contact', offset: -75, icon: <MdEmail />, ref: null },
   ];
 
   return (
     <motion.nav
-      className={`bg-black bg-opacity-85 fixed top-0 z-20 md:border-gray-900 m-0 w-full md:m-6 md:inset-x-0 md:mx-auto md:w-[65%] md:rounded-full md:border ${isScrolling ? 'md:shadow-2xl md:shadow-blue-500/20' : 'md:shadow-lg'}`}
+      className={`bg-black bg-opacity-85 fixed top-0 z-20 md:border-gray-900 m-0 w-full md:m-6 md:inset-x-0 md:mx-auto md:w-[70%] md:rounded-full md:border ${isScrolling ? 'md:shadow-2xl md:shadow-blue-500/20' : 'md:shadow-lg'}`}
       style={{
         backdropFilter: screenWidth >= 768 ? (isScrolling ? 'blur(12px)' : 'blur(2px)') : 'blur(10px)',
         WebkitBackdropFilter: screenWidth >= 768 ? (isScrolling ? 'blur(12px)' : 'blur(2px)') : 'blur(10px)',
@@ -99,7 +103,7 @@ const Navbar = () => {
                   offset={offset}
                   smooth={true}
                   duration={500}
-                  className={`text-gray-300 hover:text-blue-400 px-3 py-2 transition 100
+                  className={`text-gray-300 hover:text-blue-400 px-3 py-1 transition 100
                   hover:cursor-pointer text-md font-medium ${activeLink === id ? 'text-blue-400' : ''}`}
                   activeClass="text-blue-400 border-blue-400 border-b-4"
                   onSetActive={() => setActiveLink(id)}

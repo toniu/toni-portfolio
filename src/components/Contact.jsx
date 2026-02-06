@@ -48,7 +48,7 @@ const Contact = () => {
                 {/* Section header */}
                 <header className="text-center mb-6 mt-12">
                     <motion.h2
-                        class="block text-base uppercase tracking-widest text-blue-500 font-bold"
+                        class="block text-xl uppercase tracking-widest text-blue-500 font-bold"
                         initial={{ opacity: 0, y: 6 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
@@ -81,19 +81,19 @@ const Contact = () => {
                 <form onSubmit={handleSubmit}
                     className="flex flex-wrap gap-x-5">
                     <div className="mb-4 flex-grow">
-                        <label htmlFor="firstName" className="block text-black text-sm md:text-lg text-left">First Name </label>
+                        <label htmlFor="firstName" className="block text-black text-sm md:text-base text-left">First Name </label>
                         <input type="text" id="firstName" name="firstName" value={formData.firstName} onChange={handleChange} className="form-input mt-1 px-3 py-1 rounded-lg block w-full transition-all 100 border-[1.5px] border-black text-black hover:bg-blue-100 focus:bg-blue-100" required />
                     </div>
                     <div className="mb-4 flex-grow">
-                        <label htmlFor="lastName" className="block text-black text-sm md:text-lg text-left">Last Name</label>
+                        <label htmlFor="lastName" className="block text-black text-sm md:text-base text-left">Last Name</label>
                         <input type="text" id="lastName" name="lastName" value={formData.lastName} onChange={handleChange} className="form-input mt-1 px-3 py-1 rounded-lg block w-full transition-all 100 border-[1.5px] border-black text-black hover:bg-blue-100 focus:bg-blue-100" required />
                     </div>
                     <div className="w-full mb-4">
-                        <label htmlFor="email" className="block text-black text-sm md:text-lg text-left">Email</label>
+                        <label htmlFor="email" className="block text-black text-sm md:text-base text-left">Email</label>
                         <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} className="form-input mt-1 px-3 py-1 rounded-lg block w-full transition-all 100 border-[1.5px] border-black text-black hover:bg-blue-100 focus:bg-blue-100" required />
                     </div>
                     <div className="w-full mb-4">
-                        <label htmlFor="message" className="block text-black text-sm md:text-lg text-left">Message</label>
+                        <label htmlFor="message" className="block text-black text-sm md:text-base text-left">Message</label>
                         <textarea id="message" name="message" value={formData.message} onChange={handleChange} className="form-textarea mt-1 px-3 py-1 rounded-lg block w-full transition-all border-[1.5px] border-black text-black hover:bg-blue-100 focus:bg-blue-100" rows="5" required></textarea>
                     </div>
                     <div className="w-full my-2 text-center md:text-left">

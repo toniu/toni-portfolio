@@ -1,13 +1,12 @@
 import React from 'react'
 import { motion } from "framer-motion";
 import moi from '../assets/apple-avatar.png'
-import techIcons from './constants/TechData'
 
 const About = () => {
     const skills = {
         frontend: ['HTML5', 'CSS3', 'Tailwind CSS', 'JavaScript (ES6+)', 'Responsive Design', 'React', 'Vue.js'],
-        wordpress: ['WordPress Themes', 'PHP Theme Development', 'Elementor', 'Custom Plugins', 'WP Optimization'],
-        webstandards: ['WCAG 2.1 Accessibility', 'SEO Optimisation', 'Performance Tuning', 'Google Analytics', 'User-Centered Design']
+        cms: ['WordPress','PHP (WordPress Themes)', 'Elementor', 'Custom WP Plugins', 'WP Optimisation','Squarespace'],
+        webstandards: ['WCAG Accessibility', 'SEO Optimisation', 'Caching and Backup systems (WP)', 'Anti-spam and bot mitigation', 'Google Analytics', 'User-Centered Design', 'Figma', 'Canva']
     };
 
     const achievements = [
@@ -38,12 +37,12 @@ const About = () => {
             transition={{ duration: 0.75, }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false }}
-            id='about' className="relative h-auto pt-12 pb-16 bg-gradient-to-b from-transparent via-blue-500/5 to-transparent">
+            id='about' className="relative h-auto pt-6 pb-12 bg-gradient-to-b from-transparent via-blue-500/5 to-transparent">
             <div className="max-w-6xl mx-auto px-4">
                 {/* Section header */}
                 <header className="text-center mb-6 mt-12">
                     <motion.h2
-                        class="block text-base uppercase tracking-widest text-blue-500 font-bold"
+                        class="block text-xl uppercase tracking-widest text-blue-500 font-bold"
                         initial={{ opacity: 0, y: 6 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
@@ -66,7 +65,7 @@ const About = () => {
                         </div>
 
                         <p className='text-gray-900 text-sm md:text-base leading-relaxed mb-6'>
-                            Hi, I'm <span className='text-blue-500 font-semibold'>Neka Toni-Uebari</span>. I'm a <span className='text-blue-500 font-semibold'>Junior Web Developer specialising in WordPress</span> with hands-on experience delivering custom CMS-driven websites. I focus on building responsive, accessible, and SEO-optimized web solutions that prioritise user experience and modern web standards (WCAG 2.1).
+                            Hi, I'm <span className='text-blue-500 font-semibold'>Neka Toni-Uebari</span>. I'm a <span className='text-blue-500 font-semibold'>Junior Web Developer specialising in WordPress</span> with hands-on experience delivering custom CMS-driven websites. I focus on building responsive, accessible, and SEO-optimised web solutions that prioritise user experience and modern web standards (WCAG 2.1).
                         </p>
 
                         {/* Highlights */}
@@ -126,10 +125,10 @@ const About = () => {
                             viewport={{ once: false }}>
                             <h3 className='text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2'>
                                 <span className='w-8 h-8 bg-green-400 rounded-full flex items-center justify-center text-black text-sm font-bold'>W</span>
-                                WordPress & CMS
+                                Content Management System (CMS)
                             </h3>
                             <div className='flex flex-wrap gap-2'>
-                                {skills.wordpress.map((skill, idx) => (
+                                {skills.cms.map((skill, idx) => (
                                     <motion.span
                                         key={idx}
                                         whileHover={{ scale: 1.05 }}
