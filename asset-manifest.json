@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/toni-portfolio/static/css/main.f23b1b5b.css",
-    "main.js": "/toni-portfolio/static/js/main.ec845949.js",
+    "main.css": "/toni-portfolio/static/css/main.aefdeed8.css",
+    "main.js": "/toni-portfolio/static/js/main.d01fd3b7.js",
     "static/js/453.6bd84ed3.chunk.js": "/toni-portfolio/static/js/453.6bd84ed3.chunk.js",
     "static/media/self-img.png": "/toni-portfolio/static/media/self-img.16d08207452a94fae0c3.png",
     "static/media/project-arithmetix.png": "/toni-portfolio/static/media/project-arithmetix.372a4f90e888d22021e2.png",
@@ -10,16 +10,16 @@
     "static/media/project-sportal.png": "/toni-portfolio/static/media/project-sportal.73a37152077778662aeb.png",
     "static/media/project-toniartsg.png": "/toni-portfolio/static/media/project-toniartsg.2e2bb9dc1c29b63e1ae4.png",
     "static/media/project-matildaltd.png": "/toni-portfolio/static/media/project-matildaltd.1f8eab7ac388823bc32a.png",
-    "static/media/project-wayfindingkaia.png": "/toni-portfolio/static/media/project-wayfindingkaia.98b22399c0ba26e15894.png",
     "static/media/project-anreer.png": "/toni-portfolio/static/media/project-anreer.5fc8102e8e838d2dd6c3.png",
     "static/media/project-ccollective.png": "/toni-portfolio/static/media/project-ccollective.138ab527e1dd948cda0e.png",
+    "static/media/project-wayfindingkaia.png": "/toni-portfolio/static/media/project-wayfindingkaia.390ce1bbc121f0f92c15.png",
     "index.html": "/toni-portfolio/index.html",
-    "main.f23b1b5b.css.map": "/toni-portfolio/static/css/main.f23b1b5b.css.map",
-    "main.ec845949.js.map": "/toni-portfolio/static/js/main.ec845949.js.map",
+    "main.aefdeed8.css.map": "/toni-portfolio/static/css/main.aefdeed8.css.map",
+    "main.d01fd3b7.js.map": "/toni-portfolio/static/js/main.d01fd3b7.js.map",
     "453.6bd84ed3.chunk.js.map": "/toni-portfolio/static/js/453.6bd84ed3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f23b1b5b.css",
-    "static/js/main.ec845949.js"
+    "static/css/main.aefdeed8.css",
+    "static/js/main.d01fd3b7.js"
   ]
 }
