@@ -11,6 +11,7 @@ import img9 from "../../assets/project-ccollective.png";
 import img10 from "../../assets/project-matildaltd.png";
 import img11 from "../../assets/project-wayfindingkaia.png";
 import img12 from "../../assets/project-anreer.png";
+import img13 from "../../assets/project-bls.png";
 
 const projectsData = [
   {
@@ -18,18 +19,29 @@ const projectsData = [
     secondTitle: "Portfolio website",
     techStack: ["React", "TailwindCSS"],
     description:
-      "The website that you are already in! It is the official portfolio website of Neka Toni-Uebari. It includes an introduction of myself and the technologies and projects I can present.",
+      "A personal portfolio website built to showcase my projects, technical skills, and development experience. Designed with a clean UI and responsive layout to present my work clearly to employers.",
     imageUrl: imgToni,
     demoLink: "https://toniu.github.io/toni-portfolio",
     codeLink: "https://github.com/toniu/toni-portfolio",
     bgColors: ["#000000", "#19334d"],
   },
   {
-    title: "Matilda Limited",
-    secondTitle: "Healthcare Training Provider",
-    techStack: ["WordPress", "PHP", "HTML", "CSS", "JavaScript"],
+    title: "Bree's Little Stars",
+    secondTitle: "Nursery and Childcare website",
+    techStack: ["WordPress", "Elementor","PHP", "HTML", "CSS", "JavaScript","Google Analytics"],
     description:
-      "A leading healthcare training provider, delivering mandatory and complex care training led by experienced professionals. With years of hands-on expertise, our trainers ensure engaging and practical learning.",
+      "A WordPress-based nursery website focused on clarity, trust, and accessibility. Built to clearly communicate the nursery’s values, services, and child-centred approach to parents.",
+    imageUrl: img13,
+    demoLink: "https://www.breeslittlestars.co.uk/",
+    codeLink: "",
+    bgColors: ["#027bbf", "#097cdb"],
+  },
+  {
+    title: "Matilda Limited",
+    secondTitle: "Healthcare training provider website",
+    techStack: ["WordPress", "Elementor","PHP", "HTML", "CSS", "JavaScript", "MailChimp","Google Analytics"],
+    description:
+      "A professional website for a healthcare training provider, designed to present training services, course information, and key business content in a clear and structured way.",
     imageUrl: img10,
     demoLink: "https://matildahealthtraining.com/",
     codeLink: "",
@@ -37,32 +49,32 @@ const projectsData = [
   },
   {
     title: "Wayfinding Kaia",
-    secondTitle: "A travel community for young people",
+    secondTitle: "Travel and events community platform",
     techStack: ["Squarespace", "Canva"],
     description:
-      "A hub for a global, diverse community based in London, creating unforgettable experiences that bring people together through travel, events, and shared moments of discovery.",
+      "A community-focused website promoting travel experiences and social events for young people. Built to support content updates and highlight events, experiences, and community engagement.",
     imageUrl: img11,
     demoLink: "https://www.wayfindingkaia.co.uk/",
     codeLink: "",
-    bgColors: ["#4e7d9d", "#34546a"],
+    bgColors: ["#4e7d9d", "#4c8ebb"],
   },
   {
     title: "ANREER Investments",
-    secondTitle: "A construction investment company",
-    techStack: ["WordPress", "HTML", "CSS", "JavaScript"],
+    secondTitle: "Construction investment company website",
+    techStack: ["WordPress", "Elementor", "HTML", "CSS", "JavaScript"],
     description:
-      "A construction business committed to delivering high-quality construction services from concept to completion.",
+      "A business website developed to present construction and investment services clearly, with a focus on professionalism, structure, and ease of navigation.",
     imageUrl: img12,
     demoLink: "https://www.anreerinvestments.com/",
     codeLink: "",
-    bgColors: ["#FFC300", "#18234A"],
+    bgColors: ["#FFC300", "#f5c700"],
   },
   {
     title: "Christian Collective",
-    secondTitle: "Christian community for young people",
+    secondTitle: "Christian community and events website",
     techStack: ["Squarespace", "Figma"],
     description:
-      "A centralised hub for a community and gathering of creative minded Christians, including latest blogs, events and creatives. Christian Collective aims to develop a comprehensive platform where users can easily discover and access information about Christian events",
+      "A centralised platform for a creative Christian community, providing access to blogs, events, and community updates through a clear and user-friendly layout.",
     imageUrl: img9,
     demoLink: "https://www.christiancollective.uk/",
     codeLink: "",
@@ -70,10 +82,10 @@ const projectsData = [
   },
   {
     title: "mybiblejourney",
-    secondTitle: "E-book release website",
-    techStack: ["React", "JavaScript", "TailwindCSS"],
+    secondTitle: "E-book launch and information website",
+    techStack: ["React", "JavaScript", "TailwindCSS","Canva"],
     description:
-      "A website which directs to the official release of my e-book of visual Bible study notes of each book of the Bible. It includes details about the project as well as external links to charities. ",
+      "A React-based website created to support the launch of an e-book, presenting project information and directing users to external resources and charitable links.",
     imageUrl: img3,
     demoLink: "https://toniu.github.io/mybiblejourney",
     codeLink: "https://github.com/toniu/mybiblejourney",
@@ -82,17 +94,17 @@ const projectsData = [
   {
     title: "toniarts.",
     secondTitle: "Visual gallery website",
-    techStack: ["React", "JavaScript", "TailwindCSS"],
+    techStack: ["React", "JavaScript", "TailwindCSS","Canva"],
     description:
-      "A visually appealing website which shows a gallery of my drawings exploring the beauty of the black diaspora. From family, to sports, to fashion, to music, to film and other forms of our creativity.",
+      "A responsive gallery website showcasing my original artwork, designed to highlight visual storytelling and provide a clean, immersive viewing experience.",
     imageUrl: img4,
     demoLink: "https://toniu.github.io/toniarts",
     codeLink: "https://github.com/toniu/toniarts",
-    bgColors: ["#292316", "#544932"],
+    bgColors: ["#82e4a4", "#66a37b"],
   },
   {
     title: "SPortal",
-    secondTitle: "React TS SharePoint webparts",
+    secondTitle: "SharePoint webparts and internal tools",
     techStack: [
       "SPFx",
       "React",
@@ -102,15 +114,15 @@ const projectsData = [
       "SharePoint Lists",
     ],
     description:
-      "SPFx TypeScript project of implemented Sharepoint webparts for Sharepoint website specifically for receiving and delivering information to other parties. This includes dashboard, profile, polls, group management and calendar",
+      "A set of SPFx React webparts built for SharePoint, including dashboards, user profiles, polls, group management, and calendar features for internal communication.",
     imageUrl: img6,
     demoLink: "",
     codeLink: "https://github.com/toniu/SPortal",
-    bgColors: ["#166f75", "#837474"],
+    bgColors: ["#0a919a", "#6ab5ba"],
   },
   {
     title: "arithmetix.",
-    secondTitle: "A-Level Maths e-Learning platform",
+    secondTitle: "A-Level Maths e-learning platform",
     techStack: [
       "VueJS",
       "TailwindCSS",
@@ -121,11 +133,11 @@ const projectsData = [
       "PostgreSQL",
     ],
     description:
-      "An e-learning website to help A-level Maths students in preparation for their exams. This includes provided resources of quizzes, notes and exam papers based on the syllabus of the exam boards: AQA, OCR and Edexcel.",
+      "An e-learning platform designed to support A-Level Maths students with revision resources, quizzes, and exam papers aligned with AQA, OCR, and Edexcel syllabuses.",
     imageUrl: img1,
     demoLink: "",
     codeLink: "https://github.com/toniu/arithmetix",
-    bgColors: ["#29303b", "#1761bd"],
+    bgColors: ["#60a4fb", "#7eb3f7"],
   },
 ];
 
@@ -170,6 +182,109 @@ const projectsData = [
     //   codeLink: 'https://github.com/toniu/BPMS2018',
     //   bgColors: ['#0d4032', '#0d5441']
     // },
+
+*/
+
+
+/*
+
+const projectsData = [
+  {
+    title: "[name]",
+    secondTitle: "Portfolio website",
+    techStack: ["React", "TailwindCSS"],
+    description:
+      "The website that you are already in! It is the official portfolio website of [name]. It includes an introduction of myself and the technologies and projects I can present.",
+
+  },
+  {
+    title: "BLS",
+    secondTitle: "Nursery and Childcare",
+    techStack: ["WordPress", "PHP", "HTML", "CSS", "JavaScript","Akismet","Google Analytics"],
+    description:
+      "Nursery website designed to highlight a safe, nurturing, and engaging environment where children learn through play. The site focuses on clarity, warmth, and trust, helping parents quickly understand the nursery’s values, care approach, and child-centred ethos.",
+
+  },
+  {
+    title: "MTLTD",
+    secondTitle: "Healthcare Training Provider",
+    techStack: ["WordPress", "PHP", "HTML", "CSS", "JavaScript"],
+    description:
+      "A leading healthcare training provider, delivering mandatory and complex care training led by experienced professionals. With years of hands-on expertise, our trainers ensure engaging and practical learning.",
+
+  },
+  {
+    title: "WKI",
+    secondTitle: "A travel community for young people",
+    techStack: ["Squarespace", "Canva"],
+    description:
+      "A hub for a global, diverse community based in London, creating unforgettable experiences that bring people together through travel, events, and shared moments of discovery.",
+
+  },
+  {
+    title: "ANRIV",
+    secondTitle: "A construction investment company",
+    techStack: ["WordPress", "HTML", "CSS", "JavaScript"],
+    description:
+      "A construction business committed to delivering high-quality construction services from concept to completion.",
+
+  },
+  {
+    title: "CRC",
+    secondTitle: "Christian community for young people",
+    techStack: ["Squarespace", "Figma"],
+    description:
+      "A centralised hub for a community and gathering of creative minded Christians, including latest blogs, events and creatives. Christian Collective aims to develop a comprehensive platform where users can easily discover and access information about Christian events",
+
+  },
+  {
+    title: "MBEJ",
+    secondTitle: "E-book release website",
+    techStack: ["React", "JavaScript", "TailwindCSS"],
+    description:
+      "A website which directs to the official release of my e-book of visual Bible study notes of each book of the Bible. It includes details about the project as well as external links to charities. ",
+
+  },
+  {
+    title: "ARTTO",
+    secondTitle: "Visual gallery website",
+    techStack: ["React", "JavaScript", "TailwindCSS"],
+    description:
+      "A visually appealing website which shows a gallery of my drawings exploring the beauty of the black diaspora. From family, to sports, to fashion, to music, to film and other forms of our creativity.",
+
+  },
+  {
+    title: "SPROL",
+    secondTitle: "React TS SharePoint webparts",
+    techStack: [
+      "SPFx",
+      "React",
+      "TypeScript",
+      "Jest",
+      "Gulp",
+      "SharePoint Lists",
+    ],
+    description:
+      "SPFx TypeScript project of implemented Sharepoint webparts for Sharepoint website specifically for receiving and delivering information to other parties. This includes dashboard, profile, polls, group management and calendar",
+  },
+  {
+    title: "ARTX.",
+    secondTitle: "A-Level Maths e-Learning platform",
+    techStack: [
+      "VueJS",
+      "TailwindCSS",
+      "Webpack",
+      "Jest",
+      "NodeJS",
+      "Express",
+      "PostgreSQL",
+    ],
+    description:
+      "An e-learning website to help A-level Maths students in preparation for their exams. This includes provided resources of quizzes, notes and exam papers based on the syllabus of the exam boards: AQA, OCR and Edexcel.",
+
+  },
+];
+
 
 */
 export default projectsData;

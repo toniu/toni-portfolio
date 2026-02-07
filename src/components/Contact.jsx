@@ -175,7 +175,7 @@ const Contact = () => {
                             <div className="w-full my-2 text-center md:text-left">
                                 <button
                                     type="submit"
-                                    className="bg-gray-900 text-white text-lg py-2 px-12 rounded-full hover:bg-blue-500 transition duration-200"
+                                    className="bg-gray-900 text-white uppercase font-semibold text-base py-2 px-12 rounded-full hover:bg-blue-500 transition duration-200"
                                 >
                                     submit
                                 </button>

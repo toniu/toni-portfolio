@@ -21,7 +21,13 @@ const testimonialsData = [
   {
     name: 'Riann Ross',
     company: 'Wayfinding Kaia',
-    quote: `I would recommend Neka for his great quality and fast results. What I enjoyed the most about my website is that it was quick and that it looks amazing.`,
+    quote: `I would recommend Neka for his great quality and fast results. What I enjoyed the most about our website is that it was quick and that it looks amazing.`,
+    rating: 0.9
+  },
+  {
+    name: 'Barida Nwidag',
+    company: `Bree's Little Stars`,
+    quote: `Neka delivered excellent quality work from start to finish. His consistency, attention to detail, and the final outcome of our website were outstanding. Communication was clear throughout, and the finished product exceeded expectations. Highly recommended.`,
     rating: 0.9
   }
 ];

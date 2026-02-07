@@ -44,7 +44,7 @@ const Projects = () => {
           </motion.h2>
 
           <p className="mt-2 text-sm md:text-base text-gray-600">
-            A selection of past client and personal projects demonstrating responsive layouts, CMS integration, and accessibility-focused development.
+            A selection of past contract and personal projects demonstrating responsive layouts, CMS integration, and accessibility-focused development.
           </p>
         </header>
 
