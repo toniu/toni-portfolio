@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/toni-portfolio/static/css/main.d9248564.css",
-    "main.js": "/toni-portfolio/static/js/main.f9012f40.js",
+    "main.js": "/toni-portfolio/static/js/main.68d04907.js",
     "static/js/453.6bd84ed3.chunk.js": "/toni-portfolio/static/js/453.6bd84ed3.chunk.js",
     "static/media/self-img.png": "/toni-portfolio/static/media/self-img.16d08207452a94fae0c3.png",
     "static/media/project-arithmetix.png": "/toni-portfolio/static/media/project-arithmetix.372a4f90e888d22021e2.png",
@@ -16,11 +16,11 @@
     "static/media/project-wayfindingkaia.png": "/toni-portfolio/static/media/project-wayfindingkaia.390ce1bbc121f0f92c15.png",
     "index.html": "/toni-portfolio/index.html",
     "main.d9248564.css.map": "/toni-portfolio/static/css/main.d9248564.css.map",
-    "main.f9012f40.js.map": "/toni-portfolio/static/js/main.f9012f40.js.map",
+    "main.68d04907.js.map": "/toni-portfolio/static/js/main.68d04907.js.map",
     "453.6bd84ed3.chunk.js.map": "/toni-portfolio/static/js/453.6bd84ed3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d9248564.css",
-    "static/js/main.f9012f40.js"
+    "static/js/main.68d04907.js"
   ]
 }
