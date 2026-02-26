@@ -116,7 +116,7 @@ const projectsData = [
     description:
       "A set of SPFx React webparts built for SharePoint, including dashboards, user profiles, polls, group management, and calendar features for internal communication.",
     imageUrl: img6,
-    demoLink: "",
+    demoLink: "https://toniu.github.io/SPortal",
     codeLink: "https://github.com/toniu/SPortal",
     bgColors: ["#0a919a", "#6ab5ba"],
   },
