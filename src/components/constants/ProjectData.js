@@ -6,7 +6,7 @@ import img4 from "../../assets/project-toniartsg.png";
 // import img5 from '../../assets/project-badminton.png';
 import img6 from "../../assets/project-sportal.png";
 //import img7 from '../../assets/project-pyaux.png';
-//import img8 from '../../assets/project-onepercent.png';
+import img8 from '../../assets/project-onepercent.png';
 import img9 from "../../assets/project-ccollective.png";
 import img10 from "../../assets/project-matildaltd.png";
 import img11 from "../../assets/project-wayfindingkaia.png";
@@ -139,6 +139,16 @@ const projectsData = [
     codeLink: "https://github.com/toniu/arithmetix",
     bgColors: ["#60a4fb", "#7eb3f7"],
   },
+  {
+    title: "ONE%",
+    secondTitle: "Scala game-show program",
+    techStack: ['Scala','Slinky','React','Webpack','GitHub Actions','Cloudflare Pages'],
+    description: `A browser-based game show simulator inspired by ITV's The 1% Club, built with Scala.js, Slinky and React. 100 contestants answer questions of increasing difficulty across 12 rounds — be the last one standing to become the ONE%`,
+    imageUrl: img8,
+    demoLink: 'https://one-percent-9y5.pages.dev/',
+    codeLink: 'https://github.com/toniu/one-percent',
+    bgColors: ['#1d2b00', '#171a12']
+  }
 ];
 
 /*
@@ -155,11 +165,11 @@ const projectsData = [
     // {
     //   title: 'ONE%',
     //   secondTitle: 'Scala game-show program',
-    //   techStack: ['Scala'],
-    //   description: `A Scala game-show program inspired by the ITV game-show, The 1% club. The game structure involves 100 players (the user called ‘You’ and 99 other ‘CPU’ players) who attempt to answer a question to stay in the game each round. The game ends when there is only one player left`,
+    //   techStack: ['Scala','Slinky','React','Webpack','GitHub Actions','Cloudflare Pages'],
+    //   description: `A browser-based game show simulator inspired by ITV's The 1% Club, built with Scala.js, Slinky and React. 100 contestants answer questions of increasing difficulty across 12 rounds — be the last one standing to become the ONE%`,
     //   imageUrl: img8,
-    //   demoLink: '',
-    //   codeLink: 'https://github.com/toniu/ONEpercent',
+    //   demoLink: 'https://one-percent-9y5.pages.dev/',
+    //   codeLink: 'https://github.com/toniu/one-percent',
     //   bgColors: ['#1d2b00', '#171a12']
     // }
         // {
