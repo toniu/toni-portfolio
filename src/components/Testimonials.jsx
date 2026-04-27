@@ -128,11 +128,11 @@ const Testimonials = () => {
                                 {/* Footer */}
                                 <footer className="relative z-10 mt-8 flex items-center justify-between">
                                     <div>
-                                        <p className="text-sm md:text-base font-semibold text-gray-900">
+                                        <p className="text-xs md:text-base font-semibold text-gray-900">
                                             {t.name}
                                         </p>
                                         {t.company && (
-                                            <p className="text-sm md:text-base text-gray-600">
+                                            <p className="text-xs md:text-base text-gray-600">
                                                 {t.company}
                                             </p>
                                         )}

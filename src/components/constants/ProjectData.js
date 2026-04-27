@@ -1,13 +1,13 @@
-import imgToni from "../../assets/project-toni.png";
+// import imgToni from "../../assets/project-toni.png";
 import img1 from "../../assets/project-arithmetix.png";
 // import img2 from '../../assets/project-fsimulation.png';
 import img3 from "../../assets/project-mybiblejourney.png";
 import img4 from "../../assets/project-toniartsg.png";
 // import img5 from '../../assets/project-badminton.png';
 import img6 from "../../assets/project-sportal.png";
-//import img7 from '../../assets/project-pyaux.png';
+// import img7 from '../../assets/project-pyaux.png';
 import img8 from '../../assets/project-onepercent.png';
-import img9 from "../../assets/project-ccollective.png";
+// import img9 from "../../assets/project-ccollective.png";
 import img10 from "../../assets/project-matildaltd.png";
 import img11 from "../../assets/project-wayfindingkaia.png";
 import img12 from "../../assets/project-anreer.png";
@@ -15,15 +15,22 @@ import img13 from "../../assets/project-bls.png";
 
 const projectsData = [
   {
-    title: "toni.",
-    secondTitle: "Portfolio website",
-    techStack: ["React", "TailwindCSS"],
+    title: "SPortal",
+    secondTitle: "SharePoint webparts and internal tools",
+    techStack: [
+      "SPFx",
+      "React",
+      "TypeScript",
+      "Jest",
+      "Gulp",
+      "SharePoint Lists",
+    ],
     description:
-      "A personal portfolio website built to showcase my projects, technical skills, and development experience. Designed with a clean UI and responsive layout to present my work clearly to employers.",
-    imageUrl: imgToni,
-    demoLink: "https://toniu.github.io/toni-portfolio",
-    codeLink: "https://github.com/toniu/toni-portfolio",
-    bgColors: ["#000000", "#19334d"],
+      "A set of SPFx React webparts built for SharePoint, including dashboards, user profiles, polls, group management, and calendar features for internal communication.",
+    imageUrl: img6,
+    demoLink: "https://toniu.github.io/SPortal",
+    codeLink: "https://github.com/toniu/SPortal",
+    bgColors: ["#0a919a", "#6ab5ba"],
   },
   {
     title: "Bree's Little Stars",
@@ -70,15 +77,23 @@ const projectsData = [
     bgColors: ["#FFC300", "#f5c700"],
   },
   {
-    title: "Christian Collective",
-    secondTitle: "Christian community and events website",
-    techStack: ["Squarespace", "Figma"],
+    title: "arithmetix.",
+    secondTitle: "A-Level Maths e-learning platform",
+    techStack: [
+      "VueJS",
+      "TailwindCSS",
+      "Webpack",
+      "Jest",
+      "NodeJS",
+      "Express",
+      "PostgreSQL",
+    ],
     description:
-      "A centralised platform for a creative Christian community, providing access to blogs, events, and community updates through a clear and user-friendly layout.",
-    imageUrl: img9,
-    demoLink: "https://www.christiancollective.uk/",
-    codeLink: "",
-    bgColors: ["#000000", "#717171"],
+      "An e-learning platform designed to support A-Level Maths students with revision resources, quizzes, and exam papers aligned with AQA, OCR, and Edexcel syllabuses.",
+    imageUrl: img1,
+    demoLink: "",
+    codeLink: "https://github.com/toniu/arithmetix",
+    bgColors: ["#60a4fb", "#7eb3f7"],
   },
   {
     title: "mybiblejourney",
@@ -103,47 +118,10 @@ const projectsData = [
     bgColors: ["#82e4a4", "#66a37b"],
   },
   {
-    title: "SPortal",
-    secondTitle: "SharePoint webparts and internal tools",
-    techStack: [
-      "SPFx",
-      "React",
-      "TypeScript",
-      "Jest",
-      "Gulp",
-      "SharePoint Lists",
-    ],
-    description:
-      "A set of SPFx React webparts built for SharePoint, including dashboards, user profiles, polls, group management, and calendar features for internal communication.",
-    imageUrl: img6,
-    demoLink: "https://toniu.github.io/SPortal",
-    codeLink: "https://github.com/toniu/SPortal",
-    bgColors: ["#0a919a", "#6ab5ba"],
-  },
-  {
-    title: "arithmetix.",
-    secondTitle: "A-Level Maths e-learning platform",
-    techStack: [
-      "VueJS",
-      "TailwindCSS",
-      "Webpack",
-      "Jest",
-      "NodeJS",
-      "Express",
-      "PostgreSQL",
-    ],
-    description:
-      "An e-learning platform designed to support A-Level Maths students with revision resources, quizzes, and exam papers aligned with AQA, OCR, and Edexcel syllabuses.",
-    imageUrl: img1,
-    demoLink: "",
-    codeLink: "https://github.com/toniu/arithmetix",
-    bgColors: ["#60a4fb", "#7eb3f7"],
-  },
-  {
     title: "ONE%",
     secondTitle: "Scala game-show program",
     techStack: ['Scala','Slinky','React','Webpack','GitHub Actions','Cloudflare Pages'],
-    description: `A browser-based game show simulator inspired by ITV's The 1% Club, built with Scala.js, Slinky and React. 100 contestants answer questions of increasing difficulty across 12 rounds — be the last one standing to become the ONE%`,
+    description: `A browser-based game show simulator inspired by ITV's The 1% Club, built with Scala.js, Slinky and React. 100 contestants answer questions of increasing difficulty across 12 rounds - be the last one standing to become the ONE%`,
     imageUrl: img8,
     demoLink: 'https://one-percent-9y5.pages.dev/',
     codeLink: 'https://github.com/toniu/one-percent',
@@ -151,150 +129,61 @@ const projectsData = [
   }
 ];
 
-/*
+/* Hidden projects kept out of the portfolio rotation.
 {
-    //   title: 'pyaux',
-    //   secondTitle: 'Python Spotify playlist analyser',
-    //   techStack: ['Python','OAuth2'],
-    //   description: `Python project which fetches and analyses a user's spotify playlist information using the python Spotify API and calculates the rating based on artist diversity, genre cohesion, popularity, playlist length. It also gives track recommendations based on the user's playlist preferences.`,
-    //   imageUrl: img7,
-    //   demoLink: '',
-    //   codeLink: 'https://github.com/toniu/pyaux',
-    //   bgColors: ['#010500', '#001c06']
-    // },
-    // {
-    //   title: 'ONE%',
-    //   secondTitle: 'Scala game-show program',
-    //   techStack: ['Scala','Slinky','React','Webpack','GitHub Actions','Cloudflare Pages'],
-    //   description: `A browser-based game show simulator inspired by ITV's The 1% Club, built with Scala.js, Slinky and React. 100 contestants answer questions of increasing difficulty across 12 rounds — be the last one standing to become the ONE%`,
-    //   imageUrl: img8,
-    //   demoLink: 'https://one-percent-9y5.pages.dev/',
-    //   codeLink: 'https://github.com/toniu/one-percent',
-    //   bgColors: ['#1d2b00', '#171a12']
-    // }
-        // {
-    //   title: 'FSimulation',
-    //   secondTitle: 'Java console football simulation',
-    //   techStack: ['Java'],
-    //   description: 'A Java football simulation project which includes the simulation of leagues and matches between teams based on their FIFA ratings (attack, defence, midfield, and OVR rating).',
-    //   imageUrl: img2,
-    //   demoLink: '',
-    //   codeLink: 'https://github.com/toniu/FSimulation',
-    //   bgColors: ['#2e5675', '#49573a']
-    // },
-    // {
-    //   title: 'BPMS2018',
-    //   secondTitle: 'Badminton Player Management System',
-    //   techStack: ['Java','NetBeans','MySQL'],
-    //   description: 'Java Netbeans project for a badminton player management system of a club of badminton players. This includes the login of badminton players, management of players, scheduling of fixtures and results and the ranking of players.',
-    //   imageUrl: img5,
-    //   demoLink: '',
-    //   codeLink: 'https://github.com/toniu/BPMS2018',
-    //   bgColors: ['#0d4032', '#0d5441']
-    // },
-
-*/
-
-
-/*
-
-const projectsData = [
-  {
-    title: "[name]",
-    secondTitle: "Portfolio website",
-    techStack: ["React", "TailwindCSS"],
-    description:
-      "The website that you are already in! It is the official portfolio website of [name]. It includes an introduction of myself and the technologies and projects I can present.",
-
-  },
-  {
-    title: "BLS",
-    secondTitle: "Nursery and Childcare",
-    techStack: ["WordPress", "PHP", "HTML", "CSS", "JavaScript","Akismet","Google Analytics"],
-    description:
-      "Nursery website designed to highlight a safe, nurturing, and engaging environment where children learn through play. The site focuses on clarity, warmth, and trust, helping parents quickly understand the nursery’s values, care approach, and child-centred ethos.",
-
-  },
-  {
-    title: "MTLTD",
-    secondTitle: "Healthcare Training Provider",
-    techStack: ["WordPress", "PHP", "HTML", "CSS", "JavaScript"],
-    description:
-      "A leading healthcare training provider, delivering mandatory and complex care training led by experienced professionals. With years of hands-on expertise, our trainers ensure engaging and practical learning.",
-
-  },
-  {
-    title: "WKI",
-    secondTitle: "A travel community for young people",
-    techStack: ["Squarespace", "Canva"],
-    description:
-      "A hub for a global, diverse community based in London, creating unforgettable experiences that bring people together through travel, events, and shared moments of discovery.",
-
-  },
-  {
-    title: "ANRIV",
-    secondTitle: "A construction investment company",
-    techStack: ["WordPress", "HTML", "CSS", "JavaScript"],
-    description:
-      "A construction business committed to delivering high-quality construction services from concept to completion.",
-
-  },
-  {
-    title: "CRC",
-    secondTitle: "Christian community for young people",
-    techStack: ["Squarespace", "Figma"],
-    description:
-      "A centralised hub for a community and gathering of creative minded Christians, including latest blogs, events and creatives. Christian Collective aims to develop a comprehensive platform where users can easily discover and access information about Christian events",
-
-  },
-  {
-    title: "MBEJ",
-    secondTitle: "E-book release website",
-    techStack: ["React", "JavaScript", "TailwindCSS"],
-    description:
-      "A website which directs to the official release of my e-book of visual Bible study notes of each book of the Bible. It includes details about the project as well as external links to charities. ",
-
-  },
-  {
-    title: "ARTTO",
-    secondTitle: "Visual gallery website",
-    techStack: ["React", "JavaScript", "TailwindCSS"],
-    description:
-      "A visually appealing website which shows a gallery of my drawings exploring the beauty of the black diaspora. From family, to sports, to fashion, to music, to film and other forms of our creativity.",
-
-  },
-  {
-    title: "SPROL",
-    secondTitle: "React TS SharePoint webparts",
-    techStack: [
-      "SPFx",
-      "React",
-      "TypeScript",
-      "Jest",
-      "Gulp",
-      "SharePoint Lists",
-    ],
-    description:
-      "SPFx TypeScript project of implemented Sharepoint webparts for Sharepoint website specifically for receiving and delivering information to other parties. This includes dashboard, profile, polls, group management and calendar",
-  },
-  {
-    title: "ARTX.",
-    secondTitle: "A-Level Maths e-Learning platform",
-    techStack: [
-      "VueJS",
-      "TailwindCSS",
-      "Webpack",
-      "Jest",
-      "NodeJS",
-      "Express",
-      "PostgreSQL",
-    ],
-    description:
-      "An e-learning website to help A-level Maths students in preparation for their exams. This includes provided resources of quizzes, notes and exam papers based on the syllabus of the exam boards: AQA, OCR and Edexcel.",
-
-  },
-];
-
-
+  title: "Christian Collective",
+  secondTitle: "Christian community and events website",
+  techStack: ["Squarespace", "Figma"],
+  description:
+    "A centralised platform for a creative Christian community, providing access to blogs, events, and community updates through a clear and user-friendly layout.",
+  imageUrl: img9,
+  demoLink: "https://www.christiancollective.uk/",
+  codeLink: "",
+  bgColors: ["#000000", "#717171"],
+},
+{
+  title: "pyaux",
+  secondTitle: "Python Spotify playlist analyser",
+  techStack: ["Python", "OAuth2"],
+  description:
+    "Python project which fetches and analyses a user's Spotify playlist information using the Spotify API and calculates a rating based on artist diversity, genre cohesion, popularity, and playlist length. It also gives track recommendations based on the user's playlist preferences.",
+  imageUrl: img7,
+  demoLink: "",
+  codeLink: "https://github.com/toniu/pyaux",
+  bgColors: ["#010500", "#001c06"],
+},
+{
+  title: "FSimulation",
+  secondTitle: "Java console football simulation",
+  techStack: ["Java"],
+  description:
+    "A Java football simulation project that models leagues and matches between teams based on FIFA-style attack, defence, midfield, and overall ratings.",
+  imageUrl: img2,
+  demoLink: "",
+  codeLink: "https://github.com/toniu/FSimulation",
+  bgColors: ["#2e5675", "#49573a"],
+},
+{
+  title: "BPMS2018",
+  secondTitle: "Badminton Player Management System",
+  techStack: ["Java", "NetBeans", "MySQL"],
+  description:
+    "A Java NetBeans project for managing badminton club players, fixtures, results, rankings, and authentication workflows.",
+  imageUrl: img5,
+  demoLink: "",
+  codeLink: "https://github.com/toniu/BPMS2018",
+  bgColors: ["#0d4032", "#0d5441"],
+},
+{
+  title: "toni.",
+  secondTitle: "Portfolio website",
+  techStack: ["React", "TailwindCSS"],
+  description:
+    "A personal portfolio website built to showcase my projects, technical skills, and development experience with a clean UI and responsive layout.",
+  imageUrl: imgToni,
+  demoLink: "https://toniu.github.io/toni-portfolio",
+  codeLink: "https://github.com/toniu/toni-portfolio",
+  bgColors: ["#000000", "#19334d"],
+},
 */
 export default projectsData;

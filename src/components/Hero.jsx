@@ -93,9 +93,9 @@ const Hero = () => {
               repeat={Infinity}
               sequence={[
                 2500,
-                'web developer',
+                'frontend developer',
                 2500,
-                'wordpress developer',
+                'web developer',
               ]}
             />
           </motion.div>
