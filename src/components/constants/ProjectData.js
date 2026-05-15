@@ -43,6 +43,7 @@ const projectsData = [
     codeLink: "",
     bgColors: ["#027bbf", "#097cdb"],
   },
+  /*
   {
     title: "Matilda Limited",
     secondTitle: "Healthcare training provider website",
@@ -54,6 +55,7 @@ const projectsData = [
     codeLink: "",
     bgColors: ["#0f535c", "#1f8b8f"],
   },
+  */
   {
     title: "Wayfinding Kaia",
     secondTitle: "Travel and events community platform",
