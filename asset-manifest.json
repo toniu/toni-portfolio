@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.d9248564.css",
-    "main.js": "/static/js/main.f8ee1d45.js",
+    "main.js": "/static/js/main.c2635329.js",
     "static/js/453.6bd84ed3.chunk.js": "/static/js/453.6bd84ed3.chunk.js",
     "static/media/self-img.png": "/static/media/self-img.16d08207452a94fae0c3.png",
     "static/media/project-arithmetix.png": "/static/media/project-arithmetix.372a4f90e888d22021e2.png",
@@ -9,17 +9,18 @@
     "static/media/apple-avatar.png": "/static/media/apple-avatar.2422a0bc80e08fe45171.png",
     "static/media/project-sportal.png": "/static/media/project-sportal.73a37152077778662aeb.png",
     "static/media/project-toniartsg.png": "/static/media/project-toniartsg.2e2bb9dc1c29b63e1ae4.png",
+    "static/media/project-matildaltd.png": "/static/media/project-matildaltd.1f8eab7ac388823bc32a.png",
     "static/media/project-anreer.png": "/static/media/project-anreer.5fc8102e8e838d2dd6c3.png",
     "static/media/project-bls.png": "/static/media/project-bls.79cd7676c5ae3e9aaabf.png",
     "static/media/project-onepercent.png": "/static/media/project-onepercent.7c76905794e9af59093d.png",
     "static/media/project-wayfindingkaia.png": "/static/media/project-wayfindingkaia.390ce1bbc121f0f92c15.png",
     "index.html": "/index.html",
     "main.d9248564.css.map": "/static/css/main.d9248564.css.map",
-    "main.f8ee1d45.js.map": "/static/js/main.f8ee1d45.js.map",
+    "main.c2635329.js.map": "/static/js/main.c2635329.js.map",
     "453.6bd84ed3.chunk.js.map": "/static/js/453.6bd84ed3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d9248564.css",
-    "static/js/main.f8ee1d45.js"
+    "static/js/main.c2635329.js"
   ]
 }
