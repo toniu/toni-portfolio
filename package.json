@@ -2,7 +2,7 @@
   "name": "toni-portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://nekatoniuebari.com",
+  "homepage": "https://www.nekatoniuebari.com",
   "dependencies": {
     "@formspree/react": "^2.5.1",
     "@testing-library/jest-dom": "^5.17.0",

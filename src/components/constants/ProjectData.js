@@ -8,7 +8,7 @@ import img6 from "../../assets/project-sportal.png";
 // import img7 from '../../assets/project-pyaux.png';
 import img8 from '../../assets/project-onepercent.png';
 // import img9 from "../../assets/project-ccollective.png";
-//import img10 from "../../assets/project-matildaltd.png";
+import img10 from "../../assets/project-matildaltd.png";
 import img11 from "../../assets/project-wayfindingkaia.png";
 import img12 from "../../assets/project-anreer.png";
 import img13 from "../../assets/project-bls.png";
@@ -43,7 +43,6 @@ const projectsData = [
     codeLink: "",
     bgColors: ["#027bbf", "#097cdb"],
   },
-  /*
   {
     title: "Matilda Limited",
     secondTitle: "Healthcare training provider website",
@@ -55,7 +54,6 @@ const projectsData = [
     codeLink: "",
     bgColors: ["#0f535c", "#1f8b8f"],
   },
-  */
   {
     title: "Wayfinding Kaia",
     secondTitle: "Travel and events community platform",
