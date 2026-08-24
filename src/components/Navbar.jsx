@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-scroll';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaHome, FaInfoCircle, FaSuitcase, FaCommentAlt } from 'react-icons/fa';
-import { MdEmail } from 'react-icons/md';
+import { HomeIcon, InfoIcon, SuitcaseIcon, CommentIcon, EmailIcon, CVIcon } from './PortfolioIcons';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -78,17 +77,20 @@ const Navbar = () => {
   }, [isOpen]);
 
   const links = [
-    { id: 'hero', title: 'home', offset: -75, icon: <FaHome />, ref: null },
-    { id: 'about', title: 'about', offset: -75, icon: <FaInfoCircle />, ref: null },
-    { id: 'projects', title: 'projects', offset: -75, icon: <FaSuitcase />, ref: null },
-    { id: 'testimonials', title: 'testimonials', offset: -75, icon: <FaCommentAlt />, ref: null },
-    { id: 'contact', title: 'contact', offset: -75, icon: <MdEmail />, ref: null },
+    { id: 'hero', title: 'home', offset: -75, icon: <HomeIcon />, ref: null },
+    { id: 'projects', title: 'projects', offset: -75, icon: <SuitcaseIcon />, ref: null },
+    { id: 'about', title: 'about', offset: -75, icon: <InfoIcon />, ref: null },
+    { id: 'testimonials', title: 'testimonials', offset: -75, icon: <CommentIcon />, ref: null },
+    { id: 'contact', title: 'contact', offset: -75, icon: <EmailIcon />, ref: null },
   ];
+
+  const downloadCvUrl = '/feedback-cv/cv-neka-toni-uebari.pdf';
+  const cvButtonClass = 'inline-flex items-center gap-1.5 whitespace-nowrap rounded-full border border-blue-300/70 bg-gradient-to-r from-blue-500/15 to-cyan-500/10 px-2.5 py-1.5 text-sm font-medium text-blue-100 transition-all duration-200 hover:bg-blue-500 hover:text-white hover:border-blue-300/80 flex-shrink-0';
 
   return (
     <motion.nav
       ref={navRef}
-      className={`bg-black bg-opacity-85 fixed top-0 z-20 md:border-gray-900 m-0 w-full md:m-6 md:inset-x-0 md:mx-auto md:w-[70%] md:rounded-full md:border ${isScrolling ? 'md:shadow-2xl md:shadow-blue-500/20' : 'md:shadow-lg'}`}
+      className={`bg-black bg-opacity-85 fixed top-0 z-20 md:border-gray-900 m-0 w-full md:m-6 md:inset-x-0 md:mx-auto md:w-[85%] md:rounded-full md:border ${isScrolling ? 'md:shadow-2xl md:shadow-blue-500/20' : 'md:shadow-lg'}`}
       style={{
         backdropFilter: screenWidth >= 768 ? (isScrolling ? 'blur(12px)' : 'blur(2px)') : 'blur(10px)',
         WebkitBackdropFilter: screenWidth >= 768 ? (isScrolling ? 'blur(12px)' : 'blur(2px)') : 'blur(10px)',
@@ -98,7 +100,7 @@ const Navbar = () => {
       transition={{ duration: 0.3, scale: { type: 'spring', stiffness: 400, damping: 10 } }}
     >
       <div className="max-w-7xl mx-auto px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-12 gap-3">
           {/* Logo */}
           <div className="flex items-center">
             <Link
@@ -107,14 +109,14 @@ const Navbar = () => {
               offset={-70}
               smooth={true}
               duration={500}
-              className="select-none flex-shrink-0 text-white font-bold text-2xl
+              className="select-none flex-shrink-0 text-white font-bold text-xl
                   hover:text-blue-400 hover:cursor-pointer transition 100">
               toni.
             </Link>
           </div>
           {/* Desktop Menu */}
           <div className="hidden md:flex flex-grow justify-end">
-            <div className="flex items-baseline space-x-4">
+            <div className="flex items-center gap-2 lg:gap-3">
               {links.map(({ id, title, offset, icon, ref }) => (
                 <Link
                   key={id}
@@ -124,17 +126,27 @@ const Navbar = () => {
                   smooth={true}
                   duration={500}
                   className={`text-gray-300 hover:text-blue-400 px-3 py-1 transition 100
-                  hover:cursor-pointer text-md font-medium ${activeLink === id ? 'text-blue-400' : ''}`}
-                  activeClass="text-blue-400 border-blue-400 border-b-4"
+                  hover:cursor-pointer text-[0.75em] uppercase ${activeLink === id ? 'text-blue-400' : ''}`}
+                  activeClass="text-blue-400"
                   onSetActive={() => setActiveLink(id)}
                   ref={ref}
                 >
-                  <div className="block text-base">
+                  <div className="flex items-center gap-1.5">
                     <span className={`flex justify-center ${activeLink === id ? 'text-blue-400' : ''}`}> {icon} </span>
                     <span className={`${activeLink === id ? 'text-blue-400' : ''}`}> {title} </span>
                   </div>
                 </Link>
               ))}
+
+              <a
+                href={downloadCvUrl}
+                target="_blank"
+                rel="noreferrer"
+                className={`${cvButtonClass} hidden lg:inline-flex`}
+                aria-label="Download Resume"
+              >
+                <CVIcon />
+              </a>
             </div>
           </div>
           {/* Hamburger Menu Icon */}
@@ -177,11 +189,22 @@ const Navbar = () => {
                   className="text-white flex hover:bg-black/75 hover:text-blue-400 hover:cursor-pointer py-2 rounded-sm text-base font-medium transition 100"
                 >
                   <div className="flex space-x-3 px-2">
-                    <span className="text-xl p-1"> {icon} </span>
-                    <span className="text-lg"> {title} </span>
+                    <span className="text-lg p-1"> {icon} </span>
+                    <span className="text-[0.9em] m-2 uppercase tracking-widest"> {title} </span>
                   </div>
                 </Link>
               ))}
+
+              <a
+                href={downloadCvUrl}
+                target="_blank"
+                rel="noreferrer"
+                onClick={toggleMenu}
+                className="mt-1 flex items-center justify-center gap-2 rounded-xl border border-cyan-400/70 bg-gradient-to-r from-blue-500/20 to-cyan-500/10 px-3 py-2.5 text-base font-medium text-blue-100 shadow-sm shadow-cyan-900/25 transition hover:bg-blue-500 hover:text-white"
+              >
+                <CVIcon />
+                <span className="uppercase tracking-widest text-[0.85em]">Download Resume</span>
+              </a>
             </div>
           </motion.div>
         )}

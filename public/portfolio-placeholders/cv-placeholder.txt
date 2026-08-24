@@ -1,0 +1,9 @@
+CV placeholder
+
+This file is a placeholder for Neka Toni-Uebari's CV.
+Replace it later with the final PDF or document.
+
+Suggested next step:
+- Add the final CV file here
+- Update the portfolio navigation link if the CV needs a different file name
+- Keep this file as a temporary placeholder until the final version is ready

@@ -4,20 +4,60 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
-body {
-    font-family: 'Nunito', sans-serif;
+:root {
+  --bg: #f8fafc;
+  --surface: #ffffff;
+  --surface-alt: #eef5ff;
+  --surface-strong: #0f172a;
+  --text: #0f172a;
+  --text-soft: #475569;
+  --primary: #2563eb;
+  --primary-soft: rgba(37, 99, 235, 0.10);
+  --border: rgba(148, 163, 184, 0.25);
 }
 
-.slick-slide>div {
-    margin: 0 10px;
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: rgba(37, 99, 235, 0.18);
+  color: var(--text);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Nunito', sans-serif;
+  letter-spacing: -0.03em;
+  line-height: 1.12;
+  color: var(--text);
+}
+
+p, span, li, a, button, input, textarea {
+  font-family: 'Nunito', sans-serif;
+}
+
+.slick-slide > div {
+  margin: 0 10px;
 }
 
 .slick-prev {
-    left: 3% !important;
-    z-index: 1;
+  left: 3% !important;
+  z-index: 1;
 }
 
 .slick-next {
-    right: 3% !important;
-    z-index: 1;
+  right: 3% !important;
+  z-index: 1;
 }

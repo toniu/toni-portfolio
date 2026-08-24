@@ -1,5 +1,5 @@
-import { FaJava, FaPython, FaHtml5, FaCss3, FaVuejs, FaReact, FaNodeJs, FaFigma, FaGithub, FaWordpress, FaSquarespace } from 'react-icons/fa';
-import { SiScala, SiJavascript, SiTypescript, SiWebpack, SiExpress, SiTailwindcss, SiCanva, SiJest } from 'react-icons/si';
+import { FaJava, FaPython, FaHtml5, FaCss3, FaVuejs, FaReact, FaNodeJs, FaGithub, FaSquarespace, FaWordpress, FaFigma } from 'react-icons/fa';
+import { SiScala, SiJavascript, SiTypescript, SiTailwindcss, SiWebpack, SiExpress, SiJest, SiCanva } from 'react-icons/si';
 import { BiLogoPostgresql } from 'react-icons/bi';
 
 const techIcons = [

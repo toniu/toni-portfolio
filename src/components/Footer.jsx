@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-scroll';
 import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
-import { MdEmail } from "react-icons/md";
+import { GithubIcon, LinkedinIcon, EmailIcon } from './PortfolioIcons';
 
 const Footer = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -23,38 +22,40 @@ const Footer = () => {
 
     return (
         <motion.nav
-            className='footer bg-[black] backdrop-blur-md bg-opacity-80 text-[#eee] py-1 px-2 fixed bottom-0 z-50 w-full md:inset-x-0 md:mx-auto md:m-6 md:p-0 md:shadow-2xl md:shadow-blue-500/20 md:border-[1px] border-gray-900 md:w-[45%] md:rounded-full shadow-lg'
+            className='footer bg-[black] backdrop-blur-md bg-opacity-80 text-[#eee] py-4 px-2 fixed bottom-0 z-50 w-full md:inset-x-0 md:mx-auto md:m-6 md:p-0 shadow-lg md:shadow-blue-500/20 md:border-none border-gray-900 md:w-[45%] md:bg-opacity-0 md:backdrop-blur-0 md:shadow-none'
             initial={{ y: -100 }}
             animate={{ y: isScrolled ? 200 : 0 }}
             transition={{ duration: 0.3 }}>
             <div className='container mx-auto flex justify-center'>
-                <ul className='flex justify-center'>
-                    <li className='nav-item px-5'>
-                        <a href="https://www.linkedin.com/in/neka-toni-uebari/" target="_blank" rel="noopener noreferrer"
-                            className="mx-4 text-3xl hover:text-blue-400 hover:cursor-pointer transition 100">
-                            <FaLinkedin />
-                        </a>
-                    </li>
-                    <li className='nav-item px-5 '>
-                        <a href="https://github.com/toniu" target="_blank" rel="noopener noreferrer"
-                            className="mx-4 text-3xl hover:text-blue-400 hover:cursor-pointer transition 100 ">
-                            <FaGithub />
-                        </a>
-                    </li>
-                    <li className='nav-item px-5 '>
-                        <Link
-                            to={'contact'}
-                            spy={true}
-                            offset={-100}
-                            smooth={true}
-                            duration={500}
-                            className='mx-4 text-3xl hover:text-blue-400 hover:cursor-pointer transition 100'
-                        >
-                            <MdEmail />
-                        </Link>
-                    </li>
-                    
-                </ul>
+                <div className='flex items-center justify-center gap-10 p-2'>
+                    <a
+                        href='https://www.linkedin.com/in/neka-toni-uebari/'
+                        target='_blank'
+                        rel='noopener noreferrer'
+                        aria-label='Open LinkedIn'
+                        className='flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/5 text-white transition hover:border-blue-400 hover:bg-blue-500/20 hover:text-blue-200'
+                    >
+                        <LinkedinIcon />
+                    </a>
+
+                    <a
+                        href='https://github.com/toniu'
+                        target='_blank'
+                        rel='noopener noreferrer'
+                        aria-label='Open GitHub'
+                        className='flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/5 text-white transition hover:border-blue-400 hover:bg-blue-500/20 hover:text-blue-200'
+                    >
+                        <GithubIcon />
+                    </a>
+
+                    <a
+                        href='mailto:hello@nekatoniuebari.com'
+                        aria-label='Email Neka'
+                        className='flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/5 text-white transition hover:border-blue-400 hover:bg-blue-500/20 hover:text-blue-200'
+                    >
+                        <EmailIcon />
+                    </a>
+                </div>
             </div>
         </motion.nav>
     );

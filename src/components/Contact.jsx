@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { useForm } from '@formspree/react';
-import { FaPaperPlane } from "react-icons/fa";
 import { motion } from "framer-motion";
-import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { PaperPlaneIcon, LinkedinIcon, GithubIcon, CVIcon } from './PortfolioIcons';
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -30,7 +29,7 @@ const Contact = () => {
                     <div className="h-1 w-full bg-gradient-to-r from-blue-400 to-blue-700" />
                     <div className='p-8 md:p-12 text-center'>
                         <div className='mx-auto mb-4 inline-flex h-14 w-14 items-center justify-center rounded-full bg-blue-50 text-blue-600 hover:bg-blue-100 hover:scale-105 transition 100'>
-                            <FaPaperPlane className='text-2xl md:text-3xl' />
+                            <PaperPlaneIcon />
                         </div>
                         <p className='text-gray-900 font-semibold text-lg md:text-2xl'>
                             Email sent
@@ -81,8 +80,20 @@ const Contact = () => {
                     </motion.h2>
 
                     <p className="mt-2 text-sm md:text-base text-gray-600">
-                        Let's connect. Get in touch with my socials and fill out the form below!
+                        Looking for a web developer who can turn a rough brief into a clearer, more usable digital experience? Let's connect.
                     </p>
+                    <div className="mt-4 flex justify-center">
+                        <a
+                            href='/feedback-cv/cv-neka-toni-uebari.pdf'
+                            target='_blank'
+                            rel='noreferrer'
+                            aria-label='Open resume'
+                            className='inline-flex items-center gap-2 rounded-full border bg-blue-500/90 border-blue-300/70 px-4 py-2 text-white text-[10px] font-bold uppercase tracking-[0.18em] backdrop-blur-sm transition hover:bg-blue-500'
+                        >
+                            <CVIcon />
+                            <span className="uppercase">Download Resume</span>
+                        </a>
+                    </div>
                 </header>
                 <div className="rounded-2xl border border-gray-200 bg-white shadow-md overflow-hidden">
                     <div className="h-1 w-full bg-gradient-to-r from-blue-400 to-blue-700" />
@@ -91,13 +102,13 @@ const Contact = () => {
                             <li className='nav-item p-2'>
                                 <a href="https://www.linkedin.com/in/neka-toni-uebari/" target="_blank" rel="noopener noreferrer"
                                     className="mx-6 hover:text-blue-400 transition 100">
-                                    <FaLinkedin />
+                                    <LinkedinIcon />
                                 </a>
                             </li>
                             <li className='nav-item p-2'>
                                 <a href="https://github.com/toniu" target="_blank" rel="noopener noreferrer"
                                     className="mx-6 hover:text-blue-400 transition 100">
-                                    <FaGithub />
+                                    <GithubIcon />
                                 </a>
                             </li>
                         </ul>

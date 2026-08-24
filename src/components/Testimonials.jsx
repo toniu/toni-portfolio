@@ -2,7 +2,7 @@ import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
-import { FaPlay, FaPause } from 'react-icons/fa';
+import { PlayIcon, PauseIcon } from './PortfolioIcons';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
@@ -30,7 +30,8 @@ const Testimonials = () => {
     return (
         <section
             id="testimonials"
-            className="relative h-screen py-20 px-10 overflow-hidden"
+            className="relative h-screen py-20 px-10 overflow-hidden scroll-mt-28"
+            style={{ scrollMarginTop: '7rem' }}
         >
             <div className="max-w-4xl mx-auto">
 
@@ -72,7 +73,7 @@ const Testimonials = () => {
                                 }}
                                 className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white border border-gray-200 text-gray-600 hover:text-blue-400 hover:border-blue-400 transition duration-100"
                             >
-                                {isAutoplaying ? <FaPause /> : <FaPlay />}
+                                {isAutoplaying ? <PauseIcon /> : <PlayIcon />}
                             </button>
                         </div>
                     </div>

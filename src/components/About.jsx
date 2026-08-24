@@ -37,12 +37,13 @@ const About = () => {
             transition={{ duration: 0.75, }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false }}
-            id='about' className="relative h-auto pt-6 pb-12 bg-gradient-to-b from-transparent via-blue-500/5 to-transparent">
+            id='about' className="relative h-auto pt-6 pb-12 bg-gradient-to-b from-transparent via-blue-500/5 to-transparent scroll-mt-28"
+            style={{ scrollMarginTop: '7rem' }}>
             <div className="max-w-6xl mx-auto px-4">
                 {/* Section header */}
                 <header className="text-center mb-6 mt-12">
                     <motion.h2
-                        class="block text-xl uppercase tracking-widest text-blue-500 font-bold"
+                        className="block text-lg md:text-xl uppercase tracking-[0.22em] text-blue-600 font-extrabold"
                         initial={{ opacity: 0, y: 6 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
@@ -51,22 +52,30 @@ const About = () => {
                         About
                     </motion.h2>
 
-                    <p className="mt-2 text-sm md:text-base text-gray-600">
-                        My background, accomplishments and skillset as a web developer
+                    <p className="mt-3 text-sm md:text-base text-slate-600">
+                        My background, experience, and approach to building better web experiences.
                     </p>
                 </header>
 
                 {/* Main Content */}
-                <div className='pt-12 pr-3 pl-3 block md:flex gap-12'>
+                <div className='pt-12 pr-3 pl-3 block md:flex gap-12 md:items-start'>
                     {/* Left Section - Bio & Highlights */}
                     <div className='md:w-[45%]'>
                         <div className='text-center md:text-left mb-8'>
-                            <img src={moi} alt='me' className='w-[120px] h-[120px] md:w-[150px] md:h-[150px] mx-auto md:mx-0 rounded-full0' />
+                            <img src={moi} alt='me' className='w-[120px] h-[120px] md:w-[150px] md:h-[150px] mx-auto md:mx-0 rounded-full border border-blue-200 bg-white p-1 shadow-sm shadow-blue-100' />
                         </div>
 
-                        <p className='text-gray-900 text-sm md:text-base leading-relaxed mb-6'>
-                            Hi, I'm <span className='text-blue-500 font-semibold'>Neka Toni-Uebari</span>. I'm a <span className='text-blue-500 font-semibold'>Junior Web Developer specialising in WordPress</span> with hands-on experience delivering custom both frontend and CMS-driven websites. I focus on building responsive, accessible, and SEO-optimised web solutions that prioritise user experience and modern web standards (WCAG 2.1).
+                        <p className='text-slate-700 text-sm md:text-base leading-relaxed mb-6'>
+                            Hi, I'm <span className='text-blue-600 font-extrabold'>Neka Toni-Uebari</span>. I design and build front-end experiences that help real people understand a service, trust a brand, and move forward with confidence. My work sits across <span className='text-blue-600 font-extrabold'>product-minded UI</span>, <span className='text-blue-600 font-extrabold'>CMS builds</span>, and accessible website design, with a strong focus on clarity, usability, and practical delivery.
                         </p>
+
+                        <div className='mb-6 flex flex-wrap gap-2'>
+                            {['WordPress', 'React', 'Responsive UI', 'Accessibility', 'SEO', 'User experience'].map((tag) => (
+                                <span key={tag} className='rounded-full border border-blue-200 bg-blue-50 px-3 py-1 text-[10px] md:text-[11px] font-bold uppercase tracking-[0.12em] text-blue-700'>
+                                    {tag}
+                                </span>
+                            ))}
+                        </div>
 
                         {/* Highlights */}
                         <motion.div
@@ -79,11 +88,11 @@ const About = () => {
                                 <motion.div
                                     key={index}
                                     variants={itemVariants}
-                                    className='bg-gradient-to-r from-blue-500/10 to-transparent p-4 rounded-lg border-l-2 border-blue-400 flex items-start gap-3'>
-                                    <span className='text-2xl'>{achievement.icon}</span>
+                                    className='bg-gradient-to-r from-blue-500/10 to-transparent p-4 rounded-xl border border-blue-100 border-l-4 border-l-blue-500 flex items-start gap-3 shadow-sm'>
+                                    <span className='text-2xl leading-none'>{achievement.icon}</span>
                                     <div>
-                                        <p className='text-blue-500 font-semibold text-sm'>{achievement.label}</p>
-                                        <p className='text-gray-900 text-sm'>{achievement.description}</p>
+                                        <p className='text-blue-700 font-extrabold text-sm'>{achievement.label}</p>
+                                        <p className='text-slate-700 text-sm mt-1'>{achievement.description}</p>
                                     </div>
                                 </motion.div>
                             ))}
@@ -99,8 +108,8 @@ const About = () => {
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.6 }}
                             viewport={{ once: false }}>
-                            <h3 className='text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2'>
-                                <span className='w-8 h-8 bg-blue-400 rounded-full flex items-center justify-center text-black text-sm font-bold'>F</span>
+                            <h3 className='text-base tracking-wide uppercase font-extrabold text-slate-800 mb-4 flex items-center gap-2'>
+                                <span className='w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white text-sm font-bold'>F</span>
                                 Frontend Development
                             </h3>
                             <div className='flex flex-wrap gap-2'>
@@ -108,7 +117,7 @@ const About = () => {
                                     <motion.span
                                         key={idx}
                                         whileHover={{ scale: 1.05 }}
-                                        className='bg-gray-800 hover:bg-blue-800/90 px-3 py-2 rounded-full border border-gray-700 hover:border-blue-600 transition-all text-gray-300 text-sm font-medium cursor-pointer'
+                                        className='bg-slate-900 hover:bg-blue-700 px-3 py-2 rounded-full border border-slate-800 hover:border-blue-600 transition-all text-slate-100 text-sm font-normal tracking-wide cursor-pointer'
                                     >
                                         {skill}
                                     </motion.span>
@@ -123,8 +132,8 @@ const About = () => {
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.6, delay: 0.1 }}
                             viewport={{ once: false }}>
-                            <h3 className='text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2'>
-                                <span className='w-8 h-8 bg-green-400 rounded-full flex items-center justify-center text-black text-sm font-bold'>C</span>
+                            <h3 className='text-base tracking-wide uppercase font-extrabold text-slate-800 mb-4 flex items-center gap-2'>
+                                <span className='w-8 h-8 bg-emerald-400 rounded-full flex items-center justify-center text-slate-900 text-sm font-bold'>C</span>
                                 Content Management System (CMS)
                             </h3>
                             <div className='flex flex-wrap gap-2'>
@@ -132,7 +141,7 @@ const About = () => {
                                     <motion.span
                                         key={idx}
                                         whileHover={{ scale: 1.05 }}
-                                        className='bg-gray-800 hover:bg-green-700/90 px-3 py-2 rounded-full border border-gray-700 hover:border-green-600 transition-all text-gray-300 text-sm font-medium cursor-pointer'
+                                        className='bg-slate-900 hover:bg-emerald-600 px-3 py-2 rounded-full border border-slate-800 hover:border-emerald-500 transition-all text-slate-100 text-sm font-normal tracking-wide cursor-pointer'
                                     >
                                         {skill}
                                     </motion.span>
@@ -146,8 +155,8 @@ const About = () => {
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.6, delay: 0.2 }}
                             viewport={{ once: false }}>
-                            <h3 className='text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2'>
-                                <span className='w-8 h-8 bg-purple-400 rounded-full flex items-center justify-center text-black text-sm font-bold'>W</span>
+                            <h3 className='text-base tracking-wide uppercase font-extrabold text-slate-800 mb-4 flex items-center gap-2'>
+                                <span className='w-8 h-8 bg-violet-400 rounded-full flex items-center justify-center text-slate-900 text-sm font-bold'>W</span>
                                 Web Standards & UX
                             </h3>
                             <div className='flex flex-wrap gap-2'>
@@ -155,7 +164,7 @@ const About = () => {
                                     <motion.span
                                         key={idx}
                                         whileHover={{ scale: 1.05 }}
-                                        className='bg-gray-800 hover:bg-purple-800/90 px-3 py-2 rounded-full border border-gray-700 hover:border-purple-600 transition-all text-gray-300 text-sm font-medium cursor-pointer'
+                                        className='bg-slate-900 hover:bg-violet-700 px-3 py-2 rounded-full border border-slate-800 hover:border-violet-500 transition-all text-slate-100 text-sm font-normal tracking-wide cursor-pointer'
                                     >
                                         {skill}
                                     </motion.span>

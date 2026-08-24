@@ -2,18 +2,15 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
 import heroImg from '../assets/self-img.png';
-import { BiSolidMouse } from "react-icons/bi";
+import { CVIcon, LinkedinIcon, GithubIcon, EmailIcon } from './PortfolioIcons';
 
 const Hero = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [scrollY, setScrollY] = useState(0);
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
   /* Listen for scroll event */
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
-      setScrollY(scrollTop);
       /* Set isScrolled to true if user scrolls past 50px */
       setIsScrolled(scrollTop > 50);
     };
@@ -24,26 +21,7 @@ const Hero = () => {
     };
   }, []);
 
-  useEffect(() => {
-    const handleResize = () => {
-      setScreenWidth(window.innerWidth);
-    };
-
-    window.addEventListener('resize', handleResize);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-
-  const getBackgroundSize = () => {
-    const baseSize = screenWidth <= 1024 ? 200 : 150; // 200% for mobile and tablet, 150% for larger screens
-    return `${baseSize + scrollY * 0.075}%`;
-  };
-
-  // Start with a mostly opaque black overlay at the top, and slightly increase
-  // opacity as the user scrolls to fully obscure the image when needed.
-  // Tweak the base (0.85) and divisor to change starting darkness and rate.
-  const overlayOpacity = Math.max(0.75, 0.9 - scrollY / 1000);
+  const overlayOpacity = 0.82;
 
   return (
     <div className='relative h-screen bg-black'>
@@ -55,8 +33,8 @@ const Hero = () => {
         transition={{ delay: 0.5, duration: 0.5 }}
         style={{
           backgroundImage: `url(${heroImg})`,
-          backgroundSize: getBackgroundSize(), // Dynamically adjust background size based on screen width and scroll position
-          backgroundPosition: 'center',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center center',
           backgroundRepeat: 'no-repeat',
         }}
       >
@@ -70,19 +48,15 @@ const Hero = () => {
               animate={{ opacity: 1 }}
               transition={{ delay: 1.25, duration: 1 }}
               className='text-white select-none'>
-              hello. it's me
+              hello, i’m neka
             </motion.h2>
-            <motion.span initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 1.25, duration: 1 }}
-              className='text-white select-none'> neka </motion.span>
             <span className='text-blue-400 select-none'> toni</span>
             <motion.span initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1.25, duration: 1 }}
-              className='text-white select-none'>-uebari</motion.span>
+              className='text-white select-none'> uebari</motion.span>
           </div>
-          <motion.div className='pt-2 pb-10'
+          <motion.div className='pt-2 pb-6'
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.25, duration: 1 }}>
@@ -93,25 +67,45 @@ const Hero = () => {
               repeat={Infinity}
               sequence={[
                 2500,
-                'frontend developer',
+                'front-end developer',
                 2500,
                 'web developer',
               ]}
             />
           </motion.div>
 
-          <motion.div
+          <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 2.5, duration: 1 }}>
-            <motion.div
-              initial={{ y: -200 }}
-              animate={{ opacity: isScrolled ? 0 : 100, y: isScrolled ? 100 : 0 }}
-              transition={{ duration: 0.3 }}
-              className='select-none mt-10 text-xl md:text-2xl rounded-full mx-auto flex justify-center'>
-              <BiSolidMouse className='m-1' />
-              use scroll
-            </motion.div>
+            transition={{ delay: 1.8, duration: 0.8 }}
+            className='mx-auto max-w-xl p-10 text-sm md:text-base text-slate-200/90'
+          >
+            Building clear, useful digital experiences for product, service, and brand-led teams.
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{
+              opacity: isScrolled ? 0 : 1,
+              y: isScrolled ? -10 : 0,
+              scale: isScrolled ? 0.98 : 1,
+            }}
+            transition={{ delay: 2.2, duration: 0.45, ease: 'easeOut' }}
+            className='mt-8 flex flex-col items-center gap-4'
+            style={{ pointerEvents: isScrolled ? 'none' : 'auto' }}
+          >
+            <a
+              href='/feedback-cv/cv-neka-toni-uebari.pdf'
+              target='_blank'
+              rel='noreferrer'
+              aria-label='Open resume'
+              className='inline-flex items-center gap-2 rounded-full border border-blue-300/70 bg-white/10 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.18em] text-white backdrop-blur-sm transition hover:bg-blue-500 hover:text-white'
+            >
+              <CVIcon />
+              <span>Resume</span>
+            </a>
+
+            
           </motion.div>
         </div>
       </motion.section>

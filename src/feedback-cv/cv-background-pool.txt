@@ -1,0 +1,76 @@
+CV current draft of summary, skills and pool of experiences:
+“SUMMARY 
+
+Software and Web Developer with experience building full-stack and frontend applications using JavaScript frameworks, REST APIs, and modern web technologies. Known for clear communication, rapid learning, and effective collaboration in Agile teams to deliver scalable, user-focused solutions across projects and internships.
+SKILLS 
+* Languages & Frameworks: JavaScript, TypeScript, HTML, CSS, Vue.js, React, Node.js (Express), Next.js
+* Backend & Architecture: PostgreSQL, REST APIs, JWT authentication, MVC architecture
+* Web Engineering: Accessibility (WCAG), SEO optimisation, Performance optimisation, Responsive design
+* Tools & Practices: Git, Agile/Scrum, TDD (Jest), WordPress, Google Analytics, Figma”
+* 
+PROJECT EXPERIENCE 
+Software Engineer - “SPTL”, University Team Project (SEP 2022 - MAR 2023) 
+* Developed custom frontend components using React, TypeScript, and SPFx in a cross-functional Agile team.
+* Implemented Test-Driven Development (TDD) and integration testing with Jest, reducing defects by 60%+
+* Contributed to sprint planning, peer reviews, and stakeholder demos, ensuring timely delivery of features.
+Full Stack Developer - “ARTX”, University Full-Stack Individual Project (SEP 2021 - MAR 2022)
+* Designed and built a full-stack e-learning platform using VueJS, Node.js, PostgreSQL, and REST APIs.
+* Implemented JWT authentication and MVC architecture to improve security and scalability.
+* Delivered production-ready features with positive user feedback, demonstrating ownership of the entire development lifecycle.
+INTERNSHIPS 
+Frontend Developer - “Module Choice System”, RHUL Summer Internship (JUL 2021 – AUG 2021) 
+* Developed VueJS frontend features for a module selection platform used by 12,000+ users.
+* Contributed to Node.js backend services, meeting key delivery milestones.
+* Collaborated in an Agile team using Git and Trello to ensure timely delivery.
+Software Developer - “Bright Network”, Online Internship Experience (JUN 2021 - JUL 2021)
+* Developed an object-oriented Java application as part of a structured development challenge.
+* Applied TDD to design, implement, and validate core functionality.
+* Strengthened problem-solving skills and software design fundamentals.
+“
+“
+
+
+[Web Developer - “Bree’s Little Stars”, WordPress Project (SEP 2025 - NOV 2025) 
+* Delivered a refreshed, mobile-responsive 6-page WordPress nursery site with 3 logo concepts, SEO optimisation, and automated backups to improve reliability and UX. 
+* Implemented anti-spam measures for forms and form-submission email integration to improve site stability and handle requests safely. 
+* Set up Google Analytics and optimised metadata to boost local SEO visibility and support data-driven decisions. 
+Web Designer - “ANREER Investments”, WordPress Project (JUN 2025 - JUL 2025) 
+* Built a modern, mobile-first single-page WordPress construction site with SEO setup, analytics integration, and performance plugins for faster load speed and usability. 
+* Created 3 branded logo variations and delivered revisions based on client feedback, demonstrating strong communication, collaboration, and requirements-gathering skills. 
+* Integrated social links and automated backups to improve long-term maintainability and site reliability.
+Web Designer - “Wayfinding Kaia”, Squarespace Project (MAY 2025 - JUN 2025) 
+* Designed and built and launched a dynamic, user-friendly travel and events platform using Squarespace CMS. Managed dynamic event listings and collected visitor data using analytics to inform event scheduling 
+* Developed a 4-page architecture including newsletter opt-ins and online commerce for event tickets. 
+* Collected visitor data through Squarespace Analytics to inform content and event promotion strategy. 
+Web Developer - “Matilda Healthcare Training”, WordPress Project (FEB 2025 - APR 2025)
+* Rebuilt and modernised a 8-page responsive WordPress site (HTML, CSS, JavaScript, PHP) with additional
+* plugins such as Elementor, Calendly, MailChimp, IONOS integration. 
+* Improved SEO and accessibility via axeDevTools; designed branded assets (3 new logo variants, QR codes, and 4 new course completion certificates) using Canva.
+* Created a Google Forms-based feedback system with data analysis in Google Sheets.
+Web Designer - “Christian Collective”, Squarespace Project (OCT 2024 - DEC 2024)
+* Designed and launched a 6-page responsive Squarespace website optimised for mobile and desktop. Produced Figma wireframes and Canva visuals aligned with brand identity. 
+* Held bi-weekly client reviews to refine UX and apply real-time feedback. ]
+
+Or even better Web Developer - Independent Projects (SEP 2024 - PRESENT)
+* Delivered responsive websites for multiple people, translating business requirements into accessible, user-focused solutions using WordPress, JavaScript, HTML, CSS, and modern web technologies.
+* Collaborated closely with clients throughout planning, design, implementation, and refinement, incorporating feedback to improve usability and maintainability.
+* Integrated analytics, SEO improvements, secure forms, and third-party services to deliver reliable, production-ready websites.
+
+Software Engineer - “SPortal”, University Team Project (SEP 2022 - MAR 2023) 
+* Developed 5 custom SharePoint web parts using SPFx, ReactJS, TypeScript, TailwindCSS, SharePoint Lists, and Git; maintained team communication via Trello and Microsoft Teams 
+* Implemented Jest-based TDD testing, reducing bugs by 60%+; contributed to agile sprint cycles.
+* Delivered stakeholder demos and presentations with consistently positive feedback.
+Full Stack Developer - “Arithmetix”, University Full-Stack Individual Project (SEP 2021 - MAR 2022)
+* Built an A-level maths e-learning platform using VueJS, Node.js (Express), PostgreSQL, REST APIs, and Git. 
+* Implemented JWT-based authentication and MVC architecture, which enhanced scalability and reduced unauthorised access risks; delivered well-reviewed demos praised for usability and functionality.
+Frontend Developer - “Module Choice System”, RHUL Summer Internship (JUL 2021 – AUG 2021)
+* Developed VueJS frontend for a module selection platform used by 12,000+ students.
+* Contributed to backend development (NodeJS, PostgreSQL) to hit project milestones.
+* Collaborated with a 4-member remote team using Git, Trello, and Microsoft Teams. 
+Software Developer - “Bright Network”, Online Internship Experience (JUN 2021 - JUL 2021)
+* Completed a Java development challenge for Google, building an object-oriented, console-based video player application. 
+* Used TDD and OOP principles to structure code and tests effectively.
+Office Worker - “Procter & Gamble”, Internship Experience (JUN 2019 - AUG 2019)
+* Engaged in many coding challenges in Python and Java using CodeAcademy.
+* Collaborated with an intern to utilise Computer Aided Design and 3D Printers and produce a successful exemplar product.
+“
