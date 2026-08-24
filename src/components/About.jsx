@@ -10,9 +10,9 @@ const About = () => {
     };
 
     const achievements = [
-        { icon: '', label: '5+ Contracted Projects', description: 'Delivered WordPress & Squarespace sites for upcoming businesses and organisations' },
-        { icon: '', label: 'WCAG AA Compliant', description: 'Accessibility-first development' },
-        { icon: '', label: 'Performance Focused', description: 'Optimised load speeds & SEO' }
+        { icon: '', label: '5+ Contracted Projects', description: 'Delivered product-minded web experiences for real organisations and client teams' },
+        { icon: '', label: 'Accessibility-first', description: 'Built with clarity, usability, and inclusive UX in mind' },
+        { icon: '', label: 'Performance-aware', description: 'Focused on fast, readable, conversion-friendly front-end experiences' }
     ];
 
     const containerVariants = {
@@ -66,11 +66,11 @@ const About = () => {
                         </div>
 
                         <p className='text-slate-700 text-sm md:text-base leading-relaxed mb-6'>
-                            Hi, I'm <span className='text-blue-600 font-extrabold'>Neka Toni-Uebari</span>. I design and build front-end experiences that help real people understand a service, trust a brand, and move forward with confidence. My work sits across <span className='text-blue-600 font-extrabold'>product-minded UI</span>, <span className='text-blue-600 font-extrabold'>CMS builds</span>, and accessible website design, with a strong focus on clarity, usability, and practical delivery.
+                            Hi, I'm <span className='text-blue-600 font-extrabold'>Neka Toni-Uebari</span>, a front-end developer focused on building clear, useful digital experiences for real people. I work across product-minded UI, responsive builds, and accessible web experiences with a strong emphasis on clarity, usability, and practical business outcomes.
                         </p>
 
                         <div className='mb-6 flex flex-wrap gap-2'>
-                            {['WordPress', 'React', 'Responsive UI', 'Accessibility', 'SEO', 'User experience'].map((tag) => (
+                            {['Front-end', 'React', 'Responsive UI', 'Accessibility', 'SEO', 'User experience'].map((tag) => (
                                 <span key={tag} className='rounded-full border border-blue-200 bg-blue-50 px-3 py-1 text-[10px] md:text-[11px] font-bold uppercase tracking-[0.12em] text-blue-700'>
                                     {tag}
                                 </span>
@@ -117,7 +117,7 @@ const About = () => {
                                     <motion.span
                                         key={idx}
                                         whileHover={{ scale: 1.05 }}
-                                        className='bg-slate-900 hover:bg-blue-700 px-3 py-2 rounded-full border border-slate-800 hover:border-blue-600 transition-all text-slate-100 text-sm font-normal tracking-wide cursor-pointer'
+                                        className='bg-slate-900 hover:bg-blue-800  hover:border-blue-600 transition-all text-slate-100 text-sm cursor-pointer rounded-full border border-blue-200 px-4 md:px-6 py-1 text-[0.725em] md:text-[0.825em] font-light uppercase tracking-[0.12em]'
                                     >
                                         {skill}
                                     </motion.span>
@@ -141,7 +141,7 @@ const About = () => {
                                     <motion.span
                                         key={idx}
                                         whileHover={{ scale: 1.05 }}
-                                        className='bg-slate-900 hover:bg-emerald-600 px-3 py-2 rounded-full border border-slate-800 hover:border-emerald-500 transition-all text-slate-100 text-sm font-normal tracking-wide cursor-pointer'
+                                        className='bg-slate-900 hover:bg-emerald-800  hover:border-emerald-600 transition-all text-slate-100 text-sm cursor-pointer rounded-full border border-blue-200 px-4 md:px-6 py-1 text-[0.7em] md:text-[0.85em] font-light uppercase tracking-[0.12em]'
                                     >
                                         {skill}
                                     </motion.span>
@@ -164,7 +164,7 @@ const About = () => {
                                     <motion.span
                                         key={idx}
                                         whileHover={{ scale: 1.05 }}
-                                        className='bg-slate-900 hover:bg-violet-700 px-3 py-2 rounded-full border border-slate-800 hover:border-violet-500 transition-all text-slate-100 text-sm font-normal tracking-wide cursor-pointer'
+                                        className='bg-slate-900 hover:bg-violet-800  hover:border-violet-600 transition-all text-slate-100 text-sm cursor-pointer rounded-full border border-blue-200 px-4 md:px-6 py-1 text-[0.7em] md:text-[0.85em] font-light uppercase tracking-[0.12em]'
                                     >
                                         {skill}
                                     </motion.span>

@@ -22,10 +22,22 @@ html {
 
 body {
   font-family: 'Nunito', sans-serif;
-  background: var(--bg);
+  background: linear-gradient(180deg, #f8fafc 0%, #f3f7ff 100%);
   color: var(--text);
   line-height: 1.6;
   letter-spacing: 0.01em;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+section,
+footer,
+header,
+main {
+  scroll-margin-top: 5rem;
 }
 
 * {

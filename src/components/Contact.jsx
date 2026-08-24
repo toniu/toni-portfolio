@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useForm } from '@formspree/react';
 import { motion } from "framer-motion";
-import { PaperPlaneIcon, LinkedinIcon, GithubIcon, CVIcon } from './PortfolioIcons';
+import { PaperPlaneIcon, LinkedinIcon, GithubIcon, EmailIcon, CVIcon } from './PortfolioIcons';
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -64,7 +64,7 @@ const Contact = () => {
     };
 
     return (
-        <div id='contact' className='relative h-auto flex justify-center items-center'>
+        <div id='contact' className='relative h-auto flex justify-center items-center pb-24 md:pb-20'>
 
             <div className="w-4/5 max-w-4xl px-5 pt-6 pb-10">
                 {/* Section header */}
@@ -95,6 +95,13 @@ const Contact = () => {
                         </a>
                     </div>
                 </header>
+                <div className="mb-6 text-center">
+                    <a href="mailto:nekatoniuebari@gmail.com" className="text-sm font-medium text-gray-700 hover:text-blue-500 transition">
+                        <EmailIcon/>
+                        <span className="m-2">nekatoniuebari@gmail.com</span>
+                    </a>
+                </div>
+
                 <div className="rounded-2xl border border-gray-200 bg-white shadow-md overflow-hidden">
                     <div className="h-1 w-full bg-gradient-to-r from-blue-400 to-blue-700" />
                     <div className="p-6 md:p-8">
@@ -186,7 +193,7 @@ const Contact = () => {
                             <div className="w-full my-2 text-center md:text-left">
                                 <button
                                     type="submit"
-                                    className="bg-gray-900 text-white uppercase font-semibold text-base py-2 px-12 rounded-full hover:bg-blue-500 transition duration-200"
+                                    className="bg-gray-900 text-white uppercase font-semibold text-sm py-1 px-12 rounded-full hover:bg-blue-500 transition duration-200"
                                 >
                                     submit
                                 </button>
@@ -196,7 +203,7 @@ const Contact = () => {
                 </div>
 
                 <div className='select-none bottom font-light text-sm md:text-base text-center pt-14 pb-16 space-y-2 w-[85%] mx-auto'>
-                    <p>2024 toni., inc. all rights reserved</p>
+                    <p>2026 toni., inc. all rights reserved</p>
                     <p>Developed by Neka Toni-Uebari, using ReactJS and TailwindCSS</p>
                 </div>
             </div>

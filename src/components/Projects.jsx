@@ -27,7 +27,7 @@ const Projects = () => {
           </motion.h2>
 
           <p className="mx-auto mt-2 max-w-2xl text-sm md:text-base text-gray-600">
-            A small set of work where I improved clarity, usability, and conversion across internal tools, education products, and service-driven websites.
+            A small set of product-minded work where I improved clarity, usability, and conversion across internal tools, education products, and service-driven websites.
           </p>
         </header>
 
@@ -38,7 +38,10 @@ const Projects = () => {
           viewport={{ once: false, amount: 0.12 }}
           transition={{ duration: 0.3, ease: 'easeOut' }}
         >
-          {projectsData.map((item) => (
+          {projectsData.map((item) => {
+            const mainImage = item.screenshots?.[0] || item.imageUrl;
+
+            return (
             <motion.article
               key={item.title}
               className={`group overflow-hidden rounded-2xl border bg-transparent shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-lg ${item.featured ? 'border-blue-200 bg-blue-50/40' : 'border-gray-200'}`}
@@ -49,7 +52,7 @@ const Projects = () => {
                 <div className="h-1 w-full" style={{ backgroundImage: `linear-gradient(90deg, ${item.bgColors[0]}, ${item.bgColors[1]})` }} />
 
                 {item.featured && (
-                  <div className="px-5 pt-4">
+                  <div className="px-5 pt-4 flex justify-center md:justify-start">
                     <span className="inline-flex rounded-full border border-blue-200 bg-blue-100 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-blue-700">
                       Featured
                     </span>
@@ -58,7 +61,7 @@ const Projects = () => {
 
                 <div className="overflow-hidden bg-gray-50">
                   <img
-                    src={item.imageUrl}
+                    src={mainImage}
                     alt={item.title}
                     className="h-56 w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
                     loading="lazy"
@@ -99,20 +102,20 @@ const Projects = () => {
                     </p>
                   )}
 
-                  {item.challenge && (
-                    <p className="mt-2 text-sm leading-6 text-slate-700">
-                      <span className="mr-1 font-extrabold uppercase tracking-[0.12em] text-slate-500">Challenge</span>
-                      {item.challenge}
-                    </p>
+                  {item.featured && item.challenge && (
+                    <div className="mt-3 rounded-xl border border-slate-200 bg-slate-50/80 p-3">
+                      <p className="text-[10px] font-extrabold uppercase tracking-[0.14em] text-slate-500">Challenge</p>
+                      <p className="mt-1 text-sm leading-6 text-slate-700">{item.challenge}</p>
+                    </div>
                   )}
 
                   <p className="mt-3 text-sm leading-6 text-slate-600">{item.description}</p>
 
-                  {item.outcome && (
-                    <p className="mt-3 text-sm leading-6 text-slate-700">
-                      <span className="mr-1 font-extrabold uppercase tracking-[0.12em] text-blue-700">Outcome</span>
-                      {item.outcome}
-                    </p>
+                  {item.featured && item.outcome && (
+                    <div className="mt-2 rounded-xl border border-blue-100 bg-blue-50/70 p-3">
+                      <p className="text-[10px] font-extrabold uppercase tracking-[0.14em] text-blue-700">Outcome</p>
+                      <p className="mt-1 text-sm leading-6 text-slate-700">{item.outcome}</p>
+                    </div>
                   )}
 
                   <div className="mt-4 flex flex-wrap gap-2">
@@ -125,7 +128,8 @@ const Projects = () => {
                 </div>
               </div>
             </motion.article>
-          ))}
+            );
+          })}
         </motion.div>
       </div>
     </motion.div>

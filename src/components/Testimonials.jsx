@@ -30,7 +30,7 @@ const Testimonials = () => {
     return (
         <section
             id="testimonials"
-            className="relative h-screen py-20 px-10 overflow-hidden scroll-mt-28"
+            className="relative h-screen py-16 px-6 md:px-10 overflow-hidden scroll-mt-28"
             style={{ scrollMarginTop: '7rem' }}
         >
             <div className="max-w-4xl mx-auto">

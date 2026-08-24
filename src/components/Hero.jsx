@@ -78,6 +78,15 @@ const Hero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.8, duration: 0.8 }}
+            className='mx-auto mb-6 text-[10px] font-semibold uppercase tracking-[0.22em] text-slate-200/80'
+          >
+            Open to full-time front-end roles
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.8, duration: 0.8 }}
             className='mx-auto max-w-xl p-10 text-sm md:text-base text-slate-200/90'
           >
             Building clear, useful digital experiences for product, service, and brand-led teams.

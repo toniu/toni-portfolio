@@ -125,7 +125,7 @@ const Navbar = () => {
                   offset={offset}
                   smooth={true}
                   duration={500}
-                  className={`text-gray-300 hover:text-blue-400 px-3 py-1 transition 100
+                  className={`text-gray-300 hover:text-blue-400 font-bold px-3 py-1 transition 100
                   hover:cursor-pointer text-[0.75em] uppercase ${activeLink === id ? 'text-blue-400' : ''}`}
                   activeClass="text-blue-400"
                   onSetActive={() => setActiveLink(id)}

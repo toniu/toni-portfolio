@@ -1,97 +1,63 @@
-// import imgToni from "../../assets/project-toni.png";
-import img1 from "../../assets/project-arithmetix.png";
-// import img2 from '../../assets/project-fsimulation.png';
-import img3 from "../../assets/project-mybiblejourney.png";
-import img4 from "../../assets/project-toniartsg.png";
-// import img5 from '../../assets/project-badminton.png';
-import img6 from "../../assets/project-sportal.png";
-// import img7 from '../../assets/project-pyaux.png';
-import img8 from '../../assets/project-onepercent.png';
-// import img9 from "../../assets/project-ccollective.png";
-import img10 from "../../assets/project-matildaltd.png";
-import img11 from "../../assets/project-wayfindingkaia.png";
-import img12 from "../../assets/project-anreer.png";
-import img13 from "../../assets/project-bls.png";
+import projectSPortalSc1 from '../../assets/project-screenshots/project-sportal-sc-1.png';
+import projectSPortalSc2 from '../../assets/project-screenshots/project-sportal-sc-2.png';
+import projectSPortalSc3 from '../../assets/project-screenshots/project-sportal-sc-3.png';
+
+import projectArithmetixSc1 from '../../assets/project-screenshots/project-arithmetix-sc-1.png';
+import projectArithmetixSc2 from '../../assets/project-screenshots/project-arithmetix-sc-2.png';
+
+import projectMyBibleJourneySc1 from '../../assets/project-screenshots/project-mybiblejourney-sc-1.png';
+import projectMyBibleJourneySc2 from '../../assets/project-screenshots/project-mybiblejourney-sc-2.png';
+
+import projectBlsSc1 from '../../assets/project-screenshots/project-bls-sc-1.png';
+import projectBlsSc2 from '../../assets/project-screenshots/project-bls-sc-2.png';
+import projectBlsSc3 from '../../assets/project-screenshots/project-bls-sc-3.png';
+
+import projectMatildaSc1 from '../../assets/project-screenshots/project-matildaltd-sc-1.png';
+import projectMatildaSc2 from '../../assets/project-screenshots/project-matildaltd-sc-2.png';
+
+import projectOnePercentSc1 from '../../assets/project-screenshots/project-onepercent-sc-1.png';
+import projectOnePercentSc2 from '../../assets/project-screenshots/project-onepercent-sc-2.png';
+import projectOnePercentSc3 from '../../assets/project-screenshots/project-onepercent-sc-3.png';
 
 const projectsData = [
   {
     title: "SPortal",
-    secondTitle: "SharePoint webparts and internal tools",
+    secondTitle: "Internal tools and SharePoint webparts",
     featured: true,
     year: "2024",
     role: "Frontend Developer",
     context: "Internal communications tooling",
-    challenge: "Staff were navigating fragmented internal communications and outdated SharePoint patterns that made key updates harder to find and use.",
-    outcome: "Delivered reusable webparts and clearer information flows that made internal resources easier to access, scan, and trust.",
+    challenge: "Staff were finding updates across fragmented internal systems and outdated SharePoint patterns.",
+    outcome: "Created clearer tooling and a more consistent internal information flow.",
     techStack: [
       "SPFx",
       "React",
       "TypeScript",
       "Jest",
-      "Gulp",
-      "SharePoint Lists",
+      "SharePoint",
     ],
     description:
-      "SharePoint tooling for dashboards, calendars, profiles, and engagement features — designed for real internal use rather than generic content blocks.",
-    imageUrl: img6,
+      "Reusable tooling for dashboards, calendars, profiles, and communication surfaces built for real internal use.",
+    imageUrl: projectSPortalSc1,
+    screenshots: [projectSPortalSc1, projectSPortalSc2, projectSPortalSc3],
     demoLink: "https://toniu.github.io/SPortal",
     codeLink: "https://github.com/toniu/SPortal",
     bgColors: ["#0a919a", "#6ab5ba"],
   },
   {
-    title: "arithmetix.",
-    secondTitle: "A-Level Maths e-learning platform",
-    featured: true,
-    year: "2023",
-    role: "Full-stack Developer",
-    context: "Education and revision platform",
-    challenge: "Students needed a revision experience that felt structured and purposeful, not like a long page of unfiltered notes.",
-    outcome: "Built a cleaner study journey with stronger flow, better revision structure, and more confidence in the learning path.",
-    techStack: [
-      "VueJS",
-      "TailwindCSS",
-      "Webpack",
-      "Jest",
-      "NodeJS",
-      "Express",
-      "PostgreSQL",
-    ],
-    description:
-      "A revision platform for A-Level Maths students, covering exam resources, quizzes, and board-aligned study flow in a clearer format.",
-    imageUrl: img1,
-    demoLink: "",
-    codeLink: "https://github.com/toniu/arithmetix",
-    bgColors: ["#60a4fb", "#7eb3f7"],
-  },
-  {
-    title: "mybiblejourney",
-    secondTitle: "E-book launch and information website",
-    featured: true,
-    year: "2022",
-    role: "Frontend Developer",
-    context: "Launch campaign and digital presence",
-    challenge: "The launch needed a clearer story and a more direct route from interest to action, without overwhelming visitors with too much content.",
-    outcome: "Created a sharper landing experience that focused the message, improved readability, and made the conversion path easier to follow.",
-    techStack: ["React", "JavaScript", "TailwindCSS","Canva"],
-    description:
-      "A conversion-focused launch website for an e-book, designed to make the offer clear, readable, and easy to act on.",
-    imageUrl: img3,
-    demoLink: "https://toniu.github.io/mybiblejourney",
-    codeLink: "https://github.com/toniu/mybiblejourney",
-    bgColors: ["#12132b", "#212245"],
-  },
-  {
     title: "Bree's Little Stars",
-    secondTitle: "Nursery and Childcare website",
+    secondTitle: "Nursery and childcare website",
+    featured: true,
     year: "2022",
     role: "Web Developer",
     context: "Children's nursery and family services",
-    challenge: "The nursery needed a site that reassured parents quickly and explained services without clutter or uncertainty.",
-    outcome: "Delivered a clearer, warmer website that improved trust and made service information easier to understand.",
-    techStack: ["WordPress", "Elementor","PHP", "HTML", "CSS", "JavaScript","Google Analytics"],
+    challenge: "Parents needed a quicker, clearer way to understand services and trust the nursery.",
+    outcome: "Built a warmer, more reassuring site that improved clarity and support for enquiries.",
+    techStack: ["WordPress", "Elementor", "PHP", "HTML", "CSS", "JavaScript"],
     description:
-      "A WordPress nursery site built around trust, clarity, and parent confidence — with service messaging designed to reduce friction.",
-    imageUrl: img13,
+      "A nursery website designed to feel clearer, more supportive, and easier for parents to understand.",
+    imageUrl: projectBlsSc1,
+    screenshots: [projectBlsSc1, projectBlsSc2, projectBlsSc3],
     demoLink: "https://www.breeslittlestars.co.uk/",
     codeLink: "",
     bgColors: ["#027bbf", "#097cdb"],
@@ -99,18 +65,60 @@ const projectsData = [
   {
     title: "Matilda Limited",
     secondTitle: "Healthcare training provider website",
+    featured: true,
     year: "2022",
     role: "Web Developer",
     context: "Healthcare training and education",
-    challenge: "The provider needed a more professional digital presence that made course information and trust signals easier to understand.",
-    outcome: "Built a more structured, credible site that improved clarity and supported stronger enquiry journeys.",
-    techStack: ["WordPress", "Elementor","PHP", "HTML", "CSS", "JavaScript", "MailChimp","Google Analytics"],
+    challenge: "The site needed a more credible and easier-to-scan structure for training information.",
+    outcome: "Delivered a more polished experience that improved trust and made enquiry paths easier to follow.",
+    techStack: ["WordPress", "Elementor", "PHP", "HTML", "CSS", "JavaScript"],
     description:
-      "A healthcare training website designed to communicate services clearly, strengthen credibility, and guide users to the right next step.",
-    imageUrl: img10,
+      "A healthcare training website created to communicate services clearly and support trust-building.",
+    imageUrl: projectMatildaSc1,
+    screenshots: [projectMatildaSc1, projectMatildaSc2],
     demoLink: "https://matildahealthtraining.com/",
     codeLink: "",
     bgColors: ["#0f535c", "#1f8b8f"],
+  },
+  {
+    title: "arithmetix.",
+    secondTitle: "A-Level maths learning platform",
+    year: "2023",
+    role: "Full-stack Developer",
+    context: "Education and revision platform",
+    challenge: "Students needed a cleaner revision flow that felt structured and easier to follow.",
+    outcome: "Built a more guided study experience with clearer progression and stronger engagement.",
+    techStack: [
+      "VueJS",
+      "TailwindCSS",
+      "NodeJS",
+      "Express",
+      "PostgreSQL",
+    ],
+    description:
+      "A revision platform covering resources, quizzes, and study flow in a clearer, more focused layout.",
+    imageUrl: projectArithmetixSc1,
+    screenshots: [projectArithmetixSc1, projectArithmetixSc2],
+    demoLink: "",
+    codeLink: "https://github.com/toniu/arithmetix",
+    bgColors: ["#60a4fb", "#7eb3f7"],
+  },
+  {
+    title: "mybiblejourney",
+    secondTitle: "E-book launch website",
+    year: "2022",
+    role: "Frontend Developer",
+    context: "Launch campaign and digital presence",
+    challenge: "The launch needed a sharper story and a clearer path from interest to action.",
+    outcome: "Delivered a cleaner landing page with stronger messaging and a more direct conversion path.",
+    techStack: ["React", "JavaScript", "TailwindCSS", "Canva"],
+    description:
+      "A simple, conversion-focused launch experience designed to make the offer feel clear and easy to act on.",
+    imageUrl: projectMyBibleJourneySc1,
+    screenshots: [projectMyBibleJourneySc1, projectMyBibleJourneySc2],
+    demoLink: "https://toniu.github.io/mybiblejourney",
+    codeLink: "https://github.com/toniu/mybiblejourney",
+    bgColors: ["#12132b", "#212245"],
   },
   {
     title: "ONE%",
@@ -118,11 +126,12 @@ const projectsData = [
     year: "2024",
     role: "Developer",
     context: "Interactive web experience",
-    challenge: "A game-show concept needed a responsive, engaging interface with clear progression and smooth interactive flow.",
-    outcome: "Built a scalable browser game with strong front-end polish and a playful, repeatable gameplay loop.",
-    techStack: ['Scala','Slinky','React','Webpack','GitHub Actions','Cloudflare Pages'],
-    description: `A browser-based quiz game inspired by ITV's The 1% Club, built with Scala.js and React to deliver a polished and responsive gameplay experience.`,
-    imageUrl: img8,
+    challenge: "The concept needed better engagement flow and a more polished browser experience.",
+    outcome: "Built a responsive game with stronger front-end polish and a better play loop.",
+    techStack: ['Scala', 'Slinky', 'React', 'Webpack', 'GitHub Actions'],
+    description: "A browser-based game inspired by The 1% Club, built to feel responsive, playful, and easy to use.",
+    imageUrl: projectOnePercentSc1,
+    screenshots: [projectOnePercentSc1, projectOnePercentSc2, projectOnePercentSc3],
     demoLink: 'https://one-percent-9y5.pages.dev/',
     codeLink: 'https://github.com/toniu/one-percent',
     bgColors: ['#1d2b00', '#171a12']
