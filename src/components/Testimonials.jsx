@@ -31,8 +31,8 @@ const Testimonials = () => {
     return (
         <section
             id="testimonials"
-            className="relative h-screen py-16 px-6 md:px-10 overflow-hidden scroll-mt-28"
-            style={{ scrollMarginTop: '7rem' }}
+            className="relative h-screen py-16 px-6 md:px-10 overflow-hidden scroll-mt-32"
+            style={{ scrollMarginTop: '8rem' }}
         >
             <div className="max-w-4xl mx-auto">
 

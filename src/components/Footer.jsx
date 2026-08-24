@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import { CVIcon, GithubIcon, LinkedinIcon, EmailIcon } from './PortfolioIcons';
 
 const Footer = () => {
     const [isAtHeroTop, setIsAtHeroTop] = useState(true);
+    const shouldReduceMotion = useReducedMotion();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -25,7 +26,12 @@ const Footer = () => {
             animate={{ opacity: isAtHeroTop ? 1 : 0, y: isAtHeroTop ? 0 : 80 }}
             transition={{ duration: 0.3, ease: 'easeOut' }}>
             <div className='container mx-auto flex justify-center'>
-                <div className='flex items-center justify-center gap-3 md:rounded-full border border-none md:border-white/10 bg-black/0 md:bg-black/80 px-4 md:px-6 py-10 md:py-3 text-[#eee] shadow-none md:shadow-lg backdrop-blur-0 md:backdrop-blur-md md:gap-5'>
+                <motion.div
+                    className='flex items-center justify-center gap-3 md:rounded-full border border-none md:border-white/10 bg-black/0 md:bg-black/80 px-4 md:px-6 py-10 md:py-3 text-[#eee] shadow-none md:shadow-lg backdrop-blur-0 md:backdrop-blur-md md:gap-5'
+                    initial={shouldReduceMotion ? false : { opacity: 0, y: 12 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={shouldReduceMotion ? { duration: 0 } : { delay: 1.8, duration: 0.8, ease: 'easeOut' }}
+                >
                     <a
                         href='/feedback-cv/cv-neka-toni-uebari.pdf'
                         target='_blank'
@@ -64,7 +70,7 @@ const Footer = () => {
                     >
                         <EmailIcon />
                     </a>
-                </div>
+                </motion.div>
             </div>
         </motion.nav>
     );

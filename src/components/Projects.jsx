@@ -87,6 +87,12 @@ const Projects = () => {
           aria-label={zoomedImage.alt}
           onClick={() => setZoomedImage(null)}
         >
+          {zoomedImage.shots?.length > 0 && (
+            <div className="absolute left-4 top-4 inline-flex items-center rounded-full border border-white/20 bg-white/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.16em] text-white">
+              {zoomedImage.index + 1} / {zoomedImage.shots.length}
+            </div>
+          )}
+
           <button
             type="button"
             onClick={(event) => {
@@ -146,8 +152,8 @@ const Projects = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: false, amount: 0.04 }}
         id="projects"
-        className="relative h-auto py-12 bg-white scroll-mt-28"
-        style={{ scrollMarginTop: '7rem' }}
+        className="relative h-auto py-12 bg-white scroll-mt-32"
+        style={{ scrollMarginTop: '8rem' }}
       >
       <div className="max-w-6xl mx-auto px-4">
         <header className="text-center mb-8 mt-12">

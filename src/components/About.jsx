@@ -1,12 +1,13 @@
 import React from 'react'
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import moi from '../assets/apple-avatar.png'
 
 const About = () => {
+    const shouldReduceMotion = useReducedMotion();
     const skills = {
         frontend: ['HTML5', 'CSS3', 'Tailwind CSS', 'JavaScript (ES6+)', 'TypeScript', 'Responsive Design', 'React', 'Vue.js'],
         cms: ['WordPress','PHP (WordPress Themes)', 'Elementor', 'Custom WP Plugins', 'WP Optimisation','Caching and Backup systems (WP)','Squarespace'],
-        webstandards: ['WCAG Accessibility', 'SEO Optimisation', 'Anti-spam and bot mitigation (WP)', 'Google Analytics', 'User-Centered Design', 'Figma', 'Canva']
+        webstandards: ['WCAG 2.2 AA', 'SEO Optimisation', 'Anti-spam and bot mitigation (WP)', 'Google Analytics', 'User-Centered Design', 'Figma', 'Canva']
     };
 
     const achievements = [
@@ -33,12 +34,12 @@ const About = () => {
 
     return (
         <motion.div
-            initial={{ y: -100, opacity: 0, }}
-            transition={{ duration: 0.75, }}
+            initial={shouldReduceMotion ? false : { y: -100, opacity: 0 }}
+            transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.75 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false }}
-            id='about' className="relative h-auto pt-6 pb-12 bg-gradient-to-b from-transparent via-blue-500/5 to-transparent scroll-mt-28"
-            style={{ scrollMarginTop: '7rem' }}>
+            id='about' className="relative h-auto pt-6 pb-12 bg-gradient-to-b from-transparent via-blue-500/5 to-transparent scroll-mt-32"
+            style={{ scrollMarginTop: '8rem' }}>
             <div className="max-w-6xl mx-auto px-4">
                 {/* Section header */}
                 <header className="text-center mb-6 mt-12">
@@ -80,6 +81,7 @@ const About = () => {
                         <div className='mb-6 rounded-xl border border-blue-100 bg-blue-50/70 p-4'>
                             <p className='text-[10px] font-extrabold uppercase tracking-[0.16em] text-blue-700'>Accessibility in practice</p>
                             <ul className='mt-2 space-y-1 text-sm leading-6 text-slate-700'>
+                                <li>Targets WCAG 2.2 AA criteria across key interface patterns.</li>
                                 <li>Keyboard-first navigation checks across interactive components.</li>
                                 <li>Semantic structure, accessible labels, and descriptive alt text across key sections.</li>
                                 <li>Manual contrast and readability checks for high-traffic content areas.</li>
@@ -113,9 +115,9 @@ const About = () => {
                         {/* Frontend Skills */}
                         <motion.div
                             className='mb-10'
-                            initial={{ opacity: 0, x: 20 }}
+                            initial={shouldReduceMotion ? false : { opacity: 0, x: 20 }}
                             whileInView={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.6 }}
+                            transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.6 }}
                             viewport={{ once: false }}>
                             <h3 className='text-base tracking-wide uppercase font-extrabold text-slate-800 mb-4 flex items-center gap-2'>
                                 <span className='w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white text-sm font-bold'>F</span>
@@ -125,7 +127,7 @@ const About = () => {
                                 {skills.frontend.map((skill, idx) => (
                                     <motion.span
                                         key={idx}
-                                        whileHover={{ scale: 1.05 }}
+                                        whileHover={shouldReduceMotion ? undefined : { scale: 1.05 }}
                                         className='bg-slate-900 hover:bg-blue-800  hover:border-blue-600 transition-all text-slate-100 text-sm cursor-pointer rounded-full border border-blue-200 px-4 md:px-6 py-1 text-[0.675em] md:text-[0.8em] font-light uppercase tracking-[0.12em]'
                                     >
                                         {skill}
@@ -137,9 +139,9 @@ const About = () => {
                         {/* WordPress & CMS Skills */}
                         <motion.div
                             className='mb-10'
-                            initial={{ opacity: 0, x: 20 }}
+                            initial={shouldReduceMotion ? false : { opacity: 0, x: 20 }}
                             whileInView={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.6, delay: 0.1 }}
+                            transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.6, delay: 0.1 }}
                             viewport={{ once: false }}>
                             <h3 className='text-base tracking-wide uppercase font-extrabold text-slate-800 mb-4 flex items-center gap-2'>
                                 <span className='w-8 h-8 bg-emerald-400 rounded-full flex items-center justify-center text-slate-900 text-sm font-bold'>C</span>
@@ -149,7 +151,7 @@ const About = () => {
                                 {skills.cms.map((skill, idx) => (
                                     <motion.span
                                         key={idx}
-                                        whileHover={{ scale: 1.05 }}
+                                        whileHover={shouldReduceMotion ? undefined : { scale: 1.05 }}
                                         className='bg-slate-900 hover:bg-emerald-800  hover:border-emerald-600 transition-all text-slate-100 text-sm cursor-pointer rounded-full border border-blue-200 px-4 md:px-6 py-1 text-[0.675em] md:text-[0.8em] font-light uppercase tracking-[0.12em]'
                                     >
                                         {skill}
@@ -160,9 +162,9 @@ const About = () => {
 
                         {/* Web Standards Skills */}
                         <motion.div
-                            initial={{ opacity: 0, x: 20 }}
+                            initial={shouldReduceMotion ? false : { opacity: 0, x: 20 }}
                             whileInView={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.6, delay: 0.2 }}
+                            transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.6, delay: 0.2 }}
                             viewport={{ once: false }}>
                             <h3 className='text-base tracking-wide uppercase font-extrabold text-slate-800 mb-4 flex items-center gap-2'>
                                 <span className='w-8 h-8 bg-violet-400 rounded-full flex items-center justify-center text-slate-900 text-sm font-bold'>W</span>
@@ -172,7 +174,7 @@ const About = () => {
                                 {skills.webstandards.map((skill, idx) => (
                                     <motion.span
                                         key={idx}
-                                        whileHover={{ scale: 1.05 }}
+                                        whileHover={shouldReduceMotion ? undefined : { scale: 1.05 }}
                                         className='bg-slate-900 hover:bg-violet-800  hover:border-violet-600 transition-all text-slate-100 text-sm cursor-pointer rounded-full border border-blue-200 px-4 md:px-6 py-1 text-[0.675em] md:text-[0.8em] font-light uppercase tracking-[0.12em]'
                                     >
                                         {skill}

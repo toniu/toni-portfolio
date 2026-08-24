@@ -64,7 +64,7 @@ const Contact = () => {
     };
 
     return (
-        <div id='contact' className='relative h-auto flex justify-center items-center pb-24 md:pb-20'>
+        <div id='contact' className='relative h-auto flex justify-center items-center pb-24 md:pb-20 scroll-mt-32' style={{ scrollMarginTop: '8rem' }}>
 
             <div className="w-4/5 max-w-4xl px-5 pt-6 pb-10">
                 {/* Section header */}

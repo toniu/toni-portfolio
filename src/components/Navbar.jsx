@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-scroll';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
 import { HomeIcon, InfoIcon, SuitcaseIcon, CommentIcon, EmailIcon, CVIcon } from './PortfolioIcons';
 
 const Navbar = () => {
@@ -9,6 +9,7 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isScrolling, setIsScrolling] = useState(false);
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const shouldReduceMotion = useReducedMotion();
   const scrollTimeoutRef = React.useRef(null);
   const navRef = React.useRef(null);
 
@@ -77,11 +78,11 @@ const Navbar = () => {
   }, [isOpen]);
 
   const links = [
-    { id: 'hero', title: 'home', offset: -75, icon: <HomeIcon />, ref: null },
-    { id: 'projects', title: 'projects', offset: -75, icon: <SuitcaseIcon />, ref: null },
-    { id: 'about', title: 'about', offset: -75, icon: <InfoIcon />, ref: null },
-    { id: 'testimonials', title: 'testimonials', offset: -75, icon: <CommentIcon />, ref: null },
-    { id: 'contact', title: 'contact', offset: -75, icon: <EmailIcon />, ref: null },
+    { id: 'hero', title: 'home', offset: -95, icon: <HomeIcon />, ref: null },
+    { id: 'projects', title: 'projects', offset: -95, icon: <SuitcaseIcon />, ref: null },
+    { id: 'about', title: 'about', offset: -95, icon: <InfoIcon />, ref: null },
+    { id: 'testimonials', title: 'testimonials', offset: -95, icon: <CommentIcon />, ref: null },
+    { id: 'contact', title: 'contact', offset: -95, icon: <EmailIcon />, ref: null },
   ];
 
   const downloadCvUrl = '/feedback-cv/cv-neka-toni-uebari.pdf';
@@ -95,9 +96,9 @@ const Navbar = () => {
         backdropFilter: screenWidth >= 768 ? (isScrolling ? 'blur(12px)' : 'blur(2px)') : 'blur(10px)',
         WebkitBackdropFilter: screenWidth >= 768 ? (isScrolling ? 'blur(12px)' : 'blur(2px)') : 'blur(10px)',
       }}
-      initial={{ y: -100 }}
+      initial={shouldReduceMotion ? false : { y: -100 }}
       animate={{ y: isScrolled || isOpen ? 0 : -100, scale: screenWidth >= 768 && isScrolling ? 1.02 : 1 }}
-      transition={{ duration: 0.3, scale: { type: 'spring', stiffness: 400, damping: 10 } }}
+      transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.3, scale: { type: 'spring', stiffness: 400, damping: 10 } }}
     >
       <div className="max-w-7xl mx-auto px-8">
         <div className="flex items-center justify-between h-12 gap-3">
@@ -106,7 +107,7 @@ const Navbar = () => {
             <Link
               to={'hero'}
               spy={true}
-              offset={-70}
+              offset={-95}
               smooth={true}
               duration={500}
               className="select-none flex-shrink-0 text-white font-bold text-xl
