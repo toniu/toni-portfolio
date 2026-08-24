@@ -13,3 +13,7 @@ export const GithubIcon = () => <i className="fa-brands fa-github text-[1.1rem]"
 export const ExternalLinkIcon = () => <i className="fa-solid fa-arrow-up-right-from-square text-[0.9rem]" aria-hidden="true" />;
 export const PlayIcon = () => <i className="fa-solid fa-play text-[0.7rem]" aria-hidden="true" />;
 export const PauseIcon = () => <i className="fa-solid fa-pause text-[0.7rem]" aria-hidden="true" />;
+export const ZoomIcon = () => <i className="fa-solid fa-magnifying-glass-plus text-[0.9rem]" aria-hidden="true" />;
+export const CloseIcon = () => <i className="fa-solid fa-xmark text-[1rem]" aria-hidden="true" />;
+export const ChevronLeftIcon = () => <i className="fa-solid fa-chevron-left text-[0.9rem]" aria-hidden="true" />;
+export const ChevronRightIcon = () => <i className="fa-solid fa-chevron-right text-[0.9rem]" aria-hidden="true" />;

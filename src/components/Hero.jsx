@@ -1,26 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
 import heroImg from '../assets/self-img.png';
-import { CVIcon, LinkedinIcon, GithubIcon, EmailIcon } from './PortfolioIcons';
 
 const Hero = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  /* Listen for scroll event */
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      /* Set isScrolled to true if user scrolls past 50px */
-      setIsScrolled(scrollTop > 50);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
   const overlayOpacity = 0.82;
 
   return (
@@ -91,31 +74,6 @@ const Hero = () => {
           >
             Building clear, useful digital experiences for product, service, and brand-led teams.
           </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{
-              opacity: isScrolled ? 0 : 1,
-              y: isScrolled ? -10 : 0,
-              scale: isScrolled ? 0.98 : 1,
-            }}
-            transition={{ delay: 2.2, duration: 0.45, ease: 'easeOut' }}
-            className='mt-8 flex flex-col items-center gap-4'
-            style={{ pointerEvents: isScrolled ? 'none' : 'auto' }}
-          >
-            <a
-              href='/feedback-cv/cv-neka-toni-uebari.pdf'
-              target='_blank'
-              rel='noreferrer'
-              aria-label='Open resume'
-              className='inline-flex items-center gap-2 rounded-full border border-blue-300/70 bg-white/10 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.18em] text-white backdrop-blur-sm transition hover:bg-blue-500 hover:text-white'
-            >
-              <CVIcon />
-              <span>Resume</span>
-            </a>
-
-            
-          </motion.div>
         </div>
       </motion.section>
     </div>

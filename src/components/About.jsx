@@ -117,7 +117,7 @@ const About = () => {
                                     <motion.span
                                         key={idx}
                                         whileHover={{ scale: 1.05 }}
-                                        className='bg-slate-900 hover:bg-blue-800  hover:border-blue-600 transition-all text-slate-100 text-sm cursor-pointer rounded-full border border-blue-200 px-4 md:px-6 py-1 text-[0.725em] md:text-[0.825em] font-light uppercase tracking-[0.12em]'
+                                        className='bg-slate-900 hover:bg-blue-800  hover:border-blue-600 transition-all text-slate-100 text-sm cursor-pointer rounded-full border border-blue-200 px-4 md:px-6 py-1 text-[0.675em] md:text-[0.8em] font-light uppercase tracking-[0.12em]'
                                     >
                                         {skill}
                                     </motion.span>
@@ -141,7 +141,7 @@ const About = () => {
                                     <motion.span
                                         key={idx}
                                         whileHover={{ scale: 1.05 }}
-                                        className='bg-slate-900 hover:bg-emerald-800  hover:border-emerald-600 transition-all text-slate-100 text-sm cursor-pointer rounded-full border border-blue-200 px-4 md:px-6 py-1 text-[0.7em] md:text-[0.85em] font-light uppercase tracking-[0.12em]'
+                                        className='bg-slate-900 hover:bg-emerald-800  hover:border-emerald-600 transition-all text-slate-100 text-sm cursor-pointer rounded-full border border-blue-200 px-4 md:px-6 py-1 text-[0.675em] md:text-[0.8em] font-light uppercase tracking-[0.12em]'
                                     >
                                         {skill}
                                     </motion.span>
@@ -164,7 +164,7 @@ const About = () => {
                                     <motion.span
                                         key={idx}
                                         whileHover={{ scale: 1.05 }}
-                                        className='bg-slate-900 hover:bg-violet-800  hover:border-violet-600 transition-all text-slate-100 text-sm cursor-pointer rounded-full border border-blue-200 px-4 md:px-6 py-1 text-[0.7em] md:text-[0.85em] font-light uppercase tracking-[0.12em]'
+                                        className='bg-slate-900 hover:bg-violet-800  hover:border-violet-600 transition-all text-slate-100 text-sm cursor-pointer rounded-full border border-blue-200 px-4 md:px-6 py-1 text-[0.675em] md:text-[0.8em] font-light uppercase tracking-[0.12em]'
                                     >
                                         {skill}
                                     </motion.span>
