@@ -12,7 +12,7 @@ const Navbar = () => {
   const shouldReduceMotion = useReducedMotion();
   const scrollTimeoutRef = React.useRef(null);
   const navRef = React.useRef(null);
-  const scrollDuration = 200;
+  const scrollDuration = 180;
 
   /* Toggle menu visibility */
   const toggleMenu = () => {
