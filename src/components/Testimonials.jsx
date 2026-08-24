@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion, useScroll, useTransform, useReducedMotion } from 'framer-motion';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import { PlayIcon, PauseIcon } from './PortfolioIcons';
@@ -20,6 +20,7 @@ const getStarStates = (rating) => {
 
 const Testimonials = () => {
     const { scrollY } = useScroll();
+    const shouldReduceMotion = useReducedMotion();
     const [isAutoplaying, setIsAutoplaying] = React.useState(true);
     const swiperRef = React.useRef(null);
     const [progress, setProgress] = React.useState(0);
@@ -51,7 +52,7 @@ const Testimonials = () => {
                         Feedback from people I’ve worked with on contract and project-based work.
                     </p>
 
-                    <div className="mt-4 flex justify-center">
+                    {!shouldReduceMotion && <div className="mt-4 flex justify-center">
                         <div
                             className="p-[2px] rounded-full"
                             style={{
@@ -76,7 +77,7 @@ const Testimonials = () => {
                                 {isAutoplaying ? <PauseIcon /> : <PlayIcon />}
                             </button>
                         </div>
-                    </div>
+                    </div>}
                 </header>
 
                 <Swiper
@@ -85,7 +86,7 @@ const Testimonials = () => {
                     spaceBetween={32}
                     slidesPerView={1}
                     pagination={{ clickable: true }}
-                    autoplay={{ delay: 6000, disableOnInteraction: false }}
+                    autoplay={shouldReduceMotion ? false : { delay: 6000, disableOnInteraction: false }}
                     loop
                     navigation={true}
                     onSwiper={(swiper) => {
@@ -95,7 +96,7 @@ const Testimonials = () => {
                         setProgress(0);
                     }}
                     onAutoplayTimeLeft={(_, __, progressValue) => {
-                        if (!isAutoplaying) return;
+                        if (shouldReduceMotion || !isAutoplaying) return;
                         setProgress((1 - progressValue) * 100);
                     }}
                 >
@@ -105,17 +106,17 @@ const Testimonials = () => {
                                 className="relative bg-white rounded-lg border border-gray-100 p-10 shadow-sm min-h-[280px] overflow-hidden"
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
-                                whileHover={{
+                                whileHover={shouldReduceMotion ? undefined : {
                                     scale: 1.025,
                                     boxShadow: '0 10px 20px rgba(0, 0, 0, 0.12)',
                                 }}
                                 viewport={{ once: true }}
-                                transition={{ duration: 0.4, ease: 'easeOut' }}
+                                transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.4, ease: 'easeOut' }}
                             >
                                 {/* Decorative quote */}
                                 <motion.span
                                     aria-hidden
-                                    style={{ y: quoteY }}
+                                    style={{ y: shouldReduceMotion ? 0 : quoteY }}
                                     className="absolute top-6 left-6 text-[6rem] leading-none font-serif text-gray-200 pointer-events-none select-none"
                                 >
                                     “

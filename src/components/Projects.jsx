@@ -1,11 +1,36 @@
 import React, { useEffect, useState } from 'react';
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import projectsData from './constants/ProjectData';
+import testimonialsData from './constants/TestimonialsData';
 import { ExternalLinkIcon, GithubIcon, ZoomIcon, CloseIcon, ChevronLeftIcon, ChevronRightIcon } from './PortfolioIcons';
 
 const Projects = () => {
   const [expandedProject, setExpandedProject] = useState(null);
   const [zoomedImage, setZoomedImage] = useState(null);
+  const shouldReduceMotion = useReducedMotion();
+
+  const normalizeText = (value = '') => value.toLowerCase().replace(/[^a-z0-9]+/g, '');
+  const truncateText = (value = '', max = 210) => {
+    if (value.length <= max) return value;
+    return `${value.slice(0, max).trim()}...`;
+  };
+
+  const findRelatedTestimonial = (item) => {
+    const projectTitle = normalizeText(item.title);
+    const projectSubtitle = normalizeText(item.secondTitle);
+
+    return testimonialsData.find((testimonial) => {
+      const company = normalizeText(testimonial.company || '');
+      if (!company) return false;
+
+      return (
+        projectTitle.includes(company) ||
+        company.includes(projectTitle) ||
+        projectSubtitle.includes(company) ||
+        company.includes(projectSubtitle)
+      );
+    });
+  };
 
   const stepZoomedImage = (direction) => {
     setZoomedImage((current) => {
@@ -53,9 +78,9 @@ const Projects = () => {
     <>
       {zoomedImage && (
         <motion.div
-          initial={{ opacity: 0 }}
+          initial={shouldReduceMotion ? false : { opacity: 0 }}
           animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
+          exit={shouldReduceMotion ? undefined : { opacity: 0 }}
           className="fixed inset-0 z-[70] flex items-center justify-center bg-slate-950/90 p-4"
           role="dialog"
           aria-modal="true"
@@ -116,8 +141,8 @@ const Projects = () => {
       )}
 
       <motion.div
-        initial={{ y: -40, opacity: 0 }}
-        transition={{ duration: 0.5 }}
+        initial={shouldReduceMotion ? false : { y: -40, opacity: 0 }}
+        transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.5 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: false, amount: 0.04 }}
         id="projects"
@@ -146,19 +171,21 @@ const Projects = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: false, amount: 0.03 }}
-          transition={{ duration: 0.3, ease: 'easeOut' }}
+          transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.3, ease: 'easeOut' }}
         >
           {projectsData.map((item) => {
             const mainImage = item.screenshots?.[0] || item.imageUrl;
             const isExpanded = expandedProject === item.title;
-            const detailShots = item.screenshots?.slice(1, 3) || [];
+            const detailShots = item.screenshots?.slice(1) || [];
+            const relatedTestimonial = item.featured ? findRelatedTestimonial(item) : null;
+            const relatedTestimonialSnippet = relatedTestimonial ? truncateText(relatedTestimonial.quote) : '';
 
             return (
             <motion.article
               key={item.title}
               className={`group overflow-hidden rounded-2xl border bg-transparent shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-lg ${item.featured ? 'border-blue-200 bg-blue-50/40' : 'border-gray-200'}`}
               initial={false}
-              whileHover={{ y: -4 }}
+              whileHover={shouldReduceMotion ? undefined : { y: -4 }}
             >
               <div className="overflow-hidden rounded-2xl bg-white">
                 <div className="h-1 w-full" style={{ backgroundImage: `linear-gradient(90deg, ${item.bgColors[0]}, ${item.bgColors[1]})` }} />
@@ -175,7 +202,7 @@ const Projects = () => {
                   <img
                     src={mainImage}
                     alt={item.title}
-                    className="h-56 w-full object-cover object-top transition-transform duration-300 group-hover:scale-[1.02]"
+                    className={`h-56 w-full object-cover object-top ${shouldReduceMotion ? '' : 'transition-transform duration-300 group-hover:scale-[1.02]'}`}
                     loading="lazy"
                   />
                 </div>
@@ -239,6 +266,16 @@ const Projects = () => {
                     </div>
                   )}
 
+                  {item.featured && relatedTestimonial && (
+                    <div className="mt-2 rounded-xl border border-violet-100 bg-violet-50/70 p-3">
+                      <p className="text-[10px] font-extrabold uppercase tracking-[0.14em] text-violet-700">Client feedback</p>
+                      <p className="mt-1 text-sm leading-6 text-slate-700">"{relatedTestimonialSnippet}"</p>
+                      <p className="mt-2 text-[10px] font-bold uppercase tracking-[0.12em] text-slate-500">
+                        {relatedTestimonial.name} • {relatedTestimonial.company}
+                      </p>
+                    </div>
+                  )}
+
                   {item.featured && (
                     <div className="mt-3">
                       <button
@@ -257,9 +294,9 @@ const Projects = () => {
                   {item.featured && isExpanded && item.approach && (
                     <motion.div
                         id={`case-study-${item.title}`}
-                      initial={{ opacity: 0, y: 8 }}
+                      initial={shouldReduceMotion ? false : { opacity: 0, y: 8 }}
                       animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.2, ease: 'easeOut' }}
+                      transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.2, ease: 'easeOut' }}
                         className="mt-3 overflow-hidden rounded-2xl border border-blue-100 bg-gradient-to-b from-slate-50 to-white p-3 md:p-4 shadow-inner shadow-blue-100/40"
                     >
                         <div className="flex items-center justify-between gap-3 border-b border-slate-200/80 pb-2.5 md:pb-3">

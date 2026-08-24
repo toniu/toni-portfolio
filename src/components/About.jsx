@@ -77,6 +77,15 @@ const About = () => {
                             ))}
                         </div>
 
+                        <div className='mb-6 rounded-xl border border-blue-100 bg-blue-50/70 p-4'>
+                            <p className='text-[10px] font-extrabold uppercase tracking-[0.16em] text-blue-700'>Accessibility in practice</p>
+                            <ul className='mt-2 space-y-1 text-sm leading-6 text-slate-700'>
+                                <li>Keyboard-first navigation checks across interactive components.</li>
+                                <li>Semantic structure, accessible labels, and descriptive alt text across key sections.</li>
+                                <li>Manual contrast and readability checks for high-traffic content areas.</li>
+                            </ul>
+                        </div>
+
                         {/* Highlights */}
                         <motion.div
                             className='grid grid-cols-1 gap-4 mb-8'

@@ -1,9 +1,15 @@
 import projectSPortalSc1 from '../../assets/project-screenshots/project-sportal-sc-1.png';
 import projectSPortalSc2 from '../../assets/project-screenshots/project-sportal-sc-2.png';
 import projectSPortalSc3 from '../../assets/project-screenshots/project-sportal-sc-3.png';
+import projectSPortalSc4 from '../../assets/project-screenshots/project-sportal-sc-4.png';
+import projectSPortalSc5 from '../../assets/project-screenshots/project-sportal-sc-5.png';
+import projectSPortalSc6 from '../../assets/project-screenshots/project-sportal-sc-6.png';
 
 import projectArithmetixSc1 from '../../assets/project-screenshots/project-arithmetix-sc-1.png';
 import projectArithmetixSc2 from '../../assets/project-screenshots/project-arithmetix-sc-2.png';
+import projectArithmetixSc3 from '../../assets/project-screenshots/project-arithmetix-sc-3.png';
+import projectArithmetixSc4 from '../../assets/project-screenshots/project-arithmetix-sc-4.png';
+import projectArithmetixSc5 from '../../assets/project-screenshots/project-arithmetix-sc-5.png';
 
 import projectMyBibleJourneySc1 from '../../assets/project-screenshots/project-mybiblejourney-sc-1.png';
 import projectMyBibleJourneySc2 from '../../assets/project-screenshots/project-mybiblejourney-sc-2.png';
@@ -11,9 +17,13 @@ import projectMyBibleJourneySc2 from '../../assets/project-screenshots/project-m
 import projectBlsSc1 from '../../assets/project-screenshots/project-bls-sc-1.png';
 import projectBlsSc2 from '../../assets/project-screenshots/project-bls-sc-2.png';
 import projectBlsSc3 from '../../assets/project-screenshots/project-bls-sc-3.png';
+import projectBlsSc4 from '../../assets/project-screenshots/project-bls-sc-4.png';
 
 import projectMatildaSc1 from '../../assets/project-screenshots/project-matildaltd-sc-1.png';
 import projectMatildaSc2 from '../../assets/project-screenshots/project-matildaltd-sc-2.png';
+import projectMatildaSc3 from '../../assets/project-screenshots/project-matildaltd-sc-3.png';
+import projectMatildaSc4 from '../../assets/project-screenshots/project-matildaltd-sc-4.png';
+import projectMatildaSc5 from '../../assets/project-screenshots/project-matildaltd-sc-5.png';
 
 import projectOnePercentSc1 from '../../assets/project-screenshots/project-onepercent-sc-1.png';
 import projectOnePercentSc2 from '../../assets/project-screenshots/project-onepercent-sc-2.png';
@@ -44,7 +54,7 @@ const projectsData = [
     description:
       "Reusable tooling for dashboards, calendars, profiles, and communication surfaces built for real internal use.",
     imageUrl: projectSPortalSc1,
-    screenshots: [projectSPortalSc1, projectSPortalSc2, projectSPortalSc3],
+    screenshots: [projectSPortalSc1, projectSPortalSc2, projectSPortalSc3, projectSPortalSc4, projectSPortalSc5, projectSPortalSc6],
     demoLink: "https://toniu.github.io/SPortal",
     codeLink: "https://github.com/toniu/SPortal",
     bgColors: ["#0a919a", "#6ab5ba"],
@@ -67,7 +77,7 @@ const projectsData = [
     description:
       "A nursery website designed to feel clearer, more supportive, and easier for parents to understand.",
     imageUrl: projectBlsSc1,
-    screenshots: [projectBlsSc1, projectBlsSc2, projectBlsSc3],
+    screenshots: [projectBlsSc1, projectBlsSc2, projectBlsSc3, projectBlsSc4],
     demoLink: "https://www.breeslittlestars.co.uk/",
     codeLink: "",
     bgColors: ["#027bbf", "#097cdb"],
@@ -90,7 +100,7 @@ const projectsData = [
     description:
       "A healthcare training website created to communicate services clearly and support trust-building.",
     imageUrl: projectMatildaSc1,
-    screenshots: [projectMatildaSc1, projectMatildaSc2],
+    screenshots: [projectMatildaSc1, projectMatildaSc2, projectMatildaSc3, projectMatildaSc4, projectMatildaSc5],
     demoLink: "https://matildahealthtraining.com/",
     codeLink: "",
     bgColors: ["#0f535c", "#1f8b8f"],
@@ -113,7 +123,7 @@ const projectsData = [
     description:
       "A revision platform covering resources, quizzes, and study flow in a clearer, more focused layout.",
     imageUrl: projectArithmetixSc1,
-    screenshots: [projectArithmetixSc1, projectArithmetixSc2],
+    screenshots: [projectArithmetixSc1, projectArithmetixSc2, projectArithmetixSc3, projectArithmetixSc4, projectArithmetixSc5],
     demoLink: "",
     codeLink: "https://github.com/toniu/arithmetix",
     bgColors: ["#60a4fb", "#7eb3f7"],
@@ -208,6 +218,39 @@ const projectsData = [
   demoLink: "https://toniu.github.io/toni-portfolio",
   codeLink: "https://github.com/toniu/toni-portfolio",
   bgColors: ["#000000", "#19334d"],
+},
+{
+  title: "ANREER Investments",
+  secondTitle: "Business and investment website",
+  techStack: ["WordPress", "Elementor", "PHP", "HTML", "CSS"],
+  description:
+    "A business-facing website focused on clarity, credibility, and communicating investment services in a straightforward way.",
+  imageUrl: imgAnreer,
+  demoLink: "",
+  codeLink: "",
+  bgColors: ["#06242f", "#0f4a61"],
+},
+{
+  title: "toniarts",
+  secondTitle: "Creative arts showcase website",
+  techStack: ["React", "TailwindCSS", "JavaScript"],
+  description:
+    "A visual showcase website for drawings and creative work, built for cleaner browsing and stronger presentation of artwork categories.",
+  imageUrl: imgToniArts,
+  demoLink: "",
+  codeLink: "",
+  bgColors: ["#241f1c", "#4a3b32"],
+},
+{
+  title: "Wayfinding Kaia",
+  secondTitle: "Coaching and guidance website",
+  techStack: ["WordPress", "Elementor", "PHP", "HTML", "CSS"],
+  description:
+    "A service-led website designed to present coaching offers clearly, improve trust signals, and simplify contact flow.",
+  imageUrl: imgKaia,
+  demoLink: "",
+  codeLink: "",
+  bgColors: ["#1a202c", "#39435b"],
 },
 */
 export default projectsData;

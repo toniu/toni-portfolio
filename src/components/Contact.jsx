@@ -41,8 +41,8 @@ const Contact = () => {
                 </div>
 
                 <div className='select-none bottom font-light text-sm md:text-base text-center pt-12 pb-16 space-y-2 w-full max-w-3xl mx-auto'>
-                    <p>2024 toni., inc. all rights reserved</p>
-                    <p>Developed by Neka Toni-Uebari, using ReactJS and TailwindCSS</p>
+                    <p className='text-[10px] md:text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-600'>2026 toni., inc. all rights reserved</p>
+                    <p className='text-[10px] md:text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500'>Developed by Neka Toni-Uebari, using ReactJS and TailwindCSS</p>
                 </div>
             </div>
         )
@@ -122,7 +122,7 @@ const Contact = () => {
 
                         <form onSubmit={handleFormSubmit} className="flex flex-wrap gap-x-5">
                             <div className="mb-4 flex-grow">
-                                <label htmlFor="firstName" className="block text-gray-700 text-sm md:text-base text-left">First Name</label>
+                                <label htmlFor="firstName" className="block text-gray-700 text-[10px] md:text-[11px] font-semibold uppercase tracking-[0.12em] text-left">First Name</label>
                                 <input
                                     type="text"
                                     id="firstName"
@@ -135,7 +135,7 @@ const Contact = () => {
                                 />
                             </div>
                             <div className="mb-4 flex-grow">
-                                <label htmlFor="lastName" className="block text-gray-700 text-sm md:text-base text-left">Last Name</label>
+                                <label htmlFor="lastName" className="block text-gray-700 text-[10px] md:text-[11px] font-semibold uppercase tracking-[0.12em] text-left">Last Name</label>
                                 <input
                                     type="text"
                                     id="lastName"
@@ -148,7 +148,7 @@ const Contact = () => {
                                 />
                             </div>
                             <div className="w-full mb-4">
-                                <label htmlFor="email" className="block text-gray-700 text-sm md:text-base text-left">Email</label>
+                                <label htmlFor="email" className="block text-gray-700 text-[10px] md:text-[11px] font-semibold uppercase tracking-[0.12em] text-left">Email</label>
                                 <input
                                     type="email"
                                     id="email"
@@ -161,7 +161,7 @@ const Contact = () => {
                                 />
                             </div>
                             <div className="w-full mb-4">
-                                <label htmlFor="message" className="block text-gray-700 text-sm md:text-base text-left">Message</label>
+                                <label htmlFor="message" className="block text-gray-700 text-[10px] md:text-[11px] font-semibold uppercase tracking-[0.12em] text-left">Message</label>
                                 <textarea
                                     id="message"
                                     name="message"
@@ -193,18 +193,18 @@ const Contact = () => {
                             <div className="w-full my-2 text-center md:text-left">
                                 <button
                                     type="submit"
-                                    className="bg-gray-900 text-white uppercase font-semibold text-sm py-1 px-12 rounded-full hover:bg-blue-500 transition duration-200"
+                                    className="bg-gray-900 text-white uppercase tracking-[0.16em] font-semibold text-[10px] md:text-[11px] py-2 px-10 rounded-full hover:bg-blue-500 transition duration-200"
                                 >
-                                    submit
+                                    Submit
                                 </button>
                             </div>
                         </form>
                     </div>
                 </div>
 
-                <div className='select-none bottom font-light text-sm md:text-base text-center pt-14 pb-16 space-y-2 w-[85%] mx-auto'>
-                    <p>2026 toni., inc. all rights reserved</p>
-                    <p>Developed by Neka Toni-Uebari, using ReactJS and TailwindCSS</p>
+                <div className='select-none bottom text-center pt-14 pb-16 space-y-2 w-[85%] mx-auto'>
+                    <p className='text-[10px] md:text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-600'>2026 toni., inc. all rights reserved</p>
+                    <p className='text-[10px] md:text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500'>Developed by Neka Toni-Uebari, using ReactJS and TailwindCSS</p>
                 </div>
             </div>
 
