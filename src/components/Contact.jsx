@@ -70,7 +70,7 @@ const Contact = () => {
                 {/* Section header */}
                 <header className="text-center mb-6 mt-12">
                     <motion.h2
-                        className="block text-xl uppercase tracking-widest text-blue-500 font-bold"
+                        className="block text-lg md:text-xl uppercase tracking-[0.22em] text-blue-600 font-extrabold"
                         initial={{ opacity: 0, y: 6 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
@@ -80,7 +80,7 @@ const Contact = () => {
                     </motion.h2>
 
                     <p className="mt-2 text-sm md:text-base text-gray-600">
-                        Looking for a web developer who can turn a rough brief into a clearer, more usable digital experience? Let's connect.
+                        Looking for a frontend developer who can turn rough briefs into clear, usable digital products? Let's connect.
                     </p>
                     <div className="mt-4 flex justify-center">
                         <a

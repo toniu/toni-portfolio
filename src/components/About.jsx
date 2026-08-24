@@ -11,9 +11,9 @@ const About = () => {
     };
 
     const achievements = [
-        { icon: '', label: '5+ Contracted Projects', description: 'Delivered product-minded web experiences for real organisations and client teams' },
-        { icon: '', label: 'Accessibility-first', description: 'Built with clarity, usability, and inclusive UX in mind' },
-        { icon: '', label: 'Performance-aware', description: 'Focused on fast, readable, conversion-friendly front-end experiences' }
+        { icon: '', label: '5+ Contracted Projects', description: 'Shipped production websites for real client teams' },
+        { icon: '', label: 'Accessibility-first', description: 'Designed for inclusive, keyboard-friendly UX' },
+        { icon: '', label: 'Performance-aware', description: 'Built for speed, clarity, and conversion' }
     ];
 
     const containerVariants = {
@@ -67,7 +67,7 @@ const About = () => {
                         </div>
 
                         <p className='text-slate-700 text-sm md:text-base leading-relaxed mb-6'>
-                            Hi, I'm <span className='text-blue-600 font-extrabold'>Neka Toni-Uebari</span>, a front-end developer focused on building clear, useful digital experiences for real people. I work across product-minded UI, responsive builds, and accessible web experiences with a strong emphasis on clarity, usability, and practical business outcomes.
+                            Hi, I'm <span className='text-blue-600 font-extrabold'>Neka Toni-Uebari</span>, a front-end developer building clear, accessible, product-minded web experiences that support real business goals.
                         </p>
 
                         <div className='mb-6 flex flex-wrap gap-2'>
@@ -128,7 +128,7 @@ const About = () => {
                                     <motion.span
                                         key={idx}
                                         whileHover={shouldReduceMotion ? undefined : { scale: 1.05 }}
-                                        className='bg-slate-900 hover:bg-blue-800  hover:border-blue-600 transition-all text-slate-100 text-sm cursor-pointer rounded-full border border-blue-200 px-4 md:px-6 py-1 text-[0.675em] md:text-[0.8em] font-light uppercase tracking-[0.12em]'
+                                        className='bg-slate-900 hover:bg-blue-800  hover:border-blue-600 transition-all text-slate-100 text-sm cursor-pointer rounded-full border border-blue-200 px-4 md:px-6 py-1 text-[0.65em] md:text-[0.8em] font-light uppercase tracking-[0.12em]'
                                     >
                                         {skill}
                                     </motion.span>
@@ -152,7 +152,7 @@ const About = () => {
                                     <motion.span
                                         key={idx}
                                         whileHover={shouldReduceMotion ? undefined : { scale: 1.05 }}
-                                        className='bg-slate-900 hover:bg-emerald-800  hover:border-emerald-600 transition-all text-slate-100 text-sm cursor-pointer rounded-full border border-blue-200 px-4 md:px-6 py-1 text-[0.675em] md:text-[0.8em] font-light uppercase tracking-[0.12em]'
+                                        className='bg-slate-900 hover:bg-emerald-800  hover:border-emerald-600 transition-all text-slate-100 text-sm cursor-pointer rounded-full border border-blue-200 px-4 md:px-6 py-1 text-[0.65em] md:text-[0.8em] font-light uppercase tracking-[0.12em]'
                                     >
                                         {skill}
                                     </motion.span>
@@ -175,7 +175,7 @@ const About = () => {
                                     <motion.span
                                         key={idx}
                                         whileHover={shouldReduceMotion ? undefined : { scale: 1.05 }}
-                                        className='bg-slate-900 hover:bg-violet-800  hover:border-violet-600 transition-all text-slate-100 text-sm cursor-pointer rounded-full border border-blue-200 px-4 md:px-6 py-1 text-[0.675em] md:text-[0.8em] font-light uppercase tracking-[0.12em]'
+                                        className='bg-slate-900 hover:bg-violet-800  hover:border-violet-600 transition-all text-slate-100 text-sm cursor-pointer rounded-full border border-blue-200 px-4 md:px-6 py-1 text-[0.65em] md:text-[0.8em] font-light uppercase tracking-[0.12em]'
                                     >
                                         {skill}
                                     </motion.span>

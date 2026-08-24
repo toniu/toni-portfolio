@@ -39,7 +39,7 @@ const Testimonials = () => {
                 {/* Section header */}
                 <header className="text-center mb-6 mt-12">
                     <motion.h2
-                        className="block text-xl uppercase tracking-widest text-blue-500 font-bold"
+                        className="block text-lg md:text-xl uppercase tracking-[0.22em] text-blue-600 font-extrabold"
                         initial={{ opacity: 0, y: 6 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}

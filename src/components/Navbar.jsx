@@ -12,6 +12,7 @@ const Navbar = () => {
   const shouldReduceMotion = useReducedMotion();
   const scrollTimeoutRef = React.useRef(null);
   const navRef = React.useRef(null);
+  const scrollDuration = 200;
 
   /* Toggle menu visibility */
   const toggleMenu = () => {
@@ -109,7 +110,7 @@ const Navbar = () => {
               spy={true}
               offset={-95}
               smooth={true}
-              duration={500}
+              duration={scrollDuration}
               className="select-none flex-shrink-0 text-white font-bold text-xl
                   hover:text-blue-400 hover:cursor-pointer transition 100">
               toni.
@@ -125,7 +126,7 @@ const Navbar = () => {
                   spy={true}
                   offset={offset}
                   smooth={true}
-                  duration={500}
+                  duration={scrollDuration}
                   className={`text-gray-300 hover:text-blue-400 font-bold px-3 py-1 transition 100
                   hover:cursor-pointer text-[0.75em] uppercase ${activeLink === id ? 'text-blue-400' : ''}`}
                   activeClass="text-blue-400"
@@ -185,8 +186,8 @@ const Navbar = () => {
                   spy={true}
                   offset={offset}
                   smooth={true}
-                  duration={500}
-                  onClick={toggleMenu}
+                  duration={scrollDuration}
+                  onClick={() => setIsOpen(false)}
                   className="text-white flex hover:bg-black/75 hover:text-blue-400 hover:cursor-pointer py-2 rounded-sm text-base font-medium transition 100"
                 >
                   <div className="flex space-x-3 px-2">

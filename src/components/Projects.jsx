@@ -157,15 +157,7 @@ const Projects = () => {
       >
       <div className="max-w-6xl mx-auto px-4">
         <header className="text-center mb-8 mt-12">
-          <motion.h2
-            className="block text-xl uppercase tracking-widest text-blue-500 font-bold"
-            initial={{ opacity: 0, y: 6 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.4, ease: 'easeOut' }}
-          >
-            Selected Work
-          </motion.h2>
+
 
           <p className="mx-auto mt-2 max-w-2xl text-sm md:text-base text-gray-600">
             A small set of product-minded work where I improved clarity, usability, and conversion across internal tools, education products, and service-driven websites.
@@ -198,7 +190,7 @@ const Projects = () => {
 
                 {item.featured && (
                   <div className="px-5 p-2 flex justify-center md:justify-start">
-                    <span className="inline-flex rounded-full border border-blue-200 bg-blue-500 text-white px-4 py-1 text-[0.7em] font-semibold uppercase tracking-[0.18em]">
+                    <span className="inline-flex rounded-full border border-blue-200 bg-blue-700 text-white px-4 py-1 text-[0.7em] font-semibold uppercase tracking-[0.18em]">
                       Featured
                     </span>
                   </div>
@@ -251,6 +243,22 @@ const Projects = () => {
                     </p>
                   )}
 
+                  {item.proofChips?.length > 0 && (
+                    <div className="mt-3">
+                      <p className="text-[10px] font-extrabold uppercase tracking-[0.14em] text-slate-500">Proof points</p>
+                      <div className="mt-2 flex flex-wrap gap-2">
+                        {item.proofChips.map((chip) => (
+                          <span
+                            key={`${item.title}-${chip}`}
+                            className="inline-flex items-center rounded-full border border-blue-200 bg-blue-50 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.12em] text-blue-700"
+                          >
+                            {chip}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
                   {item.featured && item.challenge && (
                     <div className="mt-3 rounded-xl border border-slate-200 bg-slate-50/80 p-3">
                       <p className="text-[10px] font-extrabold uppercase tracking-[0.14em] text-slate-500">Challenge</p>
@@ -265,14 +273,14 @@ const Projects = () => {
                     <p className="mt-1 text-sm leading-6 text-slate-700">{item.description}</p>
                   </div>
 
-                  {item.featured && item.outcome && (
+                  {item.featured && isExpanded && item.outcome && (
                     <div className="mt-2 rounded-xl border border-blue-100 bg-blue-50/70 p-3">
                       <p className="text-[10px] font-extrabold uppercase tracking-[0.14em] text-blue-700">Outcome</p>
                       <p className="mt-1 text-sm leading-6 text-slate-700">{item.outcome}</p>
                     </div>
                   )}
 
-                  {item.featured && relatedTestimonial && (
+                  {item.featured && isExpanded && relatedTestimonial && (
                     <div className="mt-2 rounded-xl border border-violet-100 bg-violet-50/70 p-3">
                       <p className="text-[10px] font-extrabold uppercase tracking-[0.14em] text-violet-700">Client feedback</p>
                       <p className="mt-1 text-sm leading-6 text-slate-700">"{relatedTestimonialSnippet}"</p>
@@ -287,7 +295,7 @@ const Projects = () => {
                       <button
                         type="button"
                         onClick={() => setExpandedProject(isExpanded ? null : item.title)}
-                        className="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-gray-900/80 px-5 py-2 text-[10px] font-bold uppercase tracking-[0.16em] text-white/90 transition hover:border-blue-300 hover:bg-gray-800 hover:text-white"
+                        className="inline-flex items-center gap-2 w-full md:w-auto justify-center md:justify-start rounded-full border border-slate-300 bg-gray-900/80 px-5 py-2 text-[10px] font-bold uppercase tracking-[0.16em] text-white/90 transition hover:border-blue-300 hover:bg-gray-800 hover:text-white"
                         aria-expanded={isExpanded}
                           aria-controls={`case-study-${item.title}`}
                       >
@@ -310,9 +318,6 @@ const Projects = () => {
                             <p className="text-[10px] font-extrabold uppercase tracking-[0.18em] text-blue-700">Case study</p>
                             <p className="mt-1 text-[13px] font-semibold leading-5 text-slate-700 md:text-sm">Thinking, decisions, and detail views behind this build.</p>
                           </div>
-                          <span className="hidden rounded-full border border-blue-200 bg-blue-50 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.16em] text-blue-700 md:inline-flex">
-                            One project open
-                          </span>
                         </div>
 
                         {detailShots.length > 0 && (
@@ -353,6 +358,27 @@ const Projects = () => {
                             <p className="text-[10px] font-extrabold uppercase tracking-[0.14em] text-slate-500">Approach</p>
                             <p className="mt-1 text-[13px] leading-5 text-slate-700 md:text-sm md:leading-6">{item.approach}</p>
                           </div>
+
+                          {item.constraints && (
+                            <div className="rounded-xl border border-amber-300 bg-amber-500/10 p-3">
+                              <p className="text-[10px] font-extrabold uppercase tracking-[0.14em] text-amber-800">Constraints</p>
+                              <p className="mt-1 text-[13px] leading-5 text-slate-700 md:text-sm md:leading-6">{item.constraints}</p>
+                            </div>
+                          )}
+
+                          {item.decisions && (
+                            <div className="rounded-xl border border-indigo-100 bg-indigo-50/70 p-3">
+                              <p className="text-[10px] font-extrabold uppercase tracking-[0.14em] text-indigo-700">Key decisions</p>
+                              <p className="mt-1 text-[13px] leading-5 text-slate-700 md:text-sm md:leading-6">{item.decisions}</p>
+                            </div>
+                          )}
+
+                          {item.tradeoffs && (
+                            <div className="rounded-xl border border-rose-100 bg-rose-50/70 p-3">
+                              <p className="text-[10px] font-extrabold uppercase tracking-[0.14em] text-rose-700">Tradeoffs</p>
+                              <p className="mt-1 text-[13px] leading-5 text-slate-700 md:text-sm md:leading-6">{item.tradeoffs}</p>
+                            </div>
+                          )}
 
                           {item.solutionWhy && (
                             <div className="rounded-xl border border-slate-200 bg-slate-50/80 p-3">
